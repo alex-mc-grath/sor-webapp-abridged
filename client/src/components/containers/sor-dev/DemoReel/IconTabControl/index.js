@@ -9,7 +9,7 @@ const StyledIconTabControl = styled.div`
     margin-top: 1rem;
     background: #222;
 
-    .tab {
+    .tab, .selectedTab, .disabledTab {
         width: 1fr;
         text-align: center;
         display: inline-block;
@@ -22,30 +22,49 @@ const StyledIconTabControl = styled.div`
             margin: 0.5rem;
         }
     }
+
+    .tab {
+        color: darkgray;
+        cursor: pointer;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    .selectedTab {
+        color: rgb(255, 170, 102);
+    }
+
+    .disabledTab {
+        color: darkgray;
+        cursor: not-allowed;
+    }
 `
 
-export const IconTabControl = () => {
+export const IconTabControl = ({selectedTab, setSelectedTab}) => {
+
     return (
         <center>
             <StyledIconTabControl>
 
-                <div className="tab" style={{color: "darkgray", cursor: "not-allowed"}}>
+                <div className="disabledTab">
                     <i className="fa-solid fa-gear"></i>
                     <br/>Theme Settings
                 </div>
-                <div className="tab" style={{color: "darkgray", cursor: "not-allowed"}}>
+                <div className={selectedTab === "animations" ? "selectedTab" : "tab"} onClick={() => setSelectedTab("animations")}>
                     <i className="fa-solid fa-spinner"></i>
                     <br/>Animations
                 </div>
-                <div className="tab" style={{color: "rgb(255, 170, 102)"}}>
+                <div className={selectedTab === "charts" ? "selectedTab" : "tab"} onClick={() => setSelectedTab("charts")}>
                     <i className="fa-solid fa-chart-column"></i>
                     <br/>Charts
                 </div>
-                <div className="tab" style={{color: "darkgray", cursor: "not-allowed"}}>
+                <div className="disabledTab">
                     <i className="fa-solid fa-table-layout"></i>
                     <br/>UI packages
                 </div>
-                <div className="tab" style={{color: "darkgray", cursor: "not-allowed"}}>
+                <div className="disabledTab">
                     <i className="fa-solid fa-engine"></i>
                     <br/>Backend
                 </div>
