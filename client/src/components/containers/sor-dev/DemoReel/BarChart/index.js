@@ -1,27 +1,24 @@
-import { Chart, Series } from 'devextreme-react/chart';
+import { Chart, Series, Tooltip } from 'devextreme-react/chart';
 import styled from 'styled-components/macro'
 
 const dataSource = [{
-    day: 'Monday',
-    oranges: 3,
+    country: 'USA',
+    GDP: 20893746,
   }, {
-    day: 'Tuesday',
-    oranges: 2,
+    country: 'China',
+    GDP: 14722801,
   }, {
-    day: 'Wednesday',
-    oranges: 3,
+    country: 'Japan',
+    GDP: 5057759,
   }, {
-    day: 'Thursday',
-    oranges: 4,
+    country: 'Germany',
+    GDP: 3846414,
   }, {
-    day: 'Friday',
-    oranges: 6,
+    country: 'India',
+    GDP: 2664749,
   }, {
-    day: 'Saturday',
-    oranges: 11,
-  }, {
-    day: 'Sunday',
-    oranges: 4,
+    country: 'United Kingdom',
+    GDP: 2764198,
   }];
 
 
@@ -40,12 +37,13 @@ export const BarChart = () => {
         <StyledBarChart>
             <Chart dataSource={dataSource}>
                 <Series
-                    valueField="oranges"
-                    argumentField="day"
-                    name="My oranges"
+                    valueField="GDP"
+                    argumentField="country"
+                    name="GDP (US$ M)"
                     type="bar"
                     color="#ffaa66"
                 />
+                <Tooltip enabled={true} />
             </Chart>
         </StyledBarChart>
     )

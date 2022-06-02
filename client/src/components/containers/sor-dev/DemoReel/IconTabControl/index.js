@@ -42,6 +42,10 @@ export const IconTabControl = () => {
                     <br/>Charts
                 </div>
                 <div className="tab" style={{color: "darkgray", cursor: "not-allowed"}}>
+                    <i className="fa-solid fa-table-layout"></i>
+                    <br/>UI packages
+                </div>
+                <div className="tab" style={{color: "darkgray", cursor: "not-allowed"}}>
                     <i className="fa-solid fa-engine"></i>
                     <br/>Backend
                 </div>

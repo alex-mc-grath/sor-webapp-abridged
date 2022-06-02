@@ -10,6 +10,7 @@ import {
     Subtitle,
     Tooltip,
     Grid,
+    Font
   } from 'devextreme-react/chart';
 import styled from 'styled-components/macro'
 
@@ -18,47 +19,23 @@ const energySources = [
   ];
   
   const countriesInfo = [{
-    country: 'USA',
-    hydro: 59.8,
-    oil: 937.6,
-    gas: 582,
-    coal: 564.3,
-    nuclear: 187.9,
+    year: '2000',
+    population: 282
   }, {
-    country: 'China',
-    hydro: 74.2,
-    oil: 308.6,
-    gas: 35.1,
-    coal: 956.9,
-    nuclear: 11.3,
+    year: '2004',
+    population: 292
   }, {
-    country: 'Russia',
-    hydro: 40,
-    oil: 128.5,
-    gas: 361.8,
-    coal: 105,
-    nuclear: 32.4,
+    year: '2008',
+    population: 303
   }, {
-    country: 'Japan',
-    hydro: 22.6,
-    oil: 241.5,
-    gas: 64.9,
-    coal: 120.8,
-    nuclear: 64.8,
+    year: '2012',
+    population: 314
   }, {
-    country: 'India',
-    hydro: 19,
-    oil: 119.3,
-    gas: 28.9,
-    coal: 204.8,
-    nuclear: 3.8,
+    year: '2016',
+    population: 323
   }, {
-    country: 'Germany',
-    hydro: 6.1,
-    oil: 123.6,
-    gas: 77.3,
-    coal: 85.7,
-    nuclear: 37.8,
+    year: '2020',
+    population: 331
   }];
 
 
@@ -84,12 +61,12 @@ export const MyLineGraph = () => {
                 dataSource={countriesInfo}
             >
                 <CommonSeriesSettings
-                    argumentField="country"
+                    argumentField="year"
                     type="line"
                 />
                 <Series
-                    valueField="hydro"
-                    name='Hydro-electric'
+                    valueField="population"
+                    name='population (M)'
                 />
                 <Margin bottom={20} />
                 <ArgumentAxis
@@ -103,9 +80,10 @@ export const MyLineGraph = () => {
                     horizontalAlignment="center"
                     itemTextPosition="bottom"
                 />
-                <Export enabled={true} />
-                <Title text="Energy Consumption in 2004">
-                    <Subtitle text="(Millions of Tons, Oil Equivalent)" />
+                <Export enabled={false} />
+                <Title text="USA population size">
+                    <Font color="white" />
+                    <Subtitle text="(In Millions of People)" ><Font color="white" /></Subtitle>
                 </Title>
                 <Tooltip enabled={true} />
             </Chart>

@@ -6,6 +6,7 @@ import Funnel, {
     Item,
     Border,
     Label,
+    Font
   } from 'devextreme-react/funnel';
 import styled from 'styled-components/macro'
 
@@ -42,9 +43,10 @@ export const MyFunnelChart = () => {
                 valueField="value"
             >
                 <Title text="Website Conversions">
+                    <Font color="white" />
                     <Margin bottom={30} />
                 </Title>
-                <Export enabled={true} />
+                <Export enabled={false} />
                 <Tooltip enabled={true} format="fixedPoint" />
                 <Item>
                     <Border visible={true} />
