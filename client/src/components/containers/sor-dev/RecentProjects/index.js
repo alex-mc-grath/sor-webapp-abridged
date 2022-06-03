@@ -17,6 +17,7 @@ import image4 from '../../../../media/img/parkingsystem2.png';
 import image5 from '../../../../media/img/staystuck1.png';
 import image6 from '../../../../media/img/staystuck2.png';
 import { useState } from 'react';
+import e from 'express';
 // import image7 from '../../../../media/img/staystuck3.png';
 
 export const RecentProjects = () => {
@@ -46,14 +47,19 @@ export const RecentProjects = () => {
   // TODO: HOW TO DISPLAY ONE PROJECT AT A TIME? (CAROUSEL? ARROWS? keep it simple)
 
   const [idx, setIdx] = useState(0);
-  const current = projects[idx];
+  // const current = projects[idx];
 
   const idxManager = (direction) => {
     if (direction === 'forwards') {
-      if (idx < projects.length - 1) {
+      // if (idx > projects.length - 1) {
+      //   setIdx(idx + 1);
+      // } else if (idx < 1) {
+      //   setIdx(projects.length - 1);
+      // }
+      if (idx <= projects.length) {
         setIdx(idx + 1);
-      } else if (idx < 1) {
-        setIdx(projects.length - 1);
+      } else if (idx > projects.length) {
+        setIdx(0);
       }
     } else if (direction === 'backwards') {
       if (idx < 1) {

@@ -2,10 +2,14 @@ import styled from 'styled-components/macro';
 
 export const StyledHomepage = styled.article`
   /* //mobile-first */
-
+  position: relative;
   color: white;
   overflow: hidden;
   min-height: 100vh;
+
+  .flex-column {
+    padding: 1.3rem;
+  }
 
   h1 {
     width: 100%;

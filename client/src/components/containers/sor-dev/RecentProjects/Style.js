@@ -8,10 +8,18 @@ export const StyledRecentProjects = styled.div`
   background: #292929;
   width: auto;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 export const StyledProject = styled.div`
+  /* // Mobile */
+  @media (max-width: 1000px) {
+    .screenshots {
+      flex-direction: column !important;
+      margin: 2.5rem auto !important;
+    }
+  }
+
   position: relative;
   display: flex;
   justify-content: center;
