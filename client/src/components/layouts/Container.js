@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   @media (max-width: 1000px) {
@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   display: flex;
   justify-content: center;
-  width: ${props=>props.width ? props.width : 'auto'};
+  width: ${(props) => (props.width ? props.width : 'auto')};
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;

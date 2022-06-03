@@ -12,6 +12,7 @@ export const StyledRecentProjects = styled.div`
 `;
 
 export const StyledProject = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +22,27 @@ export const StyledProject = styled.div`
   color: black;
   padding: 2rem;
   /* height: 80%; */
+
+  button.arrows {
+    position: absolute;
+    border: none;
+    padding: 1rem;
+    color: grey;
+    border-radius: 50%;
+
+    &:hover {
+      background: ${(props) => props.theme.colors.primary};
+      transition: all 275ms ease;
+      color: white;
+    }
+
+    &:nth-of-type(1) {
+      left: 1rem;
+    }
+    &:nth-of-type(2) {
+      right: 1rem;
+    }
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -40,7 +62,7 @@ export const StyledProject = styled.div`
 
   .screenshots {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 50%;
@@ -48,6 +70,7 @@ export const StyledProject = styled.div`
     img {
       width: 50%;
       border-radius: 10px;
+      margin: 0 1rem;
 
       &:not(:first-of-type) {
         margin-top: 10px;
@@ -113,6 +136,7 @@ export const StyledProject = styled.div`
     width: fit-content;
     font-size: 1.2rem;
     margin: auto;
+    margin-top: 2rem;
 
     a {
       margin-right: 1rem;

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -12,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
   }
+  
+  html, body, #app, #app>div {
+  height: 100%
+}
+
 
   body {
     /* font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif; */
@@ -114,6 +119,6 @@ li{
 }
 
 
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
