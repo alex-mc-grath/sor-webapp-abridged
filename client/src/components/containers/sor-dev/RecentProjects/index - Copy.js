@@ -17,6 +17,7 @@ import image4 from '../../../../media/img/parkingsystem2.png';
 import image5 from '../../../../media/img/staystuck1.png';
 import image6 from '../../../../media/img/staystuck2.png';
 import { useState } from 'react';
+import e from 'express';
 // import image7 from '../../../../media/img/staystuck3.png';
 
 export const RecentProjects = () => {
