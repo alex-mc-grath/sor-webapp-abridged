@@ -7,6 +7,8 @@ import {MyLineGraph} from './MyLineGraph'
 import {MyFunnelChart} from './MyFunnelChart'
 import {IconTabControl} from './IconTabControl'
 import {LottieAnimations} from './LottieAnimations'
+import { UIFrameworks } from './UIFrameworks'
+import {ScrollAnimation} from './ScrollAnimation'
 
 const StyledDemoReel = styled.div`
     min-height:100vh;
@@ -38,7 +40,13 @@ export const DemoReel = () => {
                 </center>
             }
             {selectedTab === "animations" &&
+                <>
                 <LottieAnimations />
+                <ScrollAnimation />
+                </>
+            }
+            {selectedTab === "ui" &&
+                <UIFrameworks />
             }
         </StyledDemoReel>
     )

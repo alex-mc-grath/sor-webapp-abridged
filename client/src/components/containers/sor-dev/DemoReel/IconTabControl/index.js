@@ -14,7 +14,7 @@ const StyledIconTabControl = styled.div`
         text-align: center;
         display: inline-block;
         justify-content: center;
-        padding: 2rem;
+        padding: min(2rem,2.5vw);
         font-size: 1.2rem;
 
         i {
@@ -60,7 +60,7 @@ export const IconTabControl = ({selectedTab, setSelectedTab}) => {
                     <i className="fa-solid fa-chart-column"></i>
                     <br/>Charts
                 </div>
-                <div className="disabledTab">
+                <div className={selectedTab === "ui" ? "selectedTab" : "tab"} onClick={() => setSelectedTab("ui")}>
                     <i className="fa-solid fa-table-layout"></i>
                     <br/>UI packages
                 </div>
