@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 // /projects/project1/screenshots/image.png
 // /projects/project1/info (in DB instead? so I should have a form that submits all?)
 
-import image1 from '../../../../media/ss.png';
-import image2 from '../../../../media/ss2.png';
+import image1 from '../../../../media/img/sor-dev/linear1.png';
+import image2 from '../../../../media/img/sor-dev/linear2.png';
 import LogoAnimation from '../LogoAnimation';
 
 import image3 from '../../../../media/img/parkingsystem1.png';
@@ -17,6 +17,7 @@ import image4 from '../../../../media/img/parkingsystem2.png';
 import image5 from '../../../../media/img/staystuck1.png';
 import image6 from '../../../../media/img/staystuck2.png';
 import { useState } from 'react';
+
 // import image7 from '../../../../media/img/staystuck3.png';
 
 export const RecentProjects = () => {
@@ -55,9 +56,11 @@ export const RecentProjects = () => {
       // } else if (idx < 1) {
       //   setIdx(projects.length - 1);
       // }
-      if (idx <= projects.length) {
+      console.log(idx);
+      if (idx <= projects.length - 1) {
         setIdx(idx + 1);
-      } else if (idx > projects.length) {
+      }
+      if (idx >= projects.length - 1) {
         setIdx(0);
       }
     } else if (direction === 'backwards') {

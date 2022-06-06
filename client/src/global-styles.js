@@ -62,6 +62,30 @@ button:disabled {
   cursor: default;
 }
 
+.main-btn{
+  display:flex;
+  color:white;
+  font-size:1.5rem !important;
+  margin-right:1rem;
+  margin-left: auto;
+  /* margin-top: 1rem; */
+  padding: .5rem 1rem;
+  width:auto;
+  justify-content:center;
+  align-items:center;
+  transition: .8s all ease-out;
+  border: none;
+  background: ${(props) => props.theme.colors.secondary};
+  border-radius: 10px;
+
+  &:hover{
+    /* background: #161853; */
+    color: #292C6D;
+    cursor:pointer;
+    transition: .3s all ease-in-out;
+    }
+}
+
 a {
   text-decoration: none;
   color: black;

@@ -14,6 +14,7 @@ import { Hero } from '../HomePage/Hero/';
 import { SorSeoSvg } from './SorSeoSvg';
 import { motion } from 'framer-motion';
 import { variants1 } from '../../../utils/animationVariants';
+import BubbleMenu from '../../../layouts/BubbleMenu';
 
 const key = 'home';
 
@@ -164,12 +165,12 @@ export default function HomePage() {
           }}
         />
 
-        <SorSeoSvg onClick={() => onceToggled()} />
+        <BubbleMenu onceToggled={onceToggled} showNav={showNav} linkOptions={['/dev', '/app/logoin', '/how-it-works']} />
+        {/* <SorSeoSvg onClick={() => onceToggled()} /> */}
 
-        <div className={`circle-container ${showNav ? 'show-nav' : ''}`}>
+        {/* <div className={`circle-container ${showNav ? 'show-nav' : ''}`}>
           <div className='circle'>
             <button id='open' onClick={() => navigate('/app/login')}>
-              {/* <i class="fa-solid fa-user"></i> */}
               <i class='fa-solid fa-user-astronaut'></i>
             </button>
             <button id='open' onClick={() => navigate('/how-it-works')}>
@@ -179,7 +180,7 @@ export default function HomePage() {
               Dev
             </button>
           </div>
-        </div>
+        </div> */}
       </StyledHomepage>
     </motion.div>
   );

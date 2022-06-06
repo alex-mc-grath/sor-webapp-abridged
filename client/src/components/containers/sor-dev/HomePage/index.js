@@ -79,6 +79,10 @@ export const DevHomePage = () => {
           <LogoAnimation branchName='DEV' />
         </Container>
         <WorkingCarousel sliderImgs={sliderImgs} />
+
+        <Link to='/dev/demo-reel' className='bottom-page-button'>
+          view demo reel
+        </Link>
       </StyledHomepage>
     </motion.div>
   );

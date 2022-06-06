@@ -7,6 +7,22 @@ export const StyledHomepage = styled.article`
   overflow: hidden;
   min-height: 100vh;
 
+  .bottom-page-button {
+    position: absolute;
+    bottom: 2rem;
+    background: ${(props) => props.theme.colors.quaternary};
+    width: 20%;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675);
+
+    &:hover {
+      background: ${(props) => props.theme.colors.tertiary};
+      transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+
   .flex-column {
     padding: 1.3rem;
   }
