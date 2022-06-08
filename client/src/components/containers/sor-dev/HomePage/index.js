@@ -4,6 +4,7 @@
  * This is the dev homepage, at the '/dev/' route
  */
 
+import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { WorkingCarousel } from '../../../layouts/WorkingCarousel';
@@ -15,6 +16,7 @@ import { motion } from 'framer-motion';
 import LogoAnimation from '../LogoAnimation';
 
 import { SorSeoSvg } from '../../sor-seo/HomePage/SorSeoSvg';
+import { BubbleMenu } from '../../../layouts/BubbleMenu/';
 
 import image1 from '../../../../media/img/sor-dev/11.png';
 import image2 from '../../../../media/img/sor-dev/22.jpg';
@@ -47,6 +49,11 @@ export const DevHomePage = () => {
   // option 1 mettre StyledHomepage comme page wrapper en article
   // option 2 laisser article toujours
 
+  const [showNav, setShowNav] = useState(false);
+  const [viewDemoBtn, setViewDemoBtn] = useState(false);
+
+  setTimeout(() => setViewDemoBtn(true), 2000);
+
   return (
     <motion.div
       variants={variants}
@@ -62,7 +69,7 @@ export const DevHomePage = () => {
           <title>SOR DEV | Modern Web Experiences</title>
           <meta name='description' content='software development needs - modern web experiences - MERN Stack' />
         </Helmet>
-
+        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/how-it-works']} textOptions={['Back', 'Growth']} />
         <Container>
           <div className='flex-column'>
             {/* <Link to="/" style={{ color: 'white' }}>
@@ -79,10 +86,11 @@ export const DevHomePage = () => {
           <LogoAnimation branchName='DEV' />
         </Container>
         <WorkingCarousel sliderImgs={sliderImgs} />
-
-        <Link to='/dev/demo-reel' className='bottom-page-button'>
-          view demo reel
-        </Link>
+        {viewDemoBtn && (
+          <Link to='/dev/demo-reel' className='bottom-page-button'>
+            view demo reel
+          </Link>
+        )}
       </StyledHomepage>
     </motion.div>
   );

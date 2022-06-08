@@ -138,8 +138,13 @@ export default function HomePage() {
   // },3000)
 
   const onceToggled = () => {
-    setView('');
-    setShowNav(!showNav);
+    if (showNav) {
+      setView('zoomed');
+      setShowNav(!showNav);
+    } else {
+      setView('');
+      setShowNav(!showNav);
+    }
   };
 
   return (
@@ -165,7 +170,7 @@ export default function HomePage() {
           }}
         />
 
-        <BubbleMenu onceToggled={onceToggled} showNav={showNav} linkOptions={['/dev', '/app/logoin', '/how-it-works']} />
+        <BubbleMenu onceToggled={onceToggled} showNav={showNav} linkOptions={['/dev', '/app/login', '/how-it-works']} textOptions={['Dev', 'Growth']} />
         {/* <SorSeoSvg onClick={() => onceToggled()} /> */}
 
         {/* <div className={`circle-container ${showNav ? 'show-nav' : ''}`}>

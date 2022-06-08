@@ -29,6 +29,7 @@ import { ResourcesOverview } from '../sor-seo/ResourcesOverview';
 import { TechStack } from '../sor-dev/TechStack';
 import { About } from '../sor-dev/About';
 import { DemoReel } from '../sor-dev/DemoReel';
+import { Analytics } from '../sor-app/Analytics';
 
 const AppWrapper = styled.div`
   /* max-width: calc(768px + 16px * 2); */
@@ -67,7 +68,7 @@ export default function App() {
           <Route path='/app/' element={<Dashboard />} />
           <Route path='/app/login' element={<Login />} />
           <Route path='/app/select-connections' element={<Login />} />
-          <Route path='/app/analytics' element={<Login />} />
+          <Route path='/app/analytics' element={<Analytics />} />
 
           {/* <Route path="" component={NotFoundPage} /> */}
         </Routes>

@@ -10,7 +10,8 @@ export const StyledHomepage = styled.article`
   .bottom-page-button {
     position: absolute;
     bottom: 2rem;
-    background: ${(props) => props.theme.colors.quaternary};
+    background: linear-gradient(black, #0a0a0a);
+    color: white;
     width: 20%;
     text-align: center;
     padding: 1rem 2rem;
@@ -18,7 +19,7 @@ export const StyledHomepage = styled.article`
     transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675);
 
     &:hover {
-      background: ${(props) => props.theme.colors.tertiary};
+      background: ${(props) => props.theme.colors.black};
       transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
   }
@@ -31,6 +32,12 @@ export const StyledHomepage = styled.article`
     width: 100%;
     font-size: 3rem;
     margin: 0;
+  }
+
+  .carousel-root {
+    &:focus {
+      outline: none;
+    }
   }
 
   .carousel.carousel-slider {

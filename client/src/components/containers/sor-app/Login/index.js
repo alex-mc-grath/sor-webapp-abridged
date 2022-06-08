@@ -1,14 +1,17 @@
-import LogoAnimation from '../../sor-dev/LogoAnimation'
-import { StyledLogin } from './Style'
-import styled from 'styled-components/macro'
+import { useState } from 'react';
+import LogoAnimation from '../../sor-dev/LogoAnimation';
+import { StyledLogin } from './Style';
+import styled from 'styled-components/macro';
 
-import { motion } from 'framer-motion'
-import { variants1 } from '../../../utils/animationVariants'
+import { motion } from 'framer-motion';
+import { variants1 } from '../../../utils/animationVariants';
 
-import { signIn } from './action'
-import { useInput } from '../../../hooks/useInput'
-import { useNavigate } from 'react-router-dom'
+import { signIn } from './action';
+import { useInput } from '../../../hooks/useInput';
+import { useNavigate } from 'react-router-dom';
+import { LoginAnimation } from './LoginAnimation';
 
+import { BubbleMenu } from '../../../layouts/BubbleMenu/';
 
 const CutomizedLogoAnimation = styled(LogoAnimation)`
   /* background: ${(props) => props.theme.colors.black}; */
@@ -21,13 +24,16 @@ const CutomizedLogoAnimation = styled(LogoAnimation)`
   .sor-dev-logo-container {
     margin: auto;
   }
-`
+`;
 
 export const Login = () => {
-  const { value: email, bind: bindEmail, resetEmail } = useInput('')
-  const { value: password, bind: bindPassword, resetPassword } = useInput('')
+  const { value: email, bind: bindEmail, resetEmail } = useInput('');
+  const { value: password, bind: bindPassword, resetPassword } = useInput('');
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const [view, setView] = useState('');
+  const [showNav, setShowNav] = useState(false);
 
   //     const AUTH_TOKEN = 'auth-token';
 
@@ -54,45 +60,37 @@ export const Login = () => {
   //   });
 
   const onSubmit = (e) => {
-    e.preventDefault()
-    signIn({ email, password })
-    // if()
-    // navigate('/app/')
-  }
+    e.preventDefault();
+    signIn({ email, password });
+
+    // if(login success){
+    setView('logInSuccess');
+    setTimeout(() => navigate('/app/analytics'), 1800);
+    // }
+  };
 
   return (
     <motion.div
       variants={variants1}
-      initial="enter"
-      animate="center"
-      exit="exit"
+      initial='enter'
+      animate='center'
+      exit='exit'
       transition={{
         x: { type: 'spring', stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      }}
-    >
+        // opacity: { duration: 0.2 },
+      }}>
       <StyledLogin>
+        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/how-it-works']} textOptions={['Dev', 'Growth']} />
         <form>
-          <CutomizedLogoAnimation branchName="APP" />
-          <span className="forgot-password">Forgot Password?</span>
-          <div className="group">
-            <input
-              {...bindEmail}
-              type="email"
-              name="email"
-              id="email"
-              placeholder="email@contact.com"
-            />
-            <input
-              {...bindPassword}
-              type="password"
-              name="password"
-              id="password"
-            />
+          {view === '' ? <CutomizedLogoAnimation branchName='APP' /> : <LoginAnimation />}
+          <span className='forgot-password'>Forgot Password?</span>
+          <div className='group'>
+            <input {...bindEmail} type='email' name='email' id='email' placeholder='email@contact.com' />
+            <input {...bindPassword} type='password' name='password' id='password' />
           </div>
           <button onClick={onSubmit}>Connect</button>
         </form>
       </StyledLogin>
     </motion.div>
-  )
-}
+  );
+};

@@ -46,7 +46,7 @@ export const StyledBubbleMenu = styled.div`
         }
 
         &:nth-of-type(1) {
-          top: 75%;
+          top: 77%;
           left: 7%;
         }
         &:nth-of-type(2) {

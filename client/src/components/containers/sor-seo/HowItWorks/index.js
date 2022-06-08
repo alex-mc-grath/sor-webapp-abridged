@@ -50,7 +50,7 @@ export const HowItWorks = () => {
           <meta name='description' content='A React.js Boilerplate application homepage' />
         </Helmet>
         <LogoAnimation branchName='SEO' mode='dark' />
-        <h2>This page is currently under development, please try again later.</h2>
+        <h2>We're currently upgrading this page, please try again later.</h2>
 
         {/* <Container>
           <div>
