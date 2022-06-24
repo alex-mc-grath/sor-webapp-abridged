@@ -13,13 +13,13 @@ export const WorkingCarousel = ({ sliderImgs }) => {
       showThumbs={false}
       autoPlay={true}
       infiniteLoop
-      centerMode={true}
+      // centerMode={true}
       showStatus={false}
       showIndicators={false}
       showArrows={false}
       emulateTouch
       autoFocus
-      centerSlidePercentage={95}
+      // centerSlidePercentage={95}
       stopOnHover={false}
       useKeyboardArrows>
       <Link to='/dev/recent-projects'>
@@ -29,13 +29,13 @@ export const WorkingCarousel = ({ sliderImgs }) => {
         </SliderImg>
       </Link>
       <Link to='/dev/our-tech' className='card'>
-        <SliderImg img={sliderImgs[1]} style={{ alignItems: 'center' }}>
+        <SliderImg img={sliderImgs[1]}>
           <h4>Our Tech Stack</h4>
           <p>We use the most recent technologies and framework to build sophisticated applications.</p>
         </SliderImg>
       </Link>
       <Link to='/dev/about' className='card'>
-        <SliderImg img={sliderImgs[2]} style={{ alignItems: 'flex-end' }}>
+        <SliderImg img={sliderImgs[2]}>
           <h4>What's SOR DEV?</h4>
           <p>Enterprise-level software solutions, progressive web apps, etc. Discover what it's like to work with us.</p>
         </SliderImg>

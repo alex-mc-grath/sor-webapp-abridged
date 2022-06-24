@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
+*{
+  box-sizing:border-box;
+}
+
   html,
   body {
     scroll-behaviour: smooth;
@@ -19,14 +23,12 @@ const GlobalStyle = createGlobalStyle`
 
 
   body {
-    /* font-family: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif; */
     font-family: 'Plus Jakarta Sans';
     -webkit-font-smoothing: antialiased;
   }
 
   body.fontLoaded {
     /* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
-    /* font-family:'Black Delights Font'; */
   }
 
   article{

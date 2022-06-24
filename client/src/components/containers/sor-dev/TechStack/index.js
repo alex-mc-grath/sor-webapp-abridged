@@ -11,9 +11,7 @@ import LogoAnimation from '../LogoAnimation';
 export const TechStack = () => {
   return (
     <StyledTechStack img={image}>
-      <SorSeoSvg
-      // onClick={() => onceToggled()}
-      />
+      {/* <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/how-it-works']} textOptions={['Back', 'Growth']}/> */}
       <Container>
         {/* // add icons?  */}
         {/* add button "see demo reels" */}

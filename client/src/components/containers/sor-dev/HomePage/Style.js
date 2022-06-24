@@ -10,17 +10,21 @@ export const StyledHomepage = styled.article`
   .bottom-page-button {
     position: absolute;
     bottom: 2rem;
-    background: linear-gradient(black, #0a0a0a);
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
+    opacity: 0.8;
     color: white;
-    width: 20%;
+    width: 50%;
     text-align: center;
     padding: 1rem 2rem;
     font-size: 1.2rem;
     transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675);
 
     &:hover {
-      background: ${(props) => props.theme.colors.black};
       transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      opacity: 1;
     }
   }
 
@@ -29,12 +33,18 @@ export const StyledHomepage = styled.article`
   }
 
   h1 {
-    width: 100%;
+    width: 90%;
     font-size: 3rem;
     margin: 0;
+    padding: 1rem;
+  }
+
+  p {
+    padding: 0.4rem 1rem;
   }
 
   .carousel-root {
+    width: 100%;
     &:focus {
       outline: none;
     }
@@ -47,17 +57,27 @@ export const StyledHomepage = styled.article`
   }
 
   .slider-wrapper {
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    /* min-width: fit-content; */
+
     .slider {
       display: flex;
-      align-items: center;
-      min-width: fit-content;
+      /* align-items: center;
+
+      min-width: fit-content; */
+
+      &.animated {
+        /* justify-content: flex-start; */
+      }
       .slide {
         width: 100%;
         min-width: 100%;
         position: relative;
         z-index: 0;
         transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-        margin: auto 2rem;
+        margin: auto;
       }
     }
   }
@@ -78,6 +98,7 @@ export const StyledHomepage = styled.article`
     h1 {
       font-size: 4rem;
       width: 50%;
+      padding: 0;
     }
     p {
       font-size: 2rem;

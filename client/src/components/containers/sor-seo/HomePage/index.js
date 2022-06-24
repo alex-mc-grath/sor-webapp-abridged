@@ -100,7 +100,7 @@ export default function HomePage() {
         <span className='author'>- Stephen R Covey</span>
       </span>
     );
-  }, 3000);
+  }, 4000);
 
   // setTimeout(() => {
   //   setIntroText(<span className='gradient-color'>To learn, and not to do, is really not to learn To know, and not do, is really not to know</span>);
@@ -170,7 +170,7 @@ export default function HomePage() {
           }}
         />
 
-        <BubbleMenu onceToggled={onceToggled} showNav={showNav} linkOptions={['/dev', '/app/login', '/how-it-works']} textOptions={['Dev', 'Growth']} />
+        <BubbleMenu onceToggled={onceToggled} showNav={showNav} linkOptions={['/dev', '/app/login', '/growth']} textOptions={['Dev', 'Growth']} />
         {/* <SorSeoSvg onClick={() => onceToggled()} /> */}
 
         {/* <div className={`circle-container ${showNav ? 'show-nav' : ''}`}>
@@ -178,7 +178,7 @@ export default function HomePage() {
             <button id='open' onClick={() => navigate('/app/login')}>
               <i class='fa-solid fa-user-astronaut'></i>
             </button>
-            <button id='open' onClick={() => navigate('/how-it-works')}>
+            <button id='open' onClick={() => navigate('/growth')}>
               Growth
             </button>
             <button id='open' onClick={() => navigate('/dev')}>

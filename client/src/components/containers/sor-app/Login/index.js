@@ -80,7 +80,7 @@ export const Login = () => {
         // opacity: { duration: 0.2 },
       }}>
       <StyledLogin>
-        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/how-it-works']} textOptions={['Dev', 'Growth']} />
+        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/growth']} textOptions={['Dev', 'Growth']} />
         <form>
           {view === '' ? <CutomizedLogoAnimation branchName='APP' /> : <LoginAnimation />}
           <span className='forgot-password'>Forgot Password?</span>

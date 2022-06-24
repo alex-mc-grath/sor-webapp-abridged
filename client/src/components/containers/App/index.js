@@ -21,7 +21,7 @@ import { Login } from '../sor-app/Login';
 import { DevHomePage } from '../sor-dev/HomePage';
 
 import { AnimatePresence } from 'framer-motion';
-import { HowItWorks } from '../sor-seo/HowItWorks';
+import { Growth } from '../sor-seo/Growth';
 
 import { RecentProjects } from '../sor-dev/RecentProjects/';
 import { Dashboard } from '../sor-app/Dashboard';
@@ -36,7 +36,7 @@ const AppWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   min-height: 100%;
-  background: #000;
+  background: #fafafa;
   /* padding: 0 16px; */
   flex-direction: column;
 `;
@@ -53,7 +53,7 @@ export default function App() {
       <AnimatePresence exitBeforeEnter={false} initial={false}>
         <Routes location={location} key={location.pathname}>
           <Route path='/' element={<HomePage />} />
-          <Route path='/how-it-works' element={<HowItWorks />} />
+          <Route path='/growth' element={<Growth />} />
           <Route path='/resources' element={<ResourcesOverview />} />
           <Route path='/contact' element={<Contact />} />
 

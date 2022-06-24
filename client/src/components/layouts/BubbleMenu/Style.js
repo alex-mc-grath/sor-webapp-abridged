@@ -8,6 +8,8 @@ export const StyledBubbleMenu = styled.div`
     top: 0px;
     right: 0px;
 
+    outline: none;
+
     &.show-nav .circle {
       transform: rotate(0deg);
     }

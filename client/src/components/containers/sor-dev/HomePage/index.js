@@ -16,7 +16,7 @@ import { motion } from 'framer-motion';
 import LogoAnimation from '../LogoAnimation';
 
 import { SorSeoSvg } from '../../sor-seo/HomePage/SorSeoSvg';
-import { BubbleMenu } from '../../../layouts/BubbleMenu/';
+import { BubbleMenu } from '../../../layouts/BubbleMenu';
 
 import image1 from '../../../../media/img/sor-dev/11.png';
 import image2 from '../../../../media/img/sor-dev/22.jpg';
@@ -69,7 +69,7 @@ export const DevHomePage = () => {
           <title>SOR DEV | Modern Web Experiences</title>
           <meta name='description' content='software development needs - modern web experiences - MERN Stack' />
         </Helmet>
-        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/how-it-works']} textOptions={['Back', 'Growth']} />
+        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/growth']} textOptions={['Back', 'Growth']} />
         <Container>
           <div className='flex-column'>
             {/* <Link to="/" style={{ color: 'white' }}>
@@ -86,6 +86,7 @@ export const DevHomePage = () => {
           <LogoAnimation branchName='DEV' />
         </Container>
         <WorkingCarousel sliderImgs={sliderImgs} />
+
         {viewDemoBtn && (
           <Link to='/dev/demo-reel' className='bottom-page-button'>
             view demo reel

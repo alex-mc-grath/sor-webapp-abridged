@@ -8,7 +8,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   width: ${(props) => (props.width ? props.width : 'auto')};
-  max-width: 1280px;
+  max-width: ${(props) => (props.type === 'large' ? '1400px' : '1280px')};
   margin-left: auto;
   margin-right: auto;
 
