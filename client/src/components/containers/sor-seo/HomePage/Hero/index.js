@@ -9,8 +9,8 @@ export const Hero = ({content, view}) => {
 
   return (
     <StyledHero mainImage={heroImage} className={`${view === 'zoomed' ? 'zoomed' : ''}`}>
-        <Svg onClick={<Navigate to="/dev"/>} />
-        <H1 onClick={<Navigate to="/dev"/>} >{content.h1}</H1>
+        <Svg/>
+        <H1>{content.h1}</H1>
     </StyledHero>
   )
 }

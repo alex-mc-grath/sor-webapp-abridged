@@ -6,8 +6,6 @@ import App from './components/containers/App/';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './components/layouts/theme/theme-settings';
 
-import './index.css'
-
 // import { setContext } from '@apollo/client/link/context';
 // import { split } from '@apollo/client';
 // import { WebSocketLink } from '@apollo/client/link/ws';

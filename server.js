@@ -1,16 +1,13 @@
-import { ApolloServer } from 'apollo-server'
+import config from './server/config/index.js';
+import makeServer from './server/express/index.js';
+import path from 'path'
+import { fileURLToPath } from 'url';
 
-import { typeDefs } from './server/schema.js'
-import { Mutation } from './server/resolvers/Mutation.js'
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const indexPath = path.resolve(__dirname, 'client', 'build', 'index.html');
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers: {
-    Mutation,
-  },
-})
-server.listen().then(({ url }) => console.log(`server ready on ${url}`))
 
-// refactor whole project
-// jwtSign(email, accountType)
-// .env
+const server = makeServer({config, indexPath});
+
+

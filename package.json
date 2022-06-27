@@ -1,28 +1,54 @@
 {
-  "name": "sor-new-webapp",
+  "name": "police-app",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node backend/server",
-    "server": "nodemon backend/server",
+    "start": "node server",
+    "server": "nodemon server",
     "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "dev2": "concurrently \"node backend/server.js\" \"npm start --prefix ./client/\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.toptal.com/screening/Serguei-Nevarko.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^3.8.1",
-    "concurrently": "^7.2.1",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cuid": "^2.1.8",
+    "devextreme": "^21.2.8",
+    "devextreme-react": "^21.2.8",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.3",
     "express-async-handler": "^1.2.0",
-    "express-graphql": "^0.12.0",
-    "graphql": "^16.5.0",
-    "mongoose": "^6.3.5",
-    "nodemon": "^2.0.16"
+    "express-joi-validate": "^3.0.1",
+    "express-validator": "^6.14.0",
+    "formik": "^2.2.9",
+    "framer-motion": "^6.3.11",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "lottie-react": "^2.2.1",
+    "mongodb": "^4.5.0",
+    "react-helmet": "^6.1.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.3.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "twilio": "^3.76.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "14.16.0"
   }
 }
