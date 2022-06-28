@@ -15,6 +15,7 @@ import ctaImage from '../../../../media/img/unsplash2.jpg';
 import blendingInImage from '../../../../media/img/unsplash5.jpg';
 import mimicHumanImage from '../../../../media/img/unsplash4.jpg';
 import { ClientLogos } from './ClientLogos';
+import { ComparativeTable } from '../ComparativeTable';
 
 const variants1 = {
   enter: (direction) => {
@@ -100,6 +101,7 @@ export const Growth = () => {
             {/* <p>Next-gen account engagement solutions for complex B2b sales cycles</p> */}
           </div>
         </Container>
+
         {/* 2 IDEAS : SKEW BG IMG ON MOUSE MOVE AND 2) APPEAR SECTION LEFT AND RIGHT LIKE IN 50IN50 PROJECT */}
         <Container type='large' className='special-container'>
           <div className='section blending-in' ref={box}>
@@ -125,8 +127,8 @@ export const Growth = () => {
             <div className='text-box'>
               <h2>Authenticity at the forefront</h2>
               <p>
-                Engagement can be done in many ways. But in our business the way you do things matter. All our campaigns are built onto our 3 core values: It has to be authentic. It has to be humble.
-                And it has to give.
+                The most important thing to keep in mind when automating actions is that the end goal is not to "trick" people into doing actions they wouldn't otherwise have done, it's to sparkle a
+                first interaction in a way that feels natural. It puts you on their map, it reaches out professionally, and when well done it opens a direct communication channel.
               </p>
               <Link to='/resources' className='main-btn'>
                 Resources &nbsp;<i class='fa-thin fa-arrow-right'></i>
@@ -134,19 +136,19 @@ export const Growth = () => {
             </div>
           </div>
           <div className='section mimicHuman' ref={box}>
-            <img src={mimicHumanImage} alt='' />
+            <img src={mimicHumanImage} alt='' width={'100%'} />
             <div className='text-box'>
-              <h2>Time your messages and behaviours to mimic human-like behaviour</h2>
+              <h2>Time your messages and actions to mimic human-like behaviour</h2>
               {/* <p>Non-invasive, non-agressive approach</p> */}
               <p>
-                Our number one key success ingredient is our systematized approach:
+                Our number one key success ingredient is a systematized approach:
                 {/* (could have an iceberg stats popping in as you scroll - maybe strate par strate could be a nice effect) */}
                 <ul>
                   <li>you don't want to spam LinkedIn with requests</li>
                   <li>you don't want to spam LinkedIn with anything, in fact</li>
-                  <li>but LinkedIn has 840M professionals and 60M companies listed,</li>
+                  <li>but LinkedIn has 810M professionals and 58M companies listed,</li>
                   <li>
-                    so the way to systematize things is to do thorough data manipulation, multiple filters, manual filters and THEN AND ONLY THEN, automate a process with this highly epurated Target
+                    so the way to systematize things is to do thorough data manipulation, multiple filters, manual filters and then and only then, automate a process with this highly epurated Target
                     Account List
                   </li>
                 </ul>
@@ -156,6 +158,7 @@ export const Growth = () => {
               </Link>
             </div>
           </div>
+          <ComparativeTable item={'item1'} itemDescription={'itemDesc 1'} />
           {/* <div className='section' ref={box}>
             <div>
               <h2>Time your messages and behaviours to mimic human-like behaviour</h2>
@@ -182,7 +185,7 @@ export const Growth = () => {
           Reach buying committees with full insights
           Ready-to-go, */}
           <div className='section cta'>
-            <img src={ctaImage} alt='' />
+            <img src={ctaImage} alt='' width={'100%'} />
             <div>
               <h2>Get started with SOR SEO today</h2>
               <Link to='/resources' className='main-btn'>

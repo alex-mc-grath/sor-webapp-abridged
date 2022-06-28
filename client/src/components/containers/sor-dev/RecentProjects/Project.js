@@ -4,9 +4,9 @@ import { SortableList } from '../../../SortableList/index';
 
 export const Project = ({ projectInfo, idxManager }) => {
   // project title, key highlights, 2 screenshots
-  const { title, desc, images, links } = projectInfo;
+  const { title, desc, images, featuresList, links } = projectInfo;
 
-  const list = ['Linear API integration', '3 ways sortable lists (drag and drop)', 'Custom Editor and Publisher'];
+  // const list = ['Linear API integration', '3 ways sortable lists (drag and drop)', 'Custom Editor and Publisher'];
 
   const orderChangeCallback = (obj) => {
     console.log(obj);
@@ -31,11 +31,11 @@ export const Project = ({ projectInfo, idxManager }) => {
         {/* {key, item, data} */}
         <SortableList
           orderChangeCallback={orderChangeCallback}
-          items={list.map((item, idx) => {
+          items={featuresList.map((item, idx) => {
             return { key: 'item' + idx, item: <div>{item}</div>, data: '' };
           })}
         />
-        {console.log(list)}
+        {/* {console.log(featuresList)} */}
 
         {/* 
     <SortableList>

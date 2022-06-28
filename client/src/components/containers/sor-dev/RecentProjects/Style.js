@@ -26,7 +26,7 @@ export const StyledProject = styled.div`
   align-items: center;
   background: #fafafa;
   width: 90%;
-  min-height: 60vh;
+  min-height: 75vh;
   border-radius: 10px;
   color: black;
   padding: 2rem;
@@ -59,8 +59,10 @@ export const StyledProject = styled.div`
     .screenshots {
       margin-top: 1rem;
       width: 100% !important;
+      max-width: 100% !important;
       img {
         width: 100% !important;
+        /* max-width: 100% !important; */
 
         &:not(:first-of-type) {
           margin-top: 10px;

@@ -11,9 +11,10 @@ export const WorkingCarousel = ({ sliderImgs }) => {
       interval={3400}
       swipeScrollTolerance={200}
       showThumbs={false}
-      autoPlay={true}
+      autoPlay={false}
       infiniteLoop
-      // centerMode={true}
+      centerMode={true}
+      // centerSlidePercentage={90}
       showStatus={false}
       showIndicators={false}
       showArrows={false}

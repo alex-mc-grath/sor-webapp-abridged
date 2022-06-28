@@ -29,18 +29,27 @@ export const RecentProjects = () => {
       desc: 'for update tickets and issues',
       images: [image1, image2],
       links: ['link1', 'https://github.com/alex-mc-grath/changelog-builder'],
+      featuresList: ['linear API integration', '3 ways sortable lists (drag and drop)', 'custom editor and publisher'],
     },
     {
       title: 'Parking System MVP',
       desc: 'open search and twilio integration for mobile access to DB',
       images: [image3, image4],
       links: [],
+      featuresList: [
+        'open search (permit no., name, etc.)',
+        'twilio integration for mobile texts requests',
+        'mobile-first responsiveness',
+        'find users by vehicles',
+        'find all users linked to a vehicle',
+      ],
     },
     {
       title: 'StayStuck XXL',
       desc: 'cannabis modern UX',
       images: [image5, image6],
       links: [],
+      featuresList: ['dynamic coloring of categories', 'optimized pre-loading', 'interactive joystick', 'mobile-first design'],
     },
   ];
 

@@ -5,6 +5,7 @@ export const StyledHomepage = styled.article`
   position: relative;
   color: white;
   overflow: hidden;
+  background: black;
   min-height: 100vh;
 
   .bottom-page-button {
@@ -88,7 +89,7 @@ export const StyledHomepage = styled.article`
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(15, 15, 15);
+    /* background: rgb(15, 15, 15); */
     bottom: 0;
     position: absolute;
     width: 100%;
@@ -110,6 +111,14 @@ export const StyledHomepage = styled.article`
         font-size: 1.3rem;
       }
     }
+    /* 
+    .slider-wrapper {
+      width: 100%;
+
+      .slide {
+        width: 50px;
+      }
+    } */
 
     .flex-column {
       position: relative;
