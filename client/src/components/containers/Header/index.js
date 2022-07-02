@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 const HeaderRouter = () => {
   const location = useLocation();
-  // console.log(location);
+  
   // let path = 'contact'
   let path = location.pathname.slice(1);
 

@@ -5,7 +5,9 @@ export const theme = () => ({
         tertiary:"#a3eabe",
         quaternary:"#fafafa",
         quinary:"#1a1a40",
-        black: "#2c2c2d"
+        black: "#2c2c2d",
+        error: "#d74e55",
+        white: "#fafafa"
       }
     }   
 )

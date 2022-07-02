@@ -52,7 +52,7 @@ export default function makeAuthUser ({fetchUsers, passwordManager, authManager}
                     'Content-Type': "application/json"
                 },
                 statusCode: 200,
-                body: {token: authToken}
+                body: {email: user.email, accountType: user.accountType, token: authToken}
             }
         }
         catch(e)

@@ -79,3 +79,15 @@ export const StyledLogin = styled.div`
     }
   }
 `;
+
+export const StyledFormError = styled.p`
+  background: ${({theme}) => theme.colors.error};
+  color: ${({theme}) => theme.colors.white};
+  font-weight: bold;
+  padding: 0.5rem;
+`
+
+export const StyledFieldError = styled.p`
+  color: ${({theme}) => theme.colors.error};
+  font-size: 1.2rem;
+`

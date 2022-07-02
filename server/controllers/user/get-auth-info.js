@@ -37,7 +37,7 @@ export default function makeGetAuthInfo ({fetchUsers})
                     'Content-Type': "application/json"
                 },
                 statusCode: 200,
-                body: {email: user.email}
+                body: {email: user.email, accountType: user.accountType}
             }
         }
         catch(e)

@@ -43,6 +43,7 @@ const AppWrapper = styled.div`
 
 export default function App() {
   const location = useLocation();
+  
   return (
     <AppWrapper>
       <Helmet titleTemplate='%s - Systematic Organic Results' defaultTitle='SOR SEO'>
