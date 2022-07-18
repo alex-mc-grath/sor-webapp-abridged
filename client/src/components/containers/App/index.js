@@ -6,8 +6,8 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import React, {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components/macro';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -32,10 +32,10 @@ import { About } from '../sor-dev/About';
 import { DemoReel } from '../sor-dev/DemoReel';
 import { Analytics } from '../sor-app/Analytics';
 
-import {PrivateRoute} from './PrivateRoute'
+import { PrivateRoute } from './PrivateRoute';
 
-import {loadUser, logOutUser} from './actions'
-import setAuthToken from '../../../utils/setAuthToken'
+import { loadUser, logOutUser } from './actions';
+import setAuthToken from '../../../utils/setAuthToken';
 
 const AppWrapper = styled.div`
   /* max-width: calc(768px + 16px * 2); */
@@ -51,51 +51,46 @@ const App = () => {
   const location = useLocation();
   const dispatch = useDispatch();
 
-
   useEffect(() => {
-    if(localStorage.token)
-    {
-      setAuthToken(localStorage.token)
-      dispatch(loadUser())
+    if (localStorage.token) {
+      setAuthToken(localStorage.token);
+      dispatch(loadUser());
+    } else {
+      setAuthToken(null);
+      dispatch(logOutUser());
     }
-    else
-    {
-      setAuthToken(null)
-      dispatch(logOutUser())
-    }
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
-      <AppWrapper>
-        <Helmet titleTemplate='%s - Systematic Organic Results' defaultTitle='SOR SEO'>
-          <meta name='description' content='A React.js Boilerplate application' />
-        </Helmet>
-          <AnimatePresence exitBeforeEnter={false} initial={false}>
-            <Routes location={location} key={location.pathname}>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/growth' element={<Growth />} />
-              <Route path='/resources' element={<ResourcesOverview />} />
-              <Route path='/contact' element={<Contact />} />
+    <AppWrapper>
+      <Helmet titleTemplate='%s - Systematic Organic Results' defaultTitle='SOR SEO'>
+        <meta name='description' content='A React.js Boilerplate application' />
+      </Helmet>
 
-              <Route path='/dev' element={<DevHomePage />} />
-              <Route path='/dev/demo' element={<DevHomePage />} />
-              <Route path='/dev/demo-reel' element={<DemoReel />} />
-              <Route path='/dev/our-tech' element={<TechStack />} />
-              <Route path='/dev/recent-projects' element={<RecentProjects />} />
-              <Route path='/dev/contact' element={<DevHomePage />} />
-              <Route path='/dev/about' element={<About />} />
+      <AnimatePresence exitBeforeEnter={false} initial={false}>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/growth' element={<Growth />} />
+          <Route path='/resources' element={<ResourcesOverview />} />
+          <Route path='/contact' element={<Contact />} />
 
-              <Route path='/app/' element={<Dashboard />} />
-              <Route path='/app/login' element={<Login />} />
-              <Route path='/app/select-connections' element={<Login />} />
-              <Route path='/app/analytics' element={<PrivateRoute accountType="ADMIN" element={<Analytics />} />} />
+          <Route path='/dev' element={<DevHomePage />} />
+          <Route path='/dev/demo' element={<DevHomePage />} />
+          <Route path='/dev/demo-reel' element={<DemoReel />} />
+          <Route path='/dev/our-tech' element={<TechStack />} />
+          <Route path='/dev/recent-projects' element={<RecentProjects />} />
+          <Route path='/dev/contact' element={<DevHomePage />} />
+          <Route path='/dev/about' element={<About />} />
 
-            </Routes>
-
-          </AnimatePresence>
-        <GlobalStyle />
-      </AppWrapper>
+          <Route path='/app/' element={<Dashboard />} />
+          <Route path='/app/login' element={<Login />} />
+          <Route path='/app/select-connections' element={<Login />} />
+          <Route path='/app/analytics' element={<PrivateRoute accountType='ADMIN' element={<Analytics />} />} />
+        </Routes>
+      </AnimatePresence>
+      <GlobalStyle />
+    </AppWrapper>
   );
-}
+};
 
-export default App
+export default App;

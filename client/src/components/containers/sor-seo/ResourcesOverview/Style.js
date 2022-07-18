@@ -30,6 +30,13 @@ export const StyledResourcesOverview = styled.article`
   h2 {
     margin: 0;
   }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const StyledResourcePage = styled.article`
@@ -59,8 +66,51 @@ export const Container = styled.div`
     margin-bottom: 1.1rem;
     margin-right: auto;
   }
+
+  .reference {
+    font-size: 1rem;
+    color: darkblue;
+  }
 `;
 
 export const Section = styled.div`
-  background: #fafafa;
+  /* background: #fafafa; */
+  font-size: 2rem;
+  margin: 3.5rem auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  .key-stat{
+    max-width:550px;
+  }
+
+  ul {
+    position: relative;
+    width:500px;
+    margin:auto;
+    li {
+      left: 0rem;
+      transform: translateX(-0rem);
+      transition: all .35s ease-in-out;
+      
+      &:hover {
+
+        &:before{
+          content:'> ';
+          font-weight:bold;
+          position:absolute;
+          left: -2rem;
+          transform: translateX(-5rem);
+          transition: all .35s ease-in-out;
+        }
+    margin:0 5px 0 -15px;
+    color: #f00;
+}
+      }
+    }
+  }
+
+
 `;
