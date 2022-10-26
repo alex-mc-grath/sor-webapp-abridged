@@ -37,13 +37,15 @@ const spin = keyframes`
         }
     `
 
+
 const StyledSvg = styled.svg`
     /* fill:white; */
     width: 135px;
     /* width: ${(props) => (props.variant === 'A' ? '' : '')}; */
 
     .hovered{
-        fill: #1f4df1 !important;
+        /* fill: linear-gradient(140deg, rgba(31,77,241,.5),  rgba(31,77,241,.5)) !important; */
+        fill:  rgba(31,77,241,.7) !important;
     }
 
     &.clicked{

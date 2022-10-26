@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledLogin = styled.div`
+position:relative;
   background: #22242b;
   color: #727f89;
   height: 100vh;
@@ -8,11 +9,16 @@ export const StyledLogin = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  background: #171717;
+    color:white;
+
+  
+/* 
   @media (min-width: 1000px) {
     form {
       max-width: 500px;
     }
-  }
+  } */
 
   .forgot-password {
     margin-left: auto;
@@ -21,19 +27,20 @@ export const StyledLogin = styled.div`
   }
 
   form {
+    position:relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    width: 70%;
-    background: #22242f;
+    width: 95%;
+    background: #0e2967;
+    background: #1a1a40;
     padding: 2rem;
     height: 50vh;
     font-size: 1.5rem;
-
-    .group {
-      display: flex;
-      flex-direction: column;
+    border-radius: 1rem;
+    /* background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a); */
+    
 
       /* remove form autocomplete */
       input:-webkit-autofill,
@@ -48,11 +55,18 @@ export const StyledLogin = styled.div`
         color: #727f89;
         background: #2c2e35;
         border: none;
-        border-radius: 4px 4px 0 0;
-        margin-bottom: 2px;
+        border-radius: .4rem .4rem 0 0;
+        margin:auto;
+        margin-bottom: .34rem;
         padding: 0.3rem 0.5rem;
         cursor: pointer;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+        width:100%;
+        height: 3.3rem;
+
+        &::placeholder{
+          font-size:1.75rem;
+        }
 
         &:nth-of-type(2) {
           border-radius: 0;
@@ -62,15 +76,18 @@ export const StyledLogin = styled.div`
           outline: none;
         }
       }
-    }
+
 
     button {
       background: #292c6d;
       color: #161853;
       border: none;
+      width: 100%;
+      margin:0 auto;
       border-radius: 0 0 4px 4px;
       padding: 0.3rem 0.5rem;
       transition: 0.2s all ease-in-out;
+      font-size: 1.75rem;
 
       &:hover {
         color: white;
@@ -78,9 +95,28 @@ export const StyledLogin = styled.div`
       }
     }
   }
+
+
+  @media (min-width: 768px) {
+
+
+
+    form{
+    width: calc(668px + 16px * 2);
+    max-width: none;
+    display: flex;
+  }
+  }
 `;
 
+
+
 export const StyledFormError = styled.p`
+position: absolute;
+bottom:0;
+left:50%;
+width:80%;
+transform:translateX(-50%);
   background: ${({theme}) => theme.colors.error};
   color: ${({theme}) => theme.colors.white};
   font-weight: bold;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledAbout } from './Style';
-import { Container } from '../../../layouts/Container';
+import { Container } from '../../../layout/Container';
 
 export const About = () => {
   return (

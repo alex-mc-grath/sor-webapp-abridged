@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { BubbleBack, BubbleMenu } from '../../../layouts/BubbleBack';
+import { BubbleBack, BubbleMenu } from '../../../layout/BubbleBack';
 import { SorSeoSvg } from '../HomePage/SorSeoSvg';
 import { StyledResourcesOverview, Container, Section } from './Style';
 

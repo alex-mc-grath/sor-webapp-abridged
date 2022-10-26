@@ -1,6 +1,6 @@
 import { StyledRecentProjects, StyledProject } from './Style';
 import image from '../../../../media/ss.png';
-import { SortableList } from '../../../SortableList/index';
+// import { SortableList } from '../../../input/';
 
 export const Project = ({ projectInfo, idxManager }) => {
   // project title, key highlights, 2 screenshots
@@ -18,6 +18,12 @@ export const Project = ({ projectInfo, idxManager }) => {
 
   return (
     <StyledProject>
+      <button className='arrows' onClick={() => idxManager('backwards')}>
+        <i className='fa-solid fa-circle-arrow-left'></i>
+      </button>
+      <button className='arrows' onClick={() => idxManager('forwards')}>
+        <i className='fa-solid fa-circle-arrow-right'></i>
+      </button>
       <div>
         <h3>{title}</h3>
         <span className='desc'>{desc}</span>
@@ -29,12 +35,12 @@ export const Project = ({ projectInfo, idxManager }) => {
       </ul> */}
 
         {/* {key, item, data} */}
-        <SortableList
+        {/* <SortableList
           orderChangeCallback={orderChangeCallback}
           items={featuresList.map((item, idx) => {
             return { key: 'item' + idx, item: <div>{item}</div>, data: '' };
           })}
-        />
+        /> */}
         {/* {console.log(featuresList)} */}
 
         {/* 
@@ -60,12 +66,7 @@ export const Project = ({ projectInfo, idxManager }) => {
           <img src={images[idx]} alt='' />
         ))}
       </div>
-      <button className='arrows' onClick={() => idxManager('backwards')}>
-        <i className='fa-solid fa-circle-arrow-left'></i>
-      </button>
-      <button className='arrows' onClick={() => idxManager('forwards')}>
-        <i className='fa-solid fa-circle-arrow-right'></i>
-      </button>
+
     </StyledProject>
   );
 };

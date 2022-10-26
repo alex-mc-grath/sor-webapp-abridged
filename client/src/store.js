@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import newStore from './utils/redux/newStore';
-import authReducer from './components/containers/App/reducers/authReducer'
+import authReducer from './App/reducers/authReducer'
 import setAuthToken from './utils/setAuthToken';
 
 

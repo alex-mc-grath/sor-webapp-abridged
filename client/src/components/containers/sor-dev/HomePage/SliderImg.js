@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 export const SliderImg = styled.div`
   display: flex;
+  position:relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex: 1;
-  width: auto;
+  width: 97%;
   height: 100%;
+  margin: .2rem auto;
   min-height: 50vh;
   background: url('${(props) => props.img}');
   background-position: 0% 58% !important;
@@ -17,28 +19,47 @@ export const SliderImg = styled.div`
   /* margin: auto; */
   color: white;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    h4{
+    font-size: 5.5rem;
+    opacity: .9;
+    transition: all 0.3s ease-in-out;
+  }
+  }
 
   a,
   h4 {
     margin: auto 0;
+    transition: all 0.24s ease-in-out;
   }
 
   h4 {
     font-size: 4rem;
     margin: 0 auto;
     z-index: 2;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   p {
+    display:none;
+    justify-content: center;
+    align-items: center;
     font-size: 1.7rem;
-    width: 55%;
+    width: 80%;
     margin: 0 auto !important;
     margin-top: 1rem;
-    color: ${(props) => props.theme.colors.quaternary};
+    color: ${(props) => props.theme.colors.secondary};
     font-weight: bold;
     z-index: 2;
     opacity: 0.5;
+  }
+
+  &:hover{
+p{
+  /* display:flex; */
+}
   }
 
   &::before {
@@ -47,7 +68,7 @@ export const SliderImg = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    opacity: 0.65;
+    opacity: 0.85;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -56,15 +77,16 @@ export const SliderImg = styled.div`
   }
 
   &:nth-of-type(1)::before {
-    background: rgb(19, 19, 63);
+    /* background: rgb(19, 19, 63); */
+    background: linear-gradient(-140deg, #0e2967 10%, ${(props) => props.theme.colors.secondary});
     z-index: 1;
   }
   &:nth-of-type(2)::before {
-    background: rgb(19, 19, 63);
+    background: linear-gradient(-140deg, #0e2967 10%, ${(props) => props.theme.colors.secondary});
     z-index: 1;
   }
   &:nth-of-type(3)::before {
-    background: rgb(19, 19, 63);
+    background: linear-gradient(-140deg, #0e2967 10%, ${(props) => props.theme.colors.secondary});
     z-index: 1;
   }
 

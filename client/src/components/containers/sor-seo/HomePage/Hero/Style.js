@@ -2,13 +2,13 @@ import styled from 'styled-components/macro';
 
 export const StyledHero = styled.div`
   /* // Mobile */
-  @media (max-width: 1000px) {
+  /* @media (max-width: 1000px) {
     background-size: cover !important;
 
     h1 {
       width: 85% !important;
     }
-  }
+  } */
 
   /* // */
 
@@ -19,13 +19,10 @@ export const StyledHero = styled.div`
   background: url(${({ mainImage }) => mainImage});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-
-  /* background-size: 125%;*/
-  background-size: 105%;
+  background-size: cover !important;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: all 0.5s cubic-bezier(0.331, 0.441, 0.444, 1);
 
   &.zoomed {
@@ -36,10 +33,11 @@ export const StyledHero = styled.div`
   h1 {
     color: white;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0;
     padding: 0;
-    width: 50%;
+    width: 85%;
+
   }
 
   svg {

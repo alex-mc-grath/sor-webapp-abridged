@@ -2,18 +2,17 @@ import React from 'react'
 import styled from 'styled-components';
 
 const StyledSorSeoSvg = styled.svg`
-    position: ${props => (props.variant === 'uno' ? 'relative' : 'absolute')};;
-    top: ${props => (props.variant === 'uno' ? '0' : '1rem')};
-    right: ${props => (props.variant === 'uno' ? '0' : '1rem')};
-    transform:${props => (props.variant === 'uno' ? 'scale(0.4)' : 'scale(0.8)')};;
+    /* position: ${props => (props.variant === 'uno' ? 'relative' : 'absolute')};; */
+    top: ${props => (props.variant === 'uno' ? '0' : '0rem')};
+    right: ${props => (props.variant === 'uno' ? '0' : '0rem')};
+    transform:${props => (props.variant === 'uno' ? 'scale(0.4)' : 'scale(0.7)')};;
     transition: .3s ease-in-out;
-    z-index:1;
 
-    fill: ${props => (props.variant === 'uno' ? 'blue' : 'magenta')};
-
+    fill: ${props => (props.variant === 'uno' ? 'blue' : 'transparent')};
+z-index:10;
 
     &:hover{
-        transform: ${props => (props.variant === 'uno' ? 'scale(.7)' : 'scale(1)')};
+        transform: ${props => (props.variant === 'uno' ? 'scale(.7)' : 'scale(.8)')};
         transition: .3s ease-in-out;
         transition: .4s ease-in-out;
         cursor:pointer;

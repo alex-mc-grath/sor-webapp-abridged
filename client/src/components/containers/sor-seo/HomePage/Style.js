@@ -44,8 +44,16 @@ export const StyledHomepage = styled.div`
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
+  .gradient-color4 {
+    background: linear-gradient(40deg, ${(props) => props.theme.colors.secondary} 10%, #0e2967 10%, ${(props) => props.theme.colors.secondary}, ${(props) => props.theme.colors.secondary});
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 
   .author {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 `;

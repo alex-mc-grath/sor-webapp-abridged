@@ -82,21 +82,22 @@ export const RecentProjects = () => {
   };
 
   return (
-    <motion.div
-      variants={variants1}
-      initial='enter'
-      animate='center'
-      exit='exit'
-      transition={{
-        x: { type: 'spring', stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      }}>
+    // <motion.div
+    //   variants={variants1}
+    //   initial='enter'
+    //   animate='center'
+    //   exit='exit'
+    //   transition={{
+    //     x: { type: 'spring', stiffness: 300, damping: 30 },
+    //     opacity: { duration: 0.2 },
+    //   }}>
       <StyledRecentProjects>
+        <h2>our recent projects</h2>
         {/* {projects.map((project, idx) => (
           <Project key={project.title} projectInfo={projects[idx]} />
         ))} */}
         <Project key={projects[idx].title} projectInfo={projects[idx]} idxManager={idxManager} />
       </StyledRecentProjects>
-    </motion.div>
+    // </motion.div>
   );
 };

@@ -8,12 +8,13 @@ export const StyledComparativeTable = styled.div`
   .logo-header {
     background: linear-gradient(145deg, #78dde2, #a3eabe);
     color: white;
-    font-size: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
     border-radius: 3px;
   }
 
   h2 {
-    width: 80%;
+    width: 90%;
     margin: 2rem auto;
     margin-bottom: 5rem;
     text-align: center;
@@ -23,10 +24,11 @@ export const StyledComparativeTable = styled.div`
     border-collapse: collapse;
     border-spacing: 0;
     text-indent: initial;
+
   }
 
   table {
-    width: 100%;
+    width: 98%;
     vertical-align: middle;
     margin: auto;
 
@@ -155,7 +157,26 @@ export const StyledComparativeTable = styled.div`
 
     .table-comparison-icon {
       text-align: center;
-      width: 25%;
+      width: 20%;
     }
+
+    .last-column{
+      h4{
+        padding: 0 0.2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+
+  @media (min-width: 900px){
+    table {
+    width: 78%;
+
+    tbody tr:hover{
+background: white;
+    }
+
+  }
   }
 `;

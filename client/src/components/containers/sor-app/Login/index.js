@@ -13,9 +13,10 @@ import { signIn } from './action';
 import { Navigate } from 'react-router-dom';
 import { LoginAnimation } from './LoginAnimation';
 
-import { BubbleMenu } from '../../../layouts/BubbleMenu/';
+import { BubbleMenu } from '../../../layout/BubbleMenu';
 
-import LoadingIndicator from '../../../bp-components/LoadingIndicator'
+import LoadingIndicator from '../../../layout/bp-components/LoadingIndicator'
+import { Col } from '../../../layout/Col';
 
 const CutomizedLogoAnimation = styled(LogoAnimation)`
   /* background: ${(props) => props.theme.colors.black}; */
@@ -80,25 +81,24 @@ export const Login = () => {
 
 
   return (
-    <motion.div
-      variants={variants1}
-      initial='enter'
-      animate='center'
-      exit='exit'
-      transition={{
-        x: { type: 'spring', stiffness: 300, damping: 30 },
-        // opacity: { duration: 0.2 },
-      }}>
+    // <motion.div
+    //   variants={variants1}
+    //   initial='enter'
+    //   animate='center'
+    //   exit='exit'
+    //   transition={{
+    //     x: { type: 'spring', stiffness: 300, damping: 30 },
+    //     // opacity: { duration: 0.2 },
+    //   }}>
       <StyledLogin>
-        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/growth']} textOptions={['Dev', 'Growth']} />
+        {/* <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/growth']} textOptions={['Dev', 'Growth']} /> */}
         <form onSubmit={formik.handleSubmit}>
 
           {view === '' ? <CutomizedLogoAnimation branchName='APP' /> : <LoginAnimation />}
-          {formErrorMessage && <StyledFormError>{formErrorMessage}</StyledFormError>}
 
-          <span className='forgot-password'>Forgot Password?</span>
+          
 
-          <div className='group'>
+          <Col width='100%'>
 
             <input type='email' name='email' onChange={formik.handleChange} placeholder='email' value={formik.values.email} onBlur={formik.handleBlur}/>
             {formik.touched.email && formik.errors.email && <StyledFieldError>{formik.errors.email}</StyledFieldError>}
@@ -106,13 +106,14 @@ export const Login = () => {
             <input type='password' name='password' onChange={formik.handleChange} placeholder='password' value={formik.values.password} onBlur={formik.handleBlur}/>
             {formik.touched.password && formik.errors.password && <StyledFieldError>{formik.errors.password}</StyledFieldError>}
 
-          </div>
 
-          {showSpinner? (<LoadingIndicator />) : <button type="submit">Connect</button>}
-
+            {showSpinner? (<LoadingIndicator />) : <button type="submit">Connect</button>}
+            <span className='forgot-password'>Forgot Password?</span>
+          </Col>
+          {formErrorMessage && <StyledFormError>{formErrorMessage}</StyledFormError>}
         </form>
       </StyledLogin>
-    </motion.div>
+    // </motion.div>
   );
 
 };

@@ -1,13 +1,45 @@
 import styled from 'styled-components/macro';
 
-export const StyledTechStack = styled.div`
+export const StyledTechStack = styled.article`
   /* background: #001943; */
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+
+  @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.logos{
+
+  .logo-holder{
+    width:12rem;
+    height:12rem;
+    animation: float 6s ease-in-out infinite;
+    border-radius:50%;
+    padding: .8rem;
+    margin: 1.5rem;
+
+  
+    img{
+      width:100%;
+      height:auto;
+  }
+}
 
   .number-style {
     color: white;
@@ -31,7 +63,7 @@ export const StyledTechStack = styled.div`
     border: 2px solid white;
     width: 80%;
     height: 70vh;
-    background: url('${(props) => props.img}');
+    /* background: url('${(props) => props.img}'); */
     background-position: 0% 58% !important;
     background-size: cover;
     background-repeat: no-repeat;
