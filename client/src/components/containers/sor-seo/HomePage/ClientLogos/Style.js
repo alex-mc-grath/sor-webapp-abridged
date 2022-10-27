@@ -41,7 +41,7 @@ export const StyledClientLogos = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 
-  .client-logo-box {
+  .client-logo-box,svg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,7 +63,10 @@ export const StyledClientLogos = styled.div`
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 
-    &:nth-of-type(1),&:nth-of-type(3),&:nth-of-type(4){
+    &:nth-of-type(1){
+      transform: scale(1.15) translateY(-0.2rem);
+    }
+    &:nth-of-type(3),&:nth-of-type(4){
       transform: scale(1.3);
     }
 

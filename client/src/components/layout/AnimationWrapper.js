@@ -70,7 +70,7 @@ background-image:
 
 
 &:hover{
-    background-image:
+    /* background-image:
   linear-gradient(to right, rgb(255 255 255 / 1), rgb(255 255 255 / 1)),
 
   conic-gradient(
@@ -79,7 +79,8 @@ background-image:
     ${props=>props.theme.colors.secondary} 90deg 180deg,
     ${props=>props.theme.colors.tertiary} 180deg 270deg
     
-  );
+  ); */
+  
   
 
   border-radius: 1rem;
@@ -98,7 +99,17 @@ background-image:
   background-image: linear-gradient(to right, #0f0c29,#0e2967,#24243e, #110a2e);
   /* background-image: linear-gradient(to right, #141e30, #243b55); */
 
+  /* background: -webkit-linear-gradient(120deg, ${props=>props.theme.colors.secondary}, #fdfd66,${props=>props.theme.colors.quaternary} ,${props=>props.theme.colors.primary}); */
 
+  background: linear-gradient(140deg, ${(props) => props.theme.colors.primary}, #0f0c29 10%, #0e2967 10%, ${(props) => props.theme.colors.secondary});
+
+  
+
+
+  background-origin: border-box;
+  background-clip: unset;
+
+    
   span{
 
   background: -webkit-linear-gradient(120deg, ${props=>props.theme.colors.primary},  ${props=>props.theme.colors.quaternary} , #fdfd66, ${props=>props.theme.colors.secondary});
@@ -107,6 +118,7 @@ background-image:
     -webkit-text-fill-color: transparent;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+    color:white;
 }
 
 transition: 0.34s all ease-in-out;

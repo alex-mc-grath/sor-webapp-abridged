@@ -9,6 +9,7 @@ import image from '../../../../media/img/sor-dev/11(2).jpg';
 import LogoAnimation from '../LogoAnimation';
 import { Col } from '../../../layout/Col';
 
+
 import logo1 from '../../../../media/img/dev-tech-logos/react.png';
 import logo2 from '../../../../media/img/dev-tech-logos/nodejs.svg';
 import logo3 from '../../../../media/img/dev-tech-logos/express.png';
@@ -45,7 +46,7 @@ export const TechStack = () => {
     <div className="logo-holder">
         <img src={logo5} alt="" />
     </div>
-    <div className="logo-holder">
+    <div className="logo-holder quick-width-fix">
         <img src={logo6} alt="" />
     </div>
     <div className="logo-holder">

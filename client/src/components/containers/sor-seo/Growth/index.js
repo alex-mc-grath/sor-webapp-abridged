@@ -129,7 +129,7 @@ export const Growth = () => {
                 first interaction in a way that feels natural. It puts you on their map, it reaches out professionally, and when well done it opens a direct communication channel.
               </p>
 
-              <CTAButton text='see how we do it' />
+              <CTAButton text='see how we do it' to='/resources' />
               {/* <Link to='/resources' className='main-btn'>
                 see how we do it &nbsp;<i class='fa-thin fa-arrow-right'></i>
               </Link> */}
@@ -157,7 +157,7 @@ export const Growth = () => {
               {/* <Link to='/resources' className='main-btn'>
                 <i class='fa-thin fa-arrow-up-left'></i> &nbsp; Resources
               </Link> */}
-              <CTAButton text="resources" />
+              <CTAButton text="resources" to='/resources' />
             </Col>
           </Section>
 

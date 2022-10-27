@@ -11,7 +11,7 @@ export const StyledTechStack = styled.article`
 
   @keyframes float {
 	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.4);
 		transform: translatey(0px);
 	}
 	50% {
@@ -19,7 +19,7 @@ export const StyledTechStack = styled.article`
 		transform: translatey(-20px);
 	}
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
 		transform: translatey(0px);
 	}
 }
@@ -27,8 +27,8 @@ export const StyledTechStack = styled.article`
 .logos{
 
   .logo-holder{
-    width:12rem;
-    height:12rem;
+    width:7.5rem;
+    height:7.5rem;
     animation: float 6s ease-in-out infinite;
     border-radius:50%;
     padding: .8rem;
@@ -38,6 +38,11 @@ export const StyledTechStack = styled.article`
     img{
       width:100%;
       height:auto;
+
+      &.quick-width-fix{
+        width:5px;
+    border:2px solid pink;
+      }
   }
 }
 

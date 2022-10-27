@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
+@media (max-width:900px){
+  letter-spacing:-0.5px;
+}
+
 *{
   box-sizing:border-box;
 }
