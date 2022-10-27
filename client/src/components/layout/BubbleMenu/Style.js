@@ -7,8 +7,8 @@ margin-left:auto;
 
   .circle-container {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0rem;
+    right: 0rem;
     overflow:hidden;
 
     outline: none;
@@ -19,18 +19,18 @@ margin-left:auto;
       
       content:'';
       position: fixed;
-      top: -200px;
-      right: -200px;
+      top: -200rem;
+      right: -200rem;
       display:flex;
-      background: radial-gradient(circle, white, rgba(0,0,100,0.1) 150px);
-      width: 400px;
-      height:400px;
+      background: radial-gradient(circle, white, rgba(0,0,100,0.1) 150rem);
+      width: 400rem;
+      height:400rem;
       border-radius:50%;
-      box-shadow: 0 1px 1px rgba(0,0,0,0.04), 
-              0 2px 2px rgba(0,0,0,0.04), 
-              0 4px 4px rgba(0,0,0,0.04), 
-              0 8px 8px rgba(0,0,0,0.04),
-              0 16px 16px rgba(0,0,0,0.04);
+      box-shadow: 0 1rem 1rem rgba(0,0,0,0.04), 
+              0 2rem 2rem rgba(0,0,0,0.04), 
+              0 4rem 4rem rgba(0,0,0,0.04), 
+              0 8rem 8rem rgba(0,0,0,0.04),
+              0 16rem 16rem rgba(0,0,0,0.04);
 
               transform: rotate(725deg);
     } */
@@ -41,11 +41,11 @@ margin-left:auto;
 
     .circle {
       position: relative;
-      top: -150px;
-      right: -150px;
+      top: -15rem;
+      right: -15rem;
       background-color: transparent;
-      height: 300px;
-      width: 300px;
+      height: 30rem;
+      width: 30rem;
       border-radius: 50%;
       transition: transform 0.5s linear;
       transform: rotate(180deg);
@@ -57,8 +57,8 @@ margin-left:auto;
           position:relative;
 
           top: -50%;
-          width: 30px;
-          height: 30px;
+          width: 3rem;
+          height: 3rem;
           border-radius:50%;
 
           &:nth-of-type(3) {
@@ -71,6 +71,7 @@ margin-left:auto;
         &:nth-of-type(1) {
           top: 78%;
           left: 6%;
+          font-size: 1.3rem;
         }
         
 
@@ -88,8 +89,8 @@ margin-left:auto;
         left:50%;
         top:50%;
         transform:translate(-50%,-50%);
-        width: 100px;
-        height: 100px;
+        width: 1rem;
+        height: 1rem;
         background: transparent;
         border: 0;
         color: #fff;

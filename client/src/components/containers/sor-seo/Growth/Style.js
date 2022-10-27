@@ -10,7 +10,7 @@ export const StyledHowItWorks = styled.article`
   h1{
     color: white;
     font-size: 2rem;
-    width: 80%;
+    width: 95%;
     text-align:center;
   }
  }

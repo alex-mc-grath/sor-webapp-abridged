@@ -44,11 +44,11 @@ button.arrows {
 
     &:nth-of-type(1) {
       left: 1rem;
-      top:19vh;
+      top:17.5vh;
     }
     &:nth-of-type(2) {
       right: 1rem;
-      top:19vh;
+      top:17.5vh;
       z-index:1;
     }
   }

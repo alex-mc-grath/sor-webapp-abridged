@@ -179,7 +179,6 @@ export const Growth = () => {
           <Section height="60vh" className='cta bg-gradient'>
             <Col width="80%">
               <h2>Get started with <span className="gradient-color4 lineBreakMobile">SOR SEO</span></h2>
-
               <CTAButton text="resources" to="/resources" type='gradient' />
             </Col>
           </Section> 
