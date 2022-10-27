@@ -22,7 +22,7 @@ const StyledCTAButton  = styled.button`
     z-index: 0;  
     overflow: hidden;
     margin: 0 1rem;
-    background: linear-gradient(40deg, #0e2967 10%, ${(props) => props.theme.colors.secondary}) !important;
+    background: linear-gradient(40deg, #0e2967 10%, ${(props) => props.theme.colors.secondary});
     /* color:white; */
 
     &:last-of-type{
@@ -47,7 +47,6 @@ const StyledCTAButton  = styled.button`
       color:white;
       &:last-of-type{
         background: linear-gradient(-140deg, #0e2967 10%, ${(props) => props.theme.colors.secondary}) !important;
-
       }
 
       .fa-arrow-right{
@@ -199,10 +198,6 @@ const GradientText = styled.button`
         box-decoration-break: clone;
 
         transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675);
-
-
-        
-
 
         &:hover{
             box-shadow: black -2px 1px 6px;
