@@ -19,6 +19,7 @@ import { ComparativeTable } from '../ComparativeTable';
 import { Section } from '../../../layout/Section';
 import {Col} from '../../../layout/Col'
 import { CTAButton } from '../../AppComponents/CTAButton';
+import Marquee from '../../../layout/HorizontalTextMarquee';
 
 
 const variants1 = {
@@ -122,7 +123,7 @@ export const Growth = () => {
           </Section>
 
           <Section height='35vh' className='authenticity' ref={box}>
-            <Col margin="0">
+            <Col>
               <h2>Authenticity at the forefront</h2>
               <p>
                 The most important thing to keep in mind when automating actions is that the end goal is not to "trick" people into doing actions they wouldn't otherwise have done, it's to sparkle a
@@ -163,9 +164,9 @@ export const Growth = () => {
 
           <ComparativeTable item={'item1'} itemDescription={'itemDesc 1'} />
 
-          <Col width="85%">
+          {/* <Col width="85%">
           <h4 className="gradient-color4">organic means alive, it means colorful, healthy and vibrant. organic encompasses all scenarios. it can be reassuring, comforting, like the warmth of an old friend. its exploration can be somewhat unpredictable, with potentially damaging obstacles and its growth is definitely asymetical. thus it is unique.</h4>
-          </Col>
+          </Col> */}
 
           {/* call to action - with image or short video (need to have at least one short video effect) */}
           {/* The easiest way to grow your sales pipeline */}
@@ -173,8 +174,10 @@ export const Growth = () => {
           Reach buying committees with full insights
           Ready-to-go, */}
 
+          <Marquee />
+
           <Section height="60vh" className='cta bg-gradient'>
-            <Col width="60%">
+            <Col width="80%">
               <h2>Get started with <span className="gradient-color4 lineBreakMobile">SOR SEO</span></h2>
 
               <CTAButton text="resources" to="/resources" type='gradient' />

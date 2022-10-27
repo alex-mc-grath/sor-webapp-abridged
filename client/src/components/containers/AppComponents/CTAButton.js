@@ -15,7 +15,7 @@ const StyledCTAButton  = styled.button`
     text-transform: uppercase;
     /* font-size: 30px;   */
     font-size: 11px;  
-    color: ${props=>props.color};
+    color: ${props=>props.color || 'black'};
     background-color: ${props=>props.bgColor};
     box-shadow: #fafafa 2px 2px 22px;
     border-radius: 4px; 

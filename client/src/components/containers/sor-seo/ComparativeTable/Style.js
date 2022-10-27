@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledComparativeTable = styled.div`
-  margin: 5rem auto;
+  margin: 3.5rem auto;
   padding: 2rem 0;
   width: 100%;
 
@@ -14,7 +14,7 @@ export const StyledComparativeTable = styled.div`
   }
 
   h2 {
-    width: 90%;
+    width: 85%;
     margin: 2rem auto;
     margin-bottom: 5rem;
     text-align: center;
@@ -28,7 +28,7 @@ export const StyledComparativeTable = styled.div`
   }
 
   table {
-    width: 98%;
+    width: 95%;
     vertical-align: middle;
     margin: auto;
 
@@ -157,14 +157,16 @@ export const StyledComparativeTable = styled.div`
 
     .table-comparison-icon {
       text-align: center;
-      width: 20%;
+      width:14%;
     }
 
     .last-column{
+      font-size: 1rem;
       h4{
         padding: 0 0.2rem;
-        font-size: 1.2rem;
+        font-size: 1.12rem;
       }
+
     }
   }
 
