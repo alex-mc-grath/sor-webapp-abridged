@@ -62,7 +62,7 @@ margin-left:auto;
           border-radius:50%;
 
           &:nth-of-type(3) {
-          display: inline-block;
+          /* display: inline-block; */
           top: 38%;
           left: -4%;
           font-size: 1rem;

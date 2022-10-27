@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   *{
   letter-spacing:-1px;
   }
-  p,li{
+  div,p,ul,li,button{
     letter-spacing:0px;
   }
 }
