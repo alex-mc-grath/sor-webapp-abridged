@@ -37,9 +37,14 @@ export const Header = (withRouter, {...props}) => {
     const [branch,setBranch] = useState('SEO')
 
     const location = useLocation();
+  
+    let path = location.pathname.slice(1);
+
+    const [darkBg,setDarkBg] = useState('true')
 
     // const [dark,setDark] = useState(false)
 
+  
 
 
     // const dark = useMatch("/organic-growth-marketing/resources");
@@ -64,10 +69,31 @@ export const Header = (withRouter, {...props}) => {
 
 // },[[location]])
 
+useEffect(()=>{
+  if (path === '' ) {
+    setDarkBg('false')
+    
+      // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
+    }  
+    if (path === 'resources' ) {
+      setDarkBg('true')
+      
+        // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
+      }  
+
+      if (path !== 'resources' ) {
+        setDarkBg('false')
+        
+          // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
+        }  
+},[path])
+
+
+
 
 
   return (
-    <StyledHeader darkBg='true' {...props}>
+    <StyledHeader darkBg={darkBg} {...props}>
         <LogoVersionRouter />
         {/* <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} /> */}
         <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/dev', '/app/login', '/organic-growth-marketing']} textOptions={['DEV', 'Growth']} />

@@ -123,7 +123,7 @@ export const Growth = () => {
           </Section>
 
           <Section height='50vh' className='authenticity' ref={box}>
-            <Col>
+            <Col marginBottom='3rem'>
               <h2>Authenticity at the forefront</h2>
               <p>
                 The most important thing to keep in mind when automating actions is that the end goal is not to "trick" people into doing actions they wouldn't otherwise have done, it's to sparkle a
