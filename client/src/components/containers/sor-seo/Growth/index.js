@@ -122,7 +122,7 @@ export const Growth = () => {
             </Col>
           </Section>
 
-          <Section height='35vh' className='authenticity' ref={box}>
+          <Section height='50vh' className='authenticity' ref={box}>
             <Col>
               <h2>Authenticity at the forefront</h2>
               <p>

@@ -29,6 +29,7 @@ export const StyledResourceThumbnail = styled.div`
         width: 100%;
         height: 30rem;
         margin:.8rem auto;
+        margin-bottom: 2rem;
         border: 2px solid white;
         position:relative;
 
@@ -83,10 +84,8 @@ export const StyledResourceThumbnail = styled.div`
         }
 
   .title{
-            background: orange;
             font-weight:bold;
             font-size: 1.4rem;
-
             white-space:normal;
         line-height: 1.5em;
         overflow: hidden;

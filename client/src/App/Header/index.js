@@ -20,7 +20,7 @@ const LogoVersionRouter = () => {
   //   return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
   // }
 
-  if (path === '' || path === 'contact' || path === 'about' || path === 'account-based-marketing') {
+  if (path === '' || path === 'contact' || path === 'about' || path === 'account-based-marketing' || path === 'resources') {
     return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
   }
   if (path === 'dev' || path === 'dev/recent-mandates' || path === 'dev/how-can-we-help' || path === 'dev/how-can-we-help' || path === 'dev/got-a-question' || path === 'dev/about') {
@@ -32,7 +32,7 @@ const LogoVersionRouter = () => {
   
 
 
-export const Header = withRouter => {
+export const Header = (withRouter, {...props}) => {
     const [showNav,setShowNav] = useState(false)
     const [branch,setBranch] = useState('SEO')
 
@@ -67,7 +67,7 @@ export const Header = withRouter => {
 
 
   return (
-    <StyledHeader>
+    <StyledHeader darkBg='true' {...props}>
         <LogoVersionRouter />
         {/* <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} /> */}
         <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/dev', '/app/login', '/organic-growth-marketing']} textOptions={['DEV', 'Growth']} />
