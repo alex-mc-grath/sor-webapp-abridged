@@ -3,13 +3,15 @@ import styled from 'styled-components';
 export const StyledLogin = styled.div`
 position:relative;
   background: #22242b;
+  
   color: #727f89;
-  height: 100vh;
+  height: 96.89vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   background: #171717;
+  background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
+  
     color:white;
 
   
@@ -35,6 +37,7 @@ position:relative;
     width: 95%;
     background: #0e2967;
     background: #1a1a40;
+    
     padding: 2rem;
     height: 50vh;
     font-size: 1.5rem;

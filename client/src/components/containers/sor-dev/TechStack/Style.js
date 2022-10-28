@@ -2,11 +2,12 @@ import styled from 'styled-components/macro';
 
 export const StyledTechStack = styled.article`
   /* background: #001943; */
-  color: black;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
   /* min-height: 100vh; */
 
   @keyframes float {
@@ -26,6 +27,9 @@ export const StyledTechStack = styled.article`
 
 .logos{
 
+  background: linear-gradient(40deg, ${(props) => props.theme.colors.secondary} 10%, #0e2967 10%, ${(props) => props.theme.colors.secondary}, ${(props) => props.theme.colors.secondary});
+  border-radius: 3rem;
+
   .logo-holder{
     width:7.5rem;
     height:7.5rem;
@@ -33,6 +37,8 @@ export const StyledTechStack = styled.article`
     border-radius:50%;
     padding: .8rem;
     margin: 1.5rem;
+
+    background:rgba(255,255,255,0.86);
 
   
     img{

@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyledAbout } from './Style';
 import { Container } from '../../../layout/Container';
+import { Col } from '../../../layout/Col';
 
 export const About = () => {
   return (
     <StyledAbout>
       {/* <Container width='40%'> */}
+      <Col width='92%'>
       <h1>About SOR DEV</h1>
       <p>
         Based in Montreal, Canada, SOR DEV is a digital product agency specializing in tailor-made, highly perfomant, software solutions. We're passionate about highly innovative, modern-feeling,
@@ -27,6 +29,7 @@ export const About = () => {
         <li>Comprehensive Real-Time Dashboards</li>
       </ul>
       {/* </Container> */}
+      </Col>
     </StyledAbout>
   );
 };

@@ -23,7 +23,7 @@ const LogoVersionRouter = () => {
   if (path === '' || path === 'contact' || path === 'about' || path === 'account-based-marketing' || path === 'resources') {
     return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
   }
-  if (path === 'dev' || path === 'dev/recent-mandates' || path === 'dev/how-can-we-help' || path === 'dev/how-can-we-help' || path === 'dev/got-a-question' || path === 'dev/about') {
+  if (path === 'dev' || path === 'dev/recent-mandates' || path === 'dev/how-can-we-help' || path === 'dev/our-tech' || path === 'dev/got-a-question' || path === 'dev/about') {
     return <LogoAnimation branchName={'DEV'} colorTheme={dark !== null ? 'dark' : 'light'} />;
   }
   };

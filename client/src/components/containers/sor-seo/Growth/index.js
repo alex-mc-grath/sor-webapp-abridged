@@ -174,7 +174,7 @@ export const Growth = () => {
           Reach buying committees with full insights
           Ready-to-go, */}
 
-          <Marquee />
+          {/* <Marquee /> */}
 
           <Section height="60vh" className='cta bg-gradient'>
             <Col width="80%">

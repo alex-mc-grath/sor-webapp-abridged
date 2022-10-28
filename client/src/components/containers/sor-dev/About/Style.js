@@ -11,16 +11,20 @@ import styled from 'styled-components';
 
 export const StyledAbout = styled.article`
   background: #000;
+  background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
   color: white;
-  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  font-size: 200%;
 
-  > * {
-    width: 60%;
-    margin: auto;
+  ul{
+    padding:0;
+    margin-right:auto;
+    margin-left: 2rem;
   }
+
+  /* padding-top:15vh; */
+
 `;

@@ -8,6 +8,7 @@ import { SorSeoSvg } from '../../sor-seo/HomePage/SorSeoSvg';
 import image from '../../../../media/img/sor-dev/11(2).jpg';
 import LogoAnimation from '../LogoAnimation';
 import { Col } from '../../../layout/Col';
+import { GridRow } from '../../../layout/GridRow';
 
 
 import logo1 from '../../../../media/img/dev-tech-logos/react.png';
@@ -28,8 +29,8 @@ export const TechStack = () => {
         {/* // add icons?  */}
         {/* add button "see demo reels" */}
 
-
-        <Col className='logos'>
+    <h1>our tech stack</h1>
+        <GridRow col="3" className='logos'>
 
     <div className="logo-holder">
         <img src={logo1} alt="" />
@@ -58,7 +59,7 @@ export const TechStack = () => {
     <div className="logo-holder">
         <img src={logo9} alt="" />
     </div>
-        </Col>
+        </GridRow>
 {/* 
 
         <div>
@@ -88,7 +89,7 @@ export const TechStack = () => {
           <Link to='/about'>About SOR DEV</Link>
           <Link to='/about'>Contact us</Link>
         </div> */}
-        <LogoAnimation branchName='DEV' />
+        {/* <LogoAnimation branchName='DEV' /> */}
       </Container>
     </StyledTechStack>
   );
