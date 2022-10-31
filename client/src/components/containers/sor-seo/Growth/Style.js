@@ -68,7 +68,7 @@ export const StyledHowItWorks = styled.article`
       align-items: center;
       width: 90%;
       margin: auto;
-      text-align:justify;
+      text-align:left;
 
       button{
     margin-top: 1rem;

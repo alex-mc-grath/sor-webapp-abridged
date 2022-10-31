@@ -176,10 +176,11 @@ const GradientText = styled.button`
         display:flex;
         justify-content:center;
         align-items:center;
-        width:100%;
+        width: ${props=>props.width || '100%'};
+        margin: ${props=>props.margin || '0 1.4rem'};
         height: 4rem;
         color:white;
-        margin: 0 1.4rem;
+        /* margin: 0 1.4rem; */
         padding: 0 0.4rem;
         font-size: 1.25rem;
         font-weight:bold;

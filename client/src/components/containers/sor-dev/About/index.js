@@ -2,6 +2,7 @@ import React from 'react';
 import { StyledAbout } from './Style';
 import { Container } from '../../../layout/Container';
 import { Col } from '../../../layout/Col';
+import { CTAButton } from '../../AppComponents/CTAButton';
 
 export const About = () => {
   return (
@@ -30,6 +31,7 @@ export const About = () => {
         <li>Comprehensive Real-Time Dashboards</li>
       </ul>
       {/* </Container> */}
+      <CTAButton width='80%' margin='2rem auto' text='any questions? send us a quick note' to='/contact' type='gradient' />
       </Col>
     </StyledAbout>
   );

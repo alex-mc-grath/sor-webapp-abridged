@@ -20,6 +20,7 @@ import logo6 from '../../../../media/img/dev-tech-logos/aws.png';
 import logo7 from '../../../../media/img/dev-tech-logos/azure.png';
 import logo8 from '../../../../media/img/dev-tech-logos/redux.png';
 import logo9 from '../../../../media/img/dev-tech-logos/graphql.png';
+import { CTAButton } from '../../AppComponents/CTAButton';
 
 export const TechStack = () => {
   return (
@@ -81,6 +82,8 @@ export const TechStack = () => {
             <li>Google Maps, Google Drive, WeChat, </li>
             <li>linearapp.com, DevCharts </li>
           </ul>
+          <br />
+      <CTAButton width='80%' margin='auto' text='more about SOR DEV' to='/dev/about' type='gradient' />
       </Col>
 {/* 
 

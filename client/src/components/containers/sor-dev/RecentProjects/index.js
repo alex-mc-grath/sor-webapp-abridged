@@ -17,6 +17,7 @@ import image4 from '../../../../media/img/parkingsystem2.png';
 import image5 from '../../../../media/img/staystuck1.png';
 import image6 from '../../../../media/img/staystuck2.png';
 import { useState } from 'react';
+import { CTAButton } from '../../AppComponents/CTAButton';
 
 // import image7 from '../../../../media/img/staystuck3.png';
 
@@ -97,6 +98,7 @@ export const RecentProjects = () => {
           <Project key={project.title} projectInfo={projects[idx]} />
         ))} */}
         <Project key={projects[idx].title} projectInfo={projects[idx]} idxManager={idxManager} />
+        <CTAButton width='75%' margin='2rem auto' text='more about SOR DEV' to='/dev/our-tech' type='gradient' />
       </StyledRecentProjects>
     // </motion.div>
   );
