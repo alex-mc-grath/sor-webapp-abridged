@@ -6,7 +6,7 @@ export const StyledRecentProjects = styled.article`
   justify-content:flex-start;
   align-items: center;
   margin: 0;
-  padding-top: 15vh;
+  padding-top: 18vh;
   background: linear-gradient(-30deg, #000000,#130F40,#000000);  
     color:white;
 
@@ -44,11 +44,11 @@ button.arrows {
 
     &:nth-of-type(1) {
       left: 1rem;
-      top:17.5vh;
+      top:20.25vh;
     }
     &:nth-of-type(2) {
       right: 1rem;
-      top:17.5vh;
+      top:20.25vh;
       z-index:1;
     }
   }

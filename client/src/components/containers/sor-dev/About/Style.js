@@ -24,11 +24,18 @@ export const StyledAbout = styled.article`
     padding:0;
     margin-right:auto;
     margin-left: 2rem;
+    font-size: 1.4rem;
   }
 
   h1{
     margin-bottom:0;
-    font-size: 3.8rem;
+    margin-right:auto;
+    font-size: 3.6rem;
+    text-align:left;
+  }
+
+  h4{
+width:100%;
   }
 
   /* padding-top:15vh; */

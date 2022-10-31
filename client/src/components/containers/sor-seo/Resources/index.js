@@ -11,7 +11,7 @@ export const Resources = () => {
 
   return (
     <StyledResources>
-      <Col>
+      <Col width='100%'>
       <h1 className='gradient-color4'>resources & documentation</h1>
       <Wrapper>
           <ResourceThumbnail

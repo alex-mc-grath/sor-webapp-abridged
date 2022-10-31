@@ -9,7 +9,54 @@ const StyledAbmGuideDefinitionsPage = styled.article`
     padding-top:15vh;
 
     h1{
-        font-size: 3rem;
+        font-size: 2.6rem;
+    }
+
+
+  .reference {
+    font-size: 1.2rem;
+    color: darkblue;
+  }
+
+  .major-quote{
+    font-size: 3rem;
+    margin: 5rem auto;
+  }
+
+  .key-stat{
+    /* max-width:550px; */
+  }
+
+  ul {
+    position: relative;
+    /* width:500px; */
+    margin:auto;
+    li {
+      left: 0rem;
+      transform: translateX(-0rem);
+      transition: all .35s ease-in-out;
+      
+      &:hover {
+
+        &:before{
+          content:'> ';
+          font-weight:bold;
+          position:absolute;
+          left: -2rem;
+          transform: translateX(-5rem);
+          transition: all .35s ease-in-out;
+        }
+    margin:0 5px 0 -15px;
+    color: #f00;
+}
+      }
+    }
+
+    
+    @media (min-width:900px){
+      .col{
+      width:65%;
+    }
     }
 
     /* // for this spiecific ABMGuide page */
@@ -38,7 +85,7 @@ export const AbmGuideDefinitionsPage = () =>{
 
     <BackButton to='/resources' />
 
-    <Col align='flex-start' width='65%'>
+    <Col align='flex-start' className='col'>
             <h1>
             Account-based Marketing & B2B Growth - overview<br/> guide & definitions
           </h1> 
@@ -70,14 +117,14 @@ export const AbmGuideDefinitionsPage = () =>{
           </ul>
         </SectionMod>
         <SectionMod>
-          <div className='key-stats-SectionMod'>
-            <div className='key-stat gradient-color'>
+          <Col>
+            <div className='major-quote'>
               <span className='scaled-font'>80% of B2B companies report that ABM increases their customer lifetime value.</span>
             </div>
-            <div className='key-stat gradient-color'>
+            <div className='major-quote'>
               <span className='scaled-font'>87% of marketers who measure ROI say ABM outperforms every other marketing investment.</span>
             </div>
-          </div>
+          </Col>
         </SectionMod>
         <SectionMod>
           <p>Increased win rates&nbsp; |&nbsp; Increased engagement&nbsp; | &nbsp;Increased Average Deal Size</p>

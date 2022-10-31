@@ -61,25 +61,25 @@ export const TechStack = () => {
         <img src={logo9} alt="" />
     </div>
         </GridRow>
-      <Col>
+      <Col align='flex-start'>
         <ul>
           <h3>Frontend</h3>
             <li>React, Next</li>
             <li>Apollo, Redux, Context</li>
-            <li>AWS, Azure, Heroku</li>
+            <li>Styled-components</li>
+            <li>Our proprietary component library</li>
           </ul>
         <ul>
           <h3>Backend & server</h3>
             <li>GraphQl, Express</li>
-            <li>Apollo, Redux, Context</li>
             <li>MongoDb, Firebase</li>
             <li>AWS, Azure, Heroku</li>
           </ul>
         <ul>
           <h3>3rd party APIs</h3>
             <li>Paypal, Stripe</li>
-            <li>Google Maps, WeChat, </li>
-            <li>linearapp.com, </li>
+            <li>Google Maps, Google Drive, WeChat, </li>
+            <li>linearapp.com, DevCharts </li>
           </ul>
       </Col>
 {/* 
