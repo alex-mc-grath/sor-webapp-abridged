@@ -45,6 +45,7 @@ import setAuthToken from '../utils/setAuthToken';
 import ScrollToTop from './ScrollToTop';
 import { Portfolio } from '../components/containers/sor-dev/Portfolio';
 import { Footer } from '../components/containers/sor-seo/Footer';
+import { AbmGuideDefinitionsPage } from '../components/containers/sor-seo/Resources/data';
 
 const AppWrapper = styled.div`
   /* max-width: calc(768px + 16px * 2); */
@@ -81,7 +82,11 @@ const App = () => {
       <AnimatePresence exitBeforeEnter={false} initial={false}>
         <Routes location={location} key={location.pathname}>
 
+        {/* /RESOURCES/ */}
           <Route path='/resources' element={<Resources />} />
+          <Route path='/resources/abm-guide-and-definitions' element={<AbmGuideDefinitionsPage />} />
+
+          
           <Route path='/contact' element={<Contact />} />
 
 

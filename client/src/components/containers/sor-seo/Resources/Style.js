@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledResources = styled.article`
     display:flex;
     flex-direction:column;
-    margin-top: 10vh;
+    margin-top: 15vh;
 
     h1{
         width: 85%;
@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
         height: 80%;
         margin:auto;
         grid-template-columns: 1fr 1fr;
+        grid-gap:2rem;
     }
 `
 
@@ -30,7 +31,7 @@ export const StyledResourceThumbnail = styled.div`
         height: 30rem;
         margin:.8rem auto;
         margin-bottom: 2rem;
-        border: 2px solid white;
+        background:white;
         position:relative;
 
 
@@ -58,29 +59,10 @@ export const StyledResourceThumbnail = styled.div`
     text-transform: uppercase;
     font-size: 1.5rem;
 
-    /* font: 32px Arial, sans-serif; */
-            /* position:absolute; */
-            /* position:relative;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            width:6rem;
-            height:6rem;
-            font-weight:bold;
-            color:white;
-
-            &::after{
-                position: absolute;
-                content:'';
-                width:6rem;
-                height:6rem;
-                border-radius: 50%;
-                top:0;
-                background: #000;
-                z-index:0;
-  } */
+    &.small{
+        /* background: #000; */
+        font-size: 1rem;
+    }
         }
 
   .title{

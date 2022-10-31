@@ -17,10 +17,10 @@ export const Portfolio = () => {
 
         <PortfolioItem
         color="#08a2e5"
-            title="Interactive shenanigan for client in automotive industry"
-            client="Shenanigan super fast cars"
+            title="Enforcing whistleblowers right under EU Law"
+            client="Whistlaw"
             budgetRange="10K - 15K $"
-            timeline="12 - 15 WEEKS"
+            timeline="15 - 20 WEEKS"
             logo={logo}
             imgs={[img1,img2]}
             // media={logo='', imgs=[]}
@@ -30,9 +30,9 @@ export const Portfolio = () => {
 
         />
         <PortfolioItem
-            title="Interactive shenanigan for client in automotive industry"
-            client="Shenanigan super fast cars"
-            budgetRange="10K - 15K $"
+            title="Furnished real-estate long-term rental, marketed globally managed locally"
+            client="Baytaq"
+            budgetRange="8K - 10K $"
             timeline="12 - 15 WEEKS"
             logo={logo}
             imgs={[img3]}

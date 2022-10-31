@@ -29,6 +29,8 @@ export const StyledTechStack = styled.article`
 
   background: linear-gradient(40deg, ${(props) => props.theme.colors.secondary} 10%, #0e2967 10%, ${(props) => props.theme.colors.secondary}, ${(props) => props.theme.colors.secondary});
   border-radius: 3rem;
+  width: 95%;
+  margin: 0 auto;
 
   .logo-holder{
     width:7.5rem;
@@ -36,9 +38,15 @@ export const StyledTechStack = styled.article`
     animation: float 6s ease-in-out infinite;
     border-radius:50%;
     padding: .8rem;
-    margin: 1.5rem;
+    margin: 1.5rem auto;
 
     background:rgba(255,255,255,0.86);
+
+    &:hover{
+      img{
+        transform:scale(1.2);
+      }
+    }
 
   
     img{

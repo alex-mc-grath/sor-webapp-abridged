@@ -8,7 +8,7 @@ const StyledCTAButton  = styled.button`
     align-items:center;
     justify-content:center;
     text-align:center;
-    width:15rem;
+    width: ${props=>props.width || '15rem'};
     padding: 10px 20px;  
     cursor: pointer;
     font-weight: 900;

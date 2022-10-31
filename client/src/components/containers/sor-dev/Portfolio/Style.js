@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const StyledPortfolio = styled.div`
-        /* background: linear-gradient(-30deg, #000000,#130F40,#000000);   */
+        background: linear-gradient(-30deg, #000000,#130F40,#000000);  
         color:white;
         padding: 0 1rem;
         padding-top: 15vh;
 
         h1{
             color:black;
+            color:white;
             margin-bottom:0;
         }
         p{
@@ -31,11 +32,33 @@ export const StyledPortfolioItem = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
+    border: .7rem solid transparent;
+    transition: all 0.25s ease-out;
+    transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675);
     /* transition: .4s all ease-out; */
 
     &:hover{
-        background: ${props=>props.background || props.theme.colors.primary};
+        /* background: ${props=>props.background || props.theme.colors.primary}; */
+        border: .7rem solid ${props=>props.background || props.theme.colors.primary};
+        /* transition: all 0.5s ease-out; */
+        transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675);
+        
         /* transition: .4s all ease-in-out; */
+
+
+        .logo::before{
+            background:${props=>props.background || props.theme.colors.primary};    
+
+            transform:scaleX(150%);
+            transition: all 0.2s ease-out;
+        }
+
+        .badges{ 
+            >*{
+            background:${props=>props.background || props.theme.colors.primary} !important;
+            transition: all 0.2s ease-out;
+            }
+        }
     }
 
     /* ::before{
@@ -67,19 +90,30 @@ img{
             height:.4rem;
             z-index:1;
             bottom: -1rem;
+            transform: scaleX(100%);
+            transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675);
+            transition: all 0.2s ease-out;
         }
     }
 
     .badges{
 
         >*{
-        background:white;
-        color: ${props=>props.theme.colors.primary};
+        /* background: ${props=>props.theme.colors.secondary};; */
+        background: linear-gradient(40deg, #28313B, #485461);
+        color: white;
         margin: 0 .25rem;
+        
         padding: 0.4rem .6rem;
         border-radius: .5rem;
         font-weight:bold;
+        transition: all 0.2s ease-out;
+
+        :nth-child(n){
+            background: linear-gradient(40deg, #485461, #28313B);
+        }
     }
+    
     }
 
     @media(min-width:700px){

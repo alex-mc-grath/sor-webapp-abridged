@@ -9,9 +9,10 @@ export const About = () => {
       {/* <Container width='40%'> */}
       <Col width='92%' padding="6rem 2rem">
       <h1>About SOR DEV</h1>
+      <h4>Full-stack Web and Mobile Development Agency</h4>
       <p>
         Based in Montreal, Canada, SOR DEV is a digital product agency specializing in tailor-made, highly perfomant, software solutions. We're passionate about highly innovative, modern-feeling,
-        cutting-edge systems. Please find below our main types of deliverables.
+        cutting-edge systems.
       </p>
       <br />
       <ul>

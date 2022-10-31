@@ -26,6 +26,17 @@ export const StyledAbout = styled.article`
     margin-left: 2rem;
   }
 
+  h1{
+    margin-bottom:0;
+    font-size: 3.8rem;
+  }
+
   /* padding-top:15vh; */
 
+
+@media (min-width:900px){
+  div{
+    width: 70%;
+  }
+}
 `;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledComparativeTable = styled.div`
   margin: 3.5rem auto;
   padding: 2rem 0;
+  padding-bottom: 4rem;
   width: 100%;
 
   .logo-header {

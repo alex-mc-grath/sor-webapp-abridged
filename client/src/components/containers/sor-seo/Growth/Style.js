@@ -126,6 +126,16 @@ export const StyledHowItWorks = styled.article`
     }
 
 
+    .cta{
+      border-radius: .8rem;
+      width: 99.5%;
+      margin: 0 auto;
+      button{
+        margin: 1rem auto;
+      }
+    }
+
+
 
     /* MEDIA */
     @media (min-width:900px){
@@ -151,5 +161,9 @@ export const StyledHowItWorks = styled.article`
           margin-right: 5rem;
         }
       }
+    }
+
+    .cta{
+      /* width: 99.5%; */
     }
 `;

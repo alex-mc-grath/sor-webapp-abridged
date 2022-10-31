@@ -28,9 +28,10 @@ export const TechStack = () => {
       <Container>
         {/* // add icons?  */}
         {/* add button "see demo reels" */}
-
+<Col width='80%'>
     <h1>our tech stack</h1>
     <p>With our modern stack, proprietary library and cutting-edge tools, we're more capable than ever - we're delighted to create, and happy to serve.</p>
+</Col>
         <GridRow col="3" className='logos'>
     <div className="logo-holder">
         <img src={logo1} alt="" />
@@ -60,6 +61,27 @@ export const TechStack = () => {
         <img src={logo9} alt="" />
     </div>
         </GridRow>
+      <Col>
+        <ul>
+          <h3>Frontend</h3>
+            <li>React, Next</li>
+            <li>Apollo, Redux, Context</li>
+            <li>AWS, Azure, Heroku</li>
+          </ul>
+        <ul>
+          <h3>Backend & server</h3>
+            <li>GraphQl, Express</li>
+            <li>Apollo, Redux, Context</li>
+            <li>MongoDb, Firebase</li>
+            <li>AWS, Azure, Heroku</li>
+          </ul>
+        <ul>
+          <h3>3rd party APIs</h3>
+            <li>Paypal, Stripe</li>
+            <li>Google Maps, WeChat, </li>
+            <li>linearapp.com, </li>
+          </ul>
+      </Col>
 {/* 
 
         <div>

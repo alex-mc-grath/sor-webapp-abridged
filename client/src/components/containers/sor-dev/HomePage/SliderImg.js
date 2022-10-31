@@ -10,7 +10,7 @@ export const SliderImg = styled.div`
   flex: 1;
   width: 97%;
   height: 100%;
-  margin: .2rem auto;
+  margin: 0.75rem auto;
   min-height: 50vh;
   background: url('${(props) => props.img}');
   background-position: 0% 58% !important;
