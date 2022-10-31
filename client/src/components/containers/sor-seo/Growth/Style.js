@@ -9,7 +9,7 @@ export const StyledHowItWorks = styled.article`
 
   h1{
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
     width: 95%;
     text-align:center;
   }
