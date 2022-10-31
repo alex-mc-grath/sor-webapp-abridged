@@ -100,12 +100,14 @@ export const Login = () => {
 
           <Col width='100%'>
 
+          <div style={{position:'relative'}}>
             <input type='email' name='email' onChange={formik.handleChange} placeholder='email' value={formik.values.email} onBlur={formik.handleBlur}/>
             {formik.touched.email && formik.errors.email && <StyledFieldError>{formik.errors.email}</StyledFieldError>}
-
+            </div>
+          <div style={{position:'relative'}}>
             <input type='password' name='password' onChange={formik.handleChange} placeholder='password' value={formik.values.password} onBlur={formik.handleBlur}/>
             {formik.touched.password && formik.errors.password && <StyledFieldError>{formik.errors.password}</StyledFieldError>}
-
+            </div>
 
             {showSpinner? (<LoadingIndicator />) : <button type="submit">Connect</button>}
             <span className='forgot-password'>Forgot Password?</span>

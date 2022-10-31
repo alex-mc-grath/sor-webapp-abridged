@@ -21,7 +21,7 @@ export const StyledWhy = styled.div`
     @media(min-width: 800px) {
         width:50%;
         margin:0;
-        margin-left: 6rem;
+        margin-left: 11rem;
         margin-right:auto;
         min-height:70vh;
     }

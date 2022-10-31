@@ -9,23 +9,9 @@ export const StyledHowItWorks = styled.article`
 
   h1{
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 95%;
     text-align:center;
-  }
- }
-
- .mimicHuman{
-  width: 90%;
-  margin: 0 auto;
-  /* flex-direction:row; */
-
-  img{
-    max-width: 50rem;
-    
-  }
-  li{
-    list-style: bullets;
   }
  }
 
@@ -83,7 +69,31 @@ export const StyledHowItWorks = styled.article`
       width: 90%;
       margin: auto;
       text-align:justify;
+
+      button{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
     }
+
+
+
+ .mimicHuman{
+  width: 90%;
+  margin: 0 auto;
+  /* flex-direction:row; */
+
+  img{
+    max-width: 50rem;
+    
+  }
+  li{
+    list-style: bullets;
+  }
+
+  
+ }
+
 
     &.mimicHuman {
       width: 100%;
@@ -116,8 +126,9 @@ export const StyledHowItWorks = styled.article`
     }
 
 
-    @media (min-width:900px){
 
+    /* MEDIA */
+    @media (min-width:900px){
 
 .blending-in{
 

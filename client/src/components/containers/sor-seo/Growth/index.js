@@ -140,7 +140,7 @@ export const Growth = () => {
           <Section className='mimicHuman' ref={box}>
             <img src={mimicHumanImage} alt='' width={'100%'} />
             <Col>
-              <h2>Time your messages and actions to mimic human-like behaviour</h2>
+              <h2>Time your messages and actions to avoid spam-like behaviours</h2>
               {/* <p>Non-invasive, non-agressive approach</p> */}
               <p>
                 Our number one key success ingredient is a systematized approach:

@@ -18,6 +18,7 @@ export const StyledAbout = styled.article`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding-top:10vh;
 
   ul{
     padding:0;

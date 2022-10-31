@@ -11,13 +11,13 @@ export const StyledTestimonials = styled.div`
     padding-bottom: 5rem;
 
 
-.xl{
-    font-size:4rem;
-}
-   
+    .xl{
+        font-size:4rem;
+    }
+    
 
     @media(min-width: 800px) {
-        width:80%;
+        width:85%;
         margin:0 auto;
         /* margin-left: 6rem; */
         /* margin-right:auto; */
@@ -33,7 +33,7 @@ export const StyledTestimonials = styled.div`
         }
 
         >div:first-of-type{
-margin-right:auto;
+            margin-right:auto;
         }
 
         >div:nth-of-type(2){

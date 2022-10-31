@@ -23,7 +23,7 @@ const LogoVersionRouter = () => {
   if (path === '' || path === 'contact' || path === 'about' || path === 'account-based-marketing' || path === 'resources') {
     return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
   }
-  if (path === 'dev' || path === 'dev/recent-mandates' || path === 'dev/how-can-we-help' || path === 'dev/our-tech' || path === 'dev/got-a-question' || path === 'dev/about') {
+  if (path === 'dev' || path === 'dev/recent-mandates' || path === 'dev/how-can-we-help' || path === 'dev/our-tech' || path === 'dev/got-a-question' || path === 'dev/about' || path === 'dev/portfolio') {
     return <LogoAnimation branchName={'DEV'} colorTheme={dark !== null ? 'dark' : 'light'} />;
   }
   };
@@ -75,17 +75,25 @@ useEffect(()=>{
     
       // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
     }  
-    if (path === 'resources' ) {
-      setDarkBg('true')
-      
-        // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
-      }  
+   
 
-      if (path !== 'resources' ) {
+      if (path !== 'resources' || path !=='dev/portfolio') {
         setDarkBg('false')
         
           // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
         }  
+
+        // if (path === 'dev/portfolio' ) {
+        //   setDarkBg('true')
+        //   console.log(path, darkBg)
+        //     // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
+        //   }  
+
+          if (path === 'resources' || path === 'dev/portfolio' ) {
+            setDarkBg('true')
+            console.log(path, darkBg)
+              // return <LogoAnimation branchName={'SEO'} colorTheme={dark !== null ? 'dark' : 'light'} />;
+            }  
 },[path])
 
 

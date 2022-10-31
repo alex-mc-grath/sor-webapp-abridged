@@ -44,6 +44,9 @@ position:relative;
     border-radius: 1rem;
     /* background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a); */
     
+    >div>div{
+      width:100%;
+    }
 
       /* remove form autocomplete */
       input:-webkit-autofill,
@@ -118,15 +121,24 @@ export const StyledFormError = styled.p`
 position: absolute;
 bottom:0;
 left:50%;
-width:80%;
+width:84%;
 transform:translateX(-50%);
   background: ${({theme}) => theme.colors.error};
   color: ${({theme}) => theme.colors.white};
   font-weight: bold;
   padding: 0.5rem;
+  border-radius: 0.2rem;
 `
 
 export const StyledFieldError = styled.p`
+  position: absolute;
   color: ${({theme}) => theme.colors.error};
   font-size: 1.2rem;
+  top:.2rem;
+  right:.6rem;
+  transform:translateY(-50%);
+
+
+    /* top:0; */
+
 `

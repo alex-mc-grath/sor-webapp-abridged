@@ -2,8 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 
 const StyledSpinner = styled.div`
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-100%,-50%);
   width: 80px;
   height: 80px;
   display:flex;

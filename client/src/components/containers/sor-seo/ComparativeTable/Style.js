@@ -47,6 +47,7 @@ export const StyledComparativeTable = styled.div`
         position: relative;
         padding: 1.5rem;
         display: table-cell;
+        letter-spacing:0;
 
         &:nth-child(even):before {
           box-shadow: 0 0 26px rgb(0 0 0 / 15%);
@@ -153,6 +154,10 @@ export const StyledComparativeTable = styled.div`
       display: table-row-group;
       vertical-align: middle;
       border-color: inherit;
+
+      td{
+        letter-spacing:0px;
+      }
     }
 
     .table-comparison-icon {

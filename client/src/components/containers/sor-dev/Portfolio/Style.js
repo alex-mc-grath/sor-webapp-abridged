@@ -1,23 +1,42 @@
 import styled from 'styled-components';
 
 export const StyledPortfolio = styled.div`
-        height:85vh;
-        padding: 4rem;
-        padding-top:15vh;
+        /* background: linear-gradient(-30deg, #000000,#130F40,#000000);   */
+        color:white;
+        padding: 0 1rem;
+        padding-top: 15vh;
+
+        h1{
+            color:black;
+            margin-bottom:0;
+        }
+        p{
+            color:grey;
+            margin:0;
+        }
+        
+        
 `;
 
 
 export const StyledPortfolioItem = styled.div`
-    background: ${props=>props.background || props.theme.colors.primary};
+    /* background: ${props=>props.background || props.theme.colors.primary}; */
+    background: linear-gradient(60deg, #29323c 0%, #485563 100%);
     /* height: 100%; */
     margin: 4rem auto;
     border-radius:1rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
     color:white;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
+    /* transition: .4s all ease-out; */
+
+    &:hover{
+        background: ${props=>props.background || props.theme.colors.primary};
+        /* transition: .4s all ease-in-out; */
+    }
 
     /* ::before{
             content:'';
@@ -29,7 +48,7 @@ export const StyledPortfolioItem = styled.div`
 
 img{
     padding-top: 3.4rem;
-    width: 120%;
+    width:100%;
 }
 
     .logo{

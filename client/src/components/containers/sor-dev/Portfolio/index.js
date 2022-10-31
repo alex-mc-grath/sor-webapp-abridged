@@ -10,7 +10,8 @@ import img3 from '../../../../media/img/whistlaw.png'
 export const Portfolio = () => {
   return (
     <StyledPortfolio>
-        <h2>Recent projects (sorted newest to oldest)</h2>
+        <h1>recent mern stack projects</h1>
+        <p>(sorted newest to oldest)</p>
 
     {/* // here should be scrollable items again, simpler, cleaner, just more appealing than conventional boring vertical scrolling' */}
 

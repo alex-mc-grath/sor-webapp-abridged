@@ -30,8 +30,8 @@ export const TechStack = () => {
         {/* add button "see demo reels" */}
 
     <h1>our tech stack</h1>
+    <p>With our modern stack, proprietary library and cutting-edge tools, we're more capable than ever - we're delighted to create, and happy to serve.</p>
         <GridRow col="3" className='logos'>
-
     <div className="logo-holder">
         <img src={logo1} alt="" />
     </div>
