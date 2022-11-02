@@ -45,7 +45,7 @@ import setAuthToken from '../utils/setAuthToken';
 import ScrollToTop from './ScrollToTop';
 import { Portfolio } from '../components/containers/sor-dev/Portfolio';
 import { Footer } from '../components/containers/sor-seo/Footer';
-import { AbmGuideDefinitionsPage } from '../components/containers/sor-seo/Resources/data';
+import { AbmGuideDefinitionsPage } from '../components/containers/sor-seo/Resources/data/AbmGuideDefinitionsPage';
 
 const AppWrapper = styled.div`
   /* max-width: calc(768px + 16px * 2); */

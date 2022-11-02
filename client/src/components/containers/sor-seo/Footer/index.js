@@ -8,9 +8,12 @@ const StyledFooter = styled.footer`
     font-weight:medium;
     border: 5px solid white;
     border-radius: 1rem;
+    width:95%;
+    margin: 0 auto;
     
     p{
-        margin: 0;padding: .4rem 0;
+        margin: 0;
+        padding: .4rem 0;
         font-size: 1.3rem;
         color:white;
     }

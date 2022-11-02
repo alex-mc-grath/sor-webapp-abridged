@@ -4,7 +4,7 @@ import { ResourceThumbnail } from './ResourceThumbnail'
 import {GridRow} from '../../../layout/GridRow'
 import { StyledResources, Wrapper } from './Style'
 import { Col } from '../../../layout/Col'
-import { AbmGuideDefinitionsPage } from './data'
+import { AbmGuideDefinitionsPage } from './data/AbmGuideDefinitionsPage'
 
 export const Resources = () => {
   const navigate = useNavigate()
@@ -22,7 +22,8 @@ export const Resources = () => {
           date="August 2021"
           pageContent={<AbmGuideDefinitionsPage />}
           />
-          <ResourceThumbnail
+          <center><p>Stay tuned for more content.<br/> We're currently updating our older articles.</p></center>
+          {/* <ResourceThumbnail
           onClick={()=>navigate('/resources/abm-guide-and-definitions')}
           title='Why SEO is at the core of every modern strategy'
           description='A quick start guide with some basics and terminology on Account-based Marketing'
@@ -37,7 +38,7 @@ export const Resources = () => {
           category="app"
           date="September 2022"
           pageContent={<AbmGuideDefinitionsPage />}
-          />
+          /> */}
           {/*  <ResourceThumbnail
           title='Deep dive in our app'
           description='A quick start guide with some basics and terminology on Account-based Marketing'

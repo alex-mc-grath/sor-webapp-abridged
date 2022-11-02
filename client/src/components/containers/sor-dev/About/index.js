@@ -3,6 +3,7 @@ import { StyledAbout } from './Style';
 import { Container } from '../../../layout/Container';
 import { Col } from '../../../layout/Col';
 import { CTAButton } from '../../AppComponents/CTAButton';
+import { MailToButton } from '../../../input/MailToButton';
 
 export const About = () => {
   return (
@@ -31,7 +32,8 @@ export const About = () => {
         <li>Comprehensive Real-Time Dashboards</li>
       </ul>
       {/* </Container> */}
-      <CTAButton width='80%' margin='2rem auto' text='any questions? send us a quick note' to='/contact' type='gradient' />
+      {/* <CTAButton width='80%' margin='2rem auto' text='any questions? send us a quick note' to='/contact' type='gradient' /> */}
+      <MailToButton className='main-btn' mailto='mailto:contact@sor-seo.com' label='Any questions?  Reach out by email' />
       </Col>
     </StyledAbout>
   );

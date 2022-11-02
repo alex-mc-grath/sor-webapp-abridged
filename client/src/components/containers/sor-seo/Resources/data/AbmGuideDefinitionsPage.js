@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import BackButton from '../../../input/BackButton';
-import { Col } from '../../../layout/Col';
-import { Section } from '../../../layout/Section';
+import BackButton from '../../../../input/BackButton';
+import { Col } from '../../../../layout/Col';
+import { Section } from '../../../../layout/Section';
 
 const StyledAbmGuideDefinitionsPage = styled.article`
     /* // to all pages(for all resources) */
@@ -19,7 +19,7 @@ const StyledAbmGuideDefinitionsPage = styled.article`
   }
 
   .major-quote{
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 5rem auto;
   }
 
@@ -30,7 +30,8 @@ const StyledAbmGuideDefinitionsPage = styled.article`
   ul {
     position: relative;
     /* width:500px; */
-    margin:auto;
+    margin:auto 0;
+    font-size: 1.6rem;
     li {
       left: 0rem;
       transform: translateX(-0rem);
@@ -65,7 +66,7 @@ const StyledAbmGuideDefinitionsPage = styled.article`
 `;
 
 const SectionMod = styled(Section)`
-  margin: 4rem 0;
+  margin: 3rem 0;
   min-height:fit-content;
   align-items:flex-start;
 `
@@ -119,15 +120,19 @@ export const AbmGuideDefinitionsPage = () =>{
         <SectionMod>
           <Col>
             <div className='major-quote'>
-              <span className='scaled-font'>80% of B2B companies report that ABM increases their customer lifetime value.</span>
+              <span className='scaled-font'><i className="fa-solid fa-quote-left"></i> 80% of B2B companies report that ABM increases their customer lifetime value.</span>
             </div>
             <div className='major-quote'>
-              <span className='scaled-font'>87% of marketers who measure ROI say ABM outperforms every other marketing investment.</span>
+              <span className='scaled-font'><i className="fa-solid fa-quote-left"></i> 87% of marketers who measure ROI say ABM outperforms every other marketing investment.</span>
             </div>
+            <div className='major-quote'>
+            <i class='fas fa-quote-left'></i>&nbsp;The whole point of an ABM strategy is to present your prospects with the information they need, instead of having them search for it.
+          </div>
           </Col>
         </SectionMod>
-        <SectionMod>
-          <p>Increased win rates&nbsp; |&nbsp; Increased engagement&nbsp; | &nbsp;Increased Average Deal Size</p>
+        {/* <SectionMod>
+          <h3>Build trust from the start</h3>
+          <Col>Increased win rates&nbsp; |&nbsp; Increased engagement&nbsp; | &nbsp;Increased Average Deal Size</Col>
           <ul>
             <li>Account Insights & Profiling</li>
             <li>Cross-Channel Engagement</li>
@@ -136,20 +141,18 @@ export const AbmGuideDefinitionsPage = () =>{
             <li>Boost revenue</li>
             <li>Treat your target accounts like humans</li>
           </ul>
-        </SectionMod>
-        <SectionMod>
-          <div className='major-quote'>
-            <i class='fas fa-quote-left'></i>&nbsp;The whole point of an ABM strategy is to present your prospects with the information they need, instead of having them search for it.
-          </div>
+        </SectionMod> */}
+        {/* <SectionMod>
+          
 
-          <div className='SectionMod' data-aos='zoom-out-right' data-aos-delay='400'>
+ <div className='SectionMod' data-aos='zoom-out-right' data-aos-delay='400'>
             <h4>Lead Generation vs ABM - What’s the difference?</h4>
             <p>
               A great way to understand the difference between lead generation and ABM is with a good old fishing analogy.
               <br /> Please refer to the table below:
             </p>
-          </div>
-        </SectionMod>
+          </div> 
+        </SectionMod> */}
         <SectionMod>
           <h2>A definitive trend</h2>
           <div className='key-stats-SectionMod' id='key-stat-images'>

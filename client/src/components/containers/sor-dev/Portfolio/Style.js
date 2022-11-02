@@ -21,6 +21,7 @@ export const StyledPortfolio = styled.div`
 
 
 export const StyledPortfolioItem = styled.div`
+position:relative;
     /* background: ${props=>props.background || props.theme.colors.primary}; */
     background: linear-gradient(60deg, #29323c 0%, #485563 100%);
     /* height: 100%; */
@@ -61,6 +62,16 @@ export const StyledPortfolioItem = styled.div`
         }
     }
 
+    .category{
+        position:absolute;
+        top:1.5rem;
+        left:1rem;
+        font-size: 1.1rem;
+        background: white;
+        padding: .3rem 0.5rem;
+        border-radius:.4rem;
+    }
+
     /* ::before{
             content:'';
             position:absolute;
@@ -70,8 +81,9 @@ export const StyledPortfolioItem = styled.div`
         } */
 
 img{
-    padding-top: 3.4rem;
+    margin-top: 1.4rem;
     width:100%;
+    border-radius: 1rem;
 }
 
     .logo{
