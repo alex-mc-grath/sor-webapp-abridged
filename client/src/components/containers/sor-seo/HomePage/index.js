@@ -175,7 +175,7 @@ export default function HomePage() {
       <StyledHomepage>
         <Helmet>
           <title>SOR SEO | Account-based Experience</title>
-          <meta name='description' content='A React.js Boilerplate application homepage' />
+          <meta name='description' content='A modern organic growth approach for b2b' />
         </Helmet>
 
         <Hero

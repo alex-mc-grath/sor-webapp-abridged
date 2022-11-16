@@ -5,12 +5,20 @@ import {GridRow} from '../../../layout/GridRow'
 import { StyledResources, Wrapper } from './Style'
 import { Col } from '../../../layout/Col'
 import { AbmGuideDefinitionsPage } from './data/AbmGuideDefinitionsPage'
+import resource1 from '../../../../media/img/resource1.png'
+import { Helmet } from 'react-helmet'
 
 export const Resources = () => {
   const navigate = useNavigate()
 
   return (
     <StyledResources>
+       <Helmet>
+          <title>SOR SEO | Resources</title>
+          <meta name='description' content='Resources for b2b growth, b2b software solutions and b2b SEO' />
+        </Helmet>
+
+
       <Col width='100%'>
       <h1 className='gradient-color4'>resources & documentation</h1>
       <Wrapper>
@@ -21,6 +29,7 @@ export const Resources = () => {
           category="growth"
           date="August 2021"
           pageContent={<AbmGuideDefinitionsPage />}
+          img={resource1}
           />
           <center><p>Stay tuned for more content.<br/> We're currently updating our older articles.</p></center>
           {/* <ResourceThumbnail

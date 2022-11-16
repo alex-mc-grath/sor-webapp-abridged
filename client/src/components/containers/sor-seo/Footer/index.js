@@ -6,9 +6,9 @@ const StyledFooter = styled.footer`
     display:flex;
     justify-content:center;
     font-weight:medium;
-    border: 5px solid white;
+    border: .5rem solid white;
     border-radius: 1rem;
-    width:95%;
+    width:calc(100% - 0.5rem);
     margin: 0 auto;
     
     p{

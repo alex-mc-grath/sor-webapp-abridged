@@ -4,7 +4,7 @@ import { Col } from '../../../layout/Col'
 import { Row } from '../../../layout/Row'
 import { StyledResourceThumbnail } from './Style'
 
-export const ResourceThumbnail = ({title = "**enter title**", description = "**enter description**" , category = "**enter category**", date = "**enter date**", ...props} ) => {
+export const ResourceThumbnail = ({title = "**enter title**", description = "**enter description**" , category = "**enter category**", date = "**enter date**", img, ...props} ) => {
   const cat = useRef()
 
   useEffect(()=>{
@@ -16,7 +16,8 @@ export const ResourceThumbnail = ({title = "**enter title**", description = "**e
 
   return (
     <StyledResourceThumbnail {...props}>
-        <div className="img"></div>
+        {/* <div className="img"></div> */}
+        <img src={img} alt="" />
         <Row justify='flex-start' align='flex-start' padding='0 1.5rem'>
           <div className="category" ref={cat}>{category}</div>
 

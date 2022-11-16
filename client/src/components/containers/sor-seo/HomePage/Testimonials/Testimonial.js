@@ -22,6 +22,7 @@ min-height: 32vh;
       /* cursor:crosshair; */
       cursor: url(logo-sor-favicon.png);
       cursor: url(logo-sor-favicon.cur) 2 4, auto;
+      cursor:pointer;
       /* cursor: url(cursor_2.png) 2 2, pointer; */
     }
     &:after{

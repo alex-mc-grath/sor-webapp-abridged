@@ -28,19 +28,31 @@ export const Wrapper = styled.div`
 
 export const StyledResourceThumbnail = styled.div`
         width: 100%;
-        height: 30rem;
+        /* height: 30rem; */
         margin:.8rem auto;
         margin-bottom: 2rem;
         background:white;
         position:relative;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+        border-radius:1.2rem;
+        cursor:pointer;
 
 
         .img{
             display:block;
             width: 100%;
             height:50%;
-            background: #000;
+            background: ${props=>props.img};
             border-radius:1.2rem;
+            
+        }
+
+        img{
+            border-bottom: .075rem solid #1f497e;
         }
 
 
@@ -53,8 +65,8 @@ export const StyledResourceThumbnail = styled.div`
     justify-content:center;
     align-items:center;
     background: #fff;
-    border: .2rem solid #666;
-    color: #666;
+    border: .2rem solid #1f497e;
+    color: #1f497e;
     text-align: center;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -68,6 +80,7 @@ export const StyledResourceThumbnail = styled.div`
   .title{
             font-weight:bold;
             font-size: 1.4rem;
+            color:#1f497e;
             white-space:normal;
         line-height: 1.5em;
         overflow: hidden;
@@ -86,6 +99,7 @@ export const StyledResourceThumbnail = styled.div`
 
         p{
             margin:0;
+            letter-spacing:-.5px;
             
         }
 `;

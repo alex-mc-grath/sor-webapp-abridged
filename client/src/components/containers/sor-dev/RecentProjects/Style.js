@@ -22,6 +22,10 @@ img{
   width:100%;
 }
 
+.desc {
+    font-size: 1.3rem;
+  }
+
 button.arrows {
     position: absolute;
     border: none;

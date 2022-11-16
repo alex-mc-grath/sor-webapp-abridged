@@ -54,14 +54,14 @@ export const RecentProjects = () => {
     },
     {
       title: 'Custom Changelog Builder',
-      desc: 'for update tickets and issues',
+      desc: 'Update tickets and issues directly from LinearAPI',
       images: [image1, image2],
       links: ['link1', 'https://github.com/alex-mc-grath/changelog-builder'],
       featuresList: ['custom React storefront on Shopify’s API','box/order builder module', '3D box model in threeJS', 'price and size automatically adjusted on user input'],
     },
     {
       title: 'Parking System MVP',
-      desc: 'open search and twilio integration for mobile access to DB',
+      desc: 'Open search and twilio integration for mobile access to DB',
       images: [image3, image4],
       links: [],
       featuresList: [
@@ -74,7 +74,7 @@ export const RecentProjects = () => {
     },
     {
       title: 'StayStuck XXL',
-      desc: 'cannabis modern UX',
+      desc: 'A modern cannabis "joystick" UX',
       images: [image5, image6],
       links: [],
       featuresList: ['dynamic coloring of categories', 'optimized pre-loading', 'interactive joystick', 'mobile-first design'],

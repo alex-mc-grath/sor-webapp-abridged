@@ -9,7 +9,7 @@ import image4 from '../../../../../media/img/s3-logo.jpg';
 import image5 from '../../../../../media/img/siimin-logo.jpg';
 import image6 from '../../../../../media/img/baytaq-logo-mod.png';
 import image7 from '../../../../../media/img/whistlaw.png';
-import image8 from '../../../../../media/img/packmart.png';
+import image8 from '../../../../../media/img/packmartLogo.png';
 import image9 from '../../../../../media/img/exia-logo.png';
 // import image5 from '../../../../../media/img/siimin-logo.jpg';
 // import image5 from '../../../../../media/img/siimin-logo.jpg';
