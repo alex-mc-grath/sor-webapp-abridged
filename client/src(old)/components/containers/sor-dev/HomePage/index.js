@@ -7,20 +7,22 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { WorkingCarousel } from '../../../layouts/WorkingCarousel';
+// import { WorkingCarousel } from '../../../layouts/WorkingCarousel';
 import { StyledHomepage } from './Style';
-import { Container } from '../../../layouts/Container';
+import { Container } from '../../../layout/Container';
 
 import { motion } from 'framer-motion';
 
 import LogoAnimation from '../LogoAnimation';
 
 import { SorSeoSvg } from '../../sor-seo/HomePage/SorSeoSvg';
-import { BubbleMenu } from '../../../layouts/BubbleMenu';
+import { BubbleMenu } from '../../../layout/BubbleMenu';
+import { Col } from '../../../layout/Col';
 
 import image1 from '../../../../media/img/sor-dev/11.png';
 import image2 from '../../../../media/img/sor-dev/22.jpg';
 import image3 from '../../../../media/img/sor-dev/33aab.jpg';
+import { SliderImg } from './SliderImg';
 
 const sliderImgs = [image1, image2, image3];
 
@@ -55,44 +57,57 @@ export const DevHomePage = () => {
   setTimeout(() => setViewDemoBtn(true), 2000);
 
   return (
-    <motion.div
-      variants={variants}
-      initial='enter'
-      animate='center'
-      exit='exit'
-      transition={{
-        x: { type: 'spring', stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      }}>
+    // <motion.div
+    //   variants={variants}
+    //   initial='enter'
+    //   animate='center'
+    //   exit='exit'
+    //   transition={{
+    //     x: { type: 'spring', stiffness: 300, damping: 30 },
+    //     opacity: { duration: 0.2 },
+    //   }}>
       <StyledHomepage>
         <Helmet>
           <title>SOR DEV | Modern Web Experiences</title>
           <meta name='description' content='software development needs - modern web experiences - MERN Stack' />
         </Helmet>
-        <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/growth']} textOptions={['Back', 'Growth']} />
+
+          {/* <LogoAnimation branchName='DEV' /> */}
         <Container>
-          <div className='flex-column'>
-            {/* <Link to="/" style={{ color: 'white' }}>
-              <span id="back">BACK</span>
-              <SorSeoSvg variant="uno" />
-            </Link> */}
+          <Col>
             <div>
-              <h1>Next-gen digital solutions for B2B SAAS industry leaders</h1>
-              <p>Top-tier application development</p>
-              <p className='artsy'>WEB | MOBILE</p>
+              <h1>aesthetic sensitivity<br />working for you</h1>
+              <p>next-gen digital solutions</p>
+              {/* <h1>Next-gen digital solutions for B2B SAAS industry leaders</h1>
+              <p>Top-tier software application development</p> */}
+              <p className='artsy'><span className="gradient-color4">WEB</span><span className="vertical-bar">|</span><span className="gradient-color4">MOBILE</span></p>
             </div>
-          </div>
+          </Col>
 
-          <LogoAnimation branchName='DEV' />
+          <Link to='/dev/recent-mern-stack-projects'>
+        <SliderImg img={sliderImgs[0]}>
+          <h4>recent projects</h4>
+          <p>Take a look at our recent work and see if it suits your tech/project needs.</p>
+        </SliderImg>
+      </Link>
+      <Link to='/dev/our-tech' className='card'>
+        <SliderImg img={sliderImgs[1]}>
+          <h4>our tech stack</h4>
+          {/* <p>We use the most recent technologies and framework to build your sophisticated applications.</p> */}
+        </SliderImg>
+      </Link>
+      <Link to='/dev/about' className='card'>
+        <SliderImg img={sliderImgs[2]}>
+          <h4>about SOR DEV</h4>
+          <p>Enterprise-level software solutions, stunning user experiences and lightning speed site performance. Discover what it's like to work with us.</p>
+        </SliderImg>
+      </Link>
+
+          
         </Container>
-        <WorkingCarousel sliderImgs={sliderImgs} />
+        {/* <WorkingCarousel sliderImgs={sliderImgs} /> */}
 
-        {/* {viewDemoBtn && (
-          <Link to='/dev/demo-reel' className='bottom-page-button'>
-            view demo reel
-          </Link>
-        )} */}
       </StyledHomepage>
-    </motion.div>
+    // </motion.div>
   );
 };

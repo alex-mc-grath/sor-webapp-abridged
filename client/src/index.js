@@ -1,23 +1,21 @@
 import React from 'react';
-import App from './App/';
-import { createRoot } from 'react-dom/client'
-import {BrowserRouter as Router} from 'react-router-dom'
+import { createRoot } from 'react-dom/client';
+import App from './app';
+// import { Theme } from './App/theme/Theme';
+// import { BrowserRouter as Router } from 'react-router-dom';
+import store from './app/context/store'
+import { Provider } from 'react-redux';
 
 import { ThemeProvider } from 'styled-components';
-import { themeSettings } from './App/Theme/theme-settings'
-import { Provider } from 'react-redux'
-import store from './store'
-import OnRouteChangeWorker from './components/utils/OnRouteChangeWorker';
+import { themeSettings } from './app/theme/theme-settings';
 
-const container = document.getElementById('root')
-const root = createRoot(container)
+const container = document.getElementById('root');
+const root = createRoot(container);
 
 root.render(
-    <Provider store={store}>
-        <ThemeProvider theme={themeSettings}>
-            <Router>
-                <App />
-            </Router>
-        </ThemeProvider>
-    </Provider>
-)
+  <Provider store={store}>
+    <ThemeProvider theme={themeSettings}>
+      <App />
+    </ThemeProvider>
+  </Provider>
+);

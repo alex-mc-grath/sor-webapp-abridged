@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
 export const StyledComparativeTable = styled.div`
-  margin: 5rem auto;
+  margin: 3.5rem auto;
   padding: 2rem 0;
+  padding-bottom: 4rem;
   width: 100%;
 
   .logo-header {
     background: linear-gradient(145deg, #78dde2, #a3eabe);
     color: white;
-    font-size: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
     border-radius: 3px;
   }
 
   h2 {
-    width: 80%;
+    width: 85%;
     margin: 2rem auto;
     margin-bottom: 5rem;
     text-align: center;
@@ -23,10 +25,11 @@ export const StyledComparativeTable = styled.div`
     border-collapse: collapse;
     border-spacing: 0;
     text-indent: initial;
+
   }
 
   table {
-    width: 100%;
+    width: 95%;
     vertical-align: middle;
     margin: auto;
 
@@ -45,6 +48,7 @@ export const StyledComparativeTable = styled.div`
         position: relative;
         padding: 1.5rem;
         display: table-cell;
+        letter-spacing:0;
 
         &:nth-child(even):before {
           box-shadow: 0 0 26px rgb(0 0 0 / 15%);
@@ -151,11 +155,36 @@ export const StyledComparativeTable = styled.div`
       display: table-row-group;
       vertical-align: middle;
       border-color: inherit;
+
+      td{
+        letter-spacing:0px;
+      }
     }
 
     .table-comparison-icon {
       text-align: center;
-      width: 25%;
+      width:14%;
     }
+
+    .last-column{
+      font-size: 1rem;
+      h4{
+        padding: 0 0.2rem;
+        font-size: 1.12rem;
+      }
+
+    }
+  }
+
+
+  @media (min-width: 900px){
+    table {
+    width: 78%;
+
+    tbody tr:hover{
+background: white;
+    }
+
+  }
   }
 `;

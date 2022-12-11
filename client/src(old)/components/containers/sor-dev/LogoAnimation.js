@@ -9,7 +9,7 @@ const StyledLogoAnimation = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 180px;
+    width: 160px;
     max-height: 100px;
     font-family: 'Roboto';
     font-weight: 400;
@@ -18,32 +18,49 @@ const StyledLogoAnimation = styled.div`
     z-index: 2;
 
     img {
-      width: 80px;
+      width: 70px;
       position: absolute;
       transform: translateY(5px);
       z-index: 2;
       opacity: 1;
     }
-
+/* 
     h2 {
       font-family: inherit;
       color: white;
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 3px rgba(255, 255, 255, 0.5);
-      // background: -webkit-linear-gradient(-120deg, $secondary-color, #1f4df1);
+      // background: -webkit-linear-gradient(-120deg, #08a2e5, #1f4df1);
       //     background-clip: text;
       //     -webkit-background-clip: text;
       //     -webkit-text-fill-color: transparent;
+
+      ${props=>props.colorTheme === 'dark' && `
+      color: #1f4df1;
+      background: -webkit-linear-gradient(-120deg, white, #1f4df1);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: .8s background ease-out;
+
+      &:hover{
+        background: -webkit-linear-gradient(-120deg, white, #1f4df1,white);
+        background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: .8s background ease-out;
+      }
+        `} */
+
     }
 
     h2.sor {
-      // margin-left:0;
       position: relative;
       width: 100%;
-      font-size: 8rem;
+      font-size: 6.5rem;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       font-weight: 400;
       text-align: center;
-      margin: 0 auto;
+      margin: 0;
       text-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 3px rgba(255, 255, 255, 0.5);
       animation-fill-mode: forwards;
       animation-delay: 0.65s;
@@ -52,9 +69,9 @@ const StyledLogoAnimation = styled.div`
     h2.seo {
       position: absolute;
       width: auto;
-      right: -25px;
+      right: -3rem;
       min-width: fit-content;
-      font-size: 90%;
+      font-size: 1.3rem;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       border-radius: 4px;
       padding: 0 0.25rem;
@@ -99,10 +116,10 @@ const StyledLogoAnimation = styled.div`
   }
 `;
 
-const LogoAnimation = ({ branchName, className }) => {
+const LogoAnimation = ({ branchName, className, ...props }) => {
   return (
-    <StyledLogoAnimation className={className}>
-      <Link to='/dev'>
+    <StyledLogoAnimation className={className} {...props}>
+      <Link to='/'>
         <div className='sor-dev-logo-container'>
           <h2 className='sor'>SOR</h2>
           <h2 className='seo'>{branchName}</h2>

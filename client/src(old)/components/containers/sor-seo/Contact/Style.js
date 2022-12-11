@@ -4,6 +4,9 @@ export const StyledContact = styled.div`
         display: flex;
         background: white;
         min-height:100vh;
+        background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
+        color: white;
+
             
 
   hr{
@@ -16,7 +19,7 @@ export const StyledContact = styled.div`
   form {
     display: flex;
     flex-direction:column;
-    background: #fafafa;
+    /* background: #fafafa; */
             width:100%;
             max-width: 800px;
             margin:auto;
@@ -27,11 +30,9 @@ export const StyledContact = styled.div`
       display: flex;
     }
 
-    div {
-      margin: 2rem auto;
 
       label {
-        width: 50%;
+        width: 75%;
         margin-bottom: 1rem;
         background: -webkit-linear-gradient(-120deg, $secondary-color, #1f4df1);
         background-clip: text;
@@ -39,11 +40,13 @@ export const StyledContact = styled.div`
         -webkit-text-fill-color: transparent;
       }
 
-      input{
+  input{
         font: inherit;
         border: none;
-        width: 50vw;
+        /* width: 50vw; */
+        width:85%;
         height: 3rem;
+        margin:auto;
         background: #fafafa;
         border-radius: 3px;
         font-weight: 100;
@@ -53,9 +56,9 @@ export const StyledContact = styled.div`
             outline:none;
             border-bottom: 2px solid green;
         }
-      }
-    }
-    input[type="submit"] {
+      } 
+    /* } */
+    /* input[type="submit"] {
       background: #fafafa;
       color: grey;
       border: none;
@@ -81,7 +84,7 @@ export const StyledContact = styled.div`
       &:active{
         /* box-shadow: 2px 5px 11px 2px rgba(33,33,33,.4);  */
       }
-    }
+    } */
   }
         }
 `;

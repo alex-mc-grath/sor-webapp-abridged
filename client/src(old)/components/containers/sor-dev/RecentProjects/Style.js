@@ -1,18 +1,78 @@
 import styled, { css } from 'styled-components/macro';
 
-export const StyledRecentProjects = styled.div`
+export const StyledRecentProjects = styled.article`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
-  background: #292929;
-  width: auto;
   margin: 0;
-  min-height: 100vh;
+  padding-top: 18vh;
+  background: linear-gradient(-30deg, #000000,#130F40,#000000);  
+    color:white;
+
+
 `;
 
 export const StyledProject = styled.div`
-  /* // Mobile */
+width: 97%;
+margin:0;
+/* align-items:flex-start; */
+
+img{
+  width:100%;
+}
+
+.desc {
+    font-size: 1.3rem;
+  }
+
+button.arrows {
+    position: absolute;
+    border: none;
+    padding: 1rem;
+    color: grey;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    
+
+    &:hover {
+      background: linear-gradient(40deg, ${(props) => props.theme.colors.secondary} 10%, #0e2967 10%, ${(props) => props.theme.colors.secondary}, ${(props) => props.theme.colors.secondary});
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+      transition: all 275ms ease;
+      color: white;
+    }
+
+    &:nth-of-type(1) {
+      left: 1rem;
+      top:20.25vh;
+    }
+    &:nth-of-type(2) {
+      right: 1rem;
+      top:20.25vh;
+      z-index:1;
+    }
+  }
+
+@media (min-width: 1000px) {
+  display:flex;
+  flex-direction:column;
+  width: 67%;
+
+img{
+  width:100%;
+  margin: 1rem 0 ;
+  border-radius: 1rem;
+}
+
+}
+
+
+
+  /* // Mobile
   @media (max-width: 1000px) {
     .screenshots {
       flex-direction: column !important;
@@ -30,7 +90,6 @@ export const StyledProject = styled.div`
   border-radius: 10px;
   color: black;
   padding: 2rem;
-  /* height: 80%; */
 
   button.arrows {
     position: absolute;
@@ -62,7 +121,6 @@ export const StyledProject = styled.div`
       max-width: 100% !important;
       img {
         width: 100% !important;
-        /* max-width: 100% !important; */
 
         &:not(:first-of-type) {
           margin-top: 10px;
@@ -123,11 +181,7 @@ export const StyledProject = styled.div`
         color: lightblue;
       }
 
-      /* // test */
-
       position: relative;
-      /* display: inline-block; */
-      /* font-size: 2em; */
       font-weight: 800;
       color: royalblue;
       overflow: hidden;
@@ -165,5 +219,5 @@ export const StyledProject = styled.div`
         color: blue;
       }
     }
-  }
+  } */
 `;

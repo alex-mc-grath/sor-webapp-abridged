@@ -36,6 +36,7 @@
     "jsonwebtoken": "^8.5.1",
     "lottie-react": "^2.2.1",
     "mongodb": "^4.5.0",
+    "prerender-node": "^3.5.0",
     "react-helmet": "^6.1.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",

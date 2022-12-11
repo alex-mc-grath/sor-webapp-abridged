@@ -59,7 +59,7 @@ export const ComparativeTable = ({ item, itemDescription }) => {
               <i class='fa-solid fa-xmark'></i>
             </td>
             <td className='table-comparison-icon feature-present'>
-              <i className='fa-solid fa-check'></i>
+            <i class='fa-solid fa-xmark'></i>
             </td>
           </tr>
           <tr>

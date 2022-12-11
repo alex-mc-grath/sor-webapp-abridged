@@ -8,7 +8,7 @@ export default function makeJWTAuth(config)
         //validate input
         if(!_id){throw new Error('_id is required when creating an auth token')}
         if(!accountType){throw new Error('accountType is required when creating an auth token')}
-        if( (['USER','ADMIN']).indexOf(accountType) < 0 ){throw new Error('accountType is invalid for authentication')}
+        if( (['ADMIN', 'SUPER_ADMIN', 'CASE_HANDLER', 'WHISTLEBLOWER']).indexOf(accountType) < 0 ){throw new Error('accountType is invalid for authentication')}
 
         //create token
         let token = jwt.sign({_id, accountType}, config.getAuthSecret(), {
@@ -16,6 +16,26 @@ export default function makeJWTAuth(config)
         });
 
         return token;
+    }
+
+    const makeCustomToken = ({payload, expiresIn=null}) => {
+        let params = {}
+        if(expiresIn !== null){params.expiresIn = expiresIn}
+
+        let token = jwt.sign(payload, config.getAuthSecret(), params)
+
+        return token
+    }
+
+    const decodeCustomToken = (token) => {
+        try
+        {
+            return jwt.verify(token,config.getAuthSecret());
+        }
+        catch(err)
+        {
+            return null
+        }
     }
 
 
@@ -47,6 +67,8 @@ export default function makeJWTAuth(config)
     
     return Object.freeze({
         makeAuthToken,
-        authenticate
+        authenticate,
+        makeCustomToken,
+        decodeCustomToken
     })
 }

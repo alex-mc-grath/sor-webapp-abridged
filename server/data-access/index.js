@@ -1,4 +1,5 @@
 import makeUserDb from './user-db.js'
+import makeCampaignDb from './campaign-db.js'
 import mongoDB from '../db/mongoDB.js'
 
 
@@ -21,3 +22,4 @@ const makeDb = async () => {
 
 
 export const userDb = makeUserDb({makeDb})
+export const campaignDb = makeCampaignDb({makeDb});

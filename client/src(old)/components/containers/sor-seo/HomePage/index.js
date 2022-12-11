@@ -14,7 +14,19 @@ import { Hero } from '../HomePage/Hero/';
 import { SorSeoSvg } from './SorSeoSvg';
 import { motion } from 'framer-motion';
 import { variants1 } from '../../../utils/animationVariants';
-import BubbleMenu from '../../../layouts/BubbleMenu';
+import BubbleMenu from '../../../layout/BubbleMenu';
+import { ClientLogos } from './ClientLogos';
+import { Why } from './Why';
+import { What } from './What';
+import { Testimonials } from './Testimonials';
+
+
+import { Animator, ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn, MoveOut, Sticky, StickyIn, StickyOut, Zoom, ZoomIn, ZoomOut } from "react-scroll-motion";
+import { GetStarted } from './GetStarted';
+import { Why2 } from './Why2';
+import { AnimationWrapper } from '../../../layout/AnimationWrapper';
+import { Carousel } from '../../../layout/Carousel';
+
 
 const key = 'home';
 
@@ -147,20 +159,23 @@ export default function HomePage() {
     }
   };
 
+  const ZoomInScrollOut = batch( FadeIn(), ZoomIn());
+  const FadeUp = batch(Fade(), Move(), Sticky());
+
   return (
-    <motion.div
-      variants={variants1}
-      initial='enter'
-      animate='center'
-      exit='exit'
-      transition={{
-        x: { type: 'spring', stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      }}>
+    // <motion.div
+    //   variants={variants1}
+    //   initial='enter'
+    //   animate='center'
+    //   exit='exit'
+    //   transition={{
+    //     x: { type: 'spring', stiffness: 300, damping: 30 },
+    //     opacity: { duration: 0.2 },
+    //   }}>
       <StyledHomepage>
         <Helmet>
           <title>SOR SEO | Account-based Experience</title>
-          <meta name='description' content='A React.js Boilerplate application homepage' />
+          <meta name='description' content='A modern organic growth approach for b2b' />
         </Helmet>
 
         <Hero
@@ -169,25 +184,57 @@ export default function HomePage() {
             h1: introText,
           }}
         />
+        
+      <ScrollContainer snap="none">
+          {/* // Section 2 - */}
 
-        <BubbleMenu onceToggled={onceToggled} showNav={showNav} linkOptions={['/dev', '/app/login', '/growth']} textOptions={['Dev', 'Growth']} />
-        {/* <SorSeoSvg onClick={() => onceToggled()} /> */}
+          <ClientLogos />
 
-        {/* <div className={`circle-container ${showNav ? 'show-nav' : ''}`}>
-          <div className='circle'>
-            <button id='open' onClick={() => navigate('/app/login')}>
-              <i class='fa-solid fa-user-astronaut'></i>
-            </button>
-            <button id='open' onClick={() => navigate('/growth')}>
-              Growth
-            </button>
-            <button id='open' onClick={() => navigate('/dev')}>
-              Dev
-            </button>
-          </div>
-        </div> */}
+
+          {/* // Section 3 - */}
+          {/* <ScrollPage>
+                  <div>
+                <Animator animation={batch(Fade(), MoveOut(180, -200), )}>
+                  <Why />
+                </Animator>
+                  </div>
+          </ScrollPage> */}
+
+          <Why />
+
+          <Why2 />
+
+          {/* // Section 4 - */}
+
+          {/* <What /> */}
+          {/* <Why /> */}
+
+              {/* <ScrollPage>
+                <Animator animation={batch(Fade(), MoveOut(0, -200), Sticky())}>
+                  <span style={{ fontSize: "30px" }}>Let me show you scroll animation 😀</span>
+                </Animator>
+              </ScrollPage> */}
+
+
+          {/* // Section 5 - */}
+          
+          {/* <ScrollPage>
+              <Animator animation={batch( ZoomIn())}>
+              <Testimonials />
+              </Animator>
+          </ScrollPage> */}
+          <Testimonials />
+
+
+          {/* few high level client overview (at least 3 boxes + can be as simple as opening a quick clean modal) */}
+         {/* <Carousel /> */}
+
+        <GetStarted />
+
+        </ScrollContainer>
+        
       </StyledHomepage>
-    </motion.div>
+    // </motion.div>
   );
 }
 

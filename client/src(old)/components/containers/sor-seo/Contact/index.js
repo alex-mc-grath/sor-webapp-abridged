@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import {useInput} from "../../../hooks/useInput"
 import { StyledContact } from "./Style";
+import { CTAButton } from "../../AppComponents/CTAButton";
 
 // DO YOU REALLY WANT TO KEEP THIS USEINPUT SYNTAX??
 
@@ -44,18 +45,18 @@ export const Contact = () => {
       {!messageSentView && (
 
         <form onSubmit={onSubmit}>
-          <h2>See what <span className="gradient-color">SOR SEO</span> can do for you</h2>
+          <h2>Still <span className="gradient-color4">got questions?</span> How can we help?</h2>
           <hr />
           <p>Memorable. Scalable. Predictable.</p>
 
           <div>
             <label>Question / Request</label>
-            <input {...bindQuestion} type="text" name="" id="question" placeholder="Hi, I'm be interested in..." />
+            <input {...bindQuestion} type="text" name="" id="question" placeholder="Enter question..." />
           </div>
           
           <div>
             <label htmlFor="">Name</label>
-            <input {...bindName} type="text" name="" id="name" placeholder="Andrew Michael" />
+            <input {...bindName} type="text" name="" id="name" placeholder="Enter name..." />
           </div>
 
           <div>
@@ -63,7 +64,7 @@ export const Contact = () => {
             <input {...bindEmail} type="email" name="" id="business-email" placeholder="username@email.com" />
           </div>
 
-          <input type="submit" value="Submit"></input>
+          <CTAButton type="gradient" value="Submit" text="Send" wdith='75%' margin='2rem auto' />
         </form>
       )}
 
