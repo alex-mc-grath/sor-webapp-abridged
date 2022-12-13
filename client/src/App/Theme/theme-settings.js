@@ -4,6 +4,8 @@ export const themeSettings = () => ({
       primary: '#418EEB',
       secondary: '#08a2e5',
       tertiary: '#2c2c2d',
+
+      black: '#28282B',
   
       body: '#1C1C1E',
       light: '#E5E5E5',

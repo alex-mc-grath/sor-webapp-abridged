@@ -1,3 +1,4 @@
+import db from '../../db/mongoDB.js';
 import {fetchCampaigns} from '../../use-cases/campaign/index.js'
 
 export default function makeGetCampaigns({fetchCampaigns})
@@ -12,7 +13,7 @@ export default function makeGetCampaigns({fetchCampaigns})
 
             let organizationId = null;
 
-            let isHandler = false;
+            // let isHandler = false;
 
             if(!campaignId && !token)
             {
@@ -25,16 +26,16 @@ export default function makeGetCampaigns({fetchCampaigns})
 
             const campaigns = await fetchCampaigns({campaignId, token, organizationId})
 
-            if(campaignId || token)
-            {
-                if(campaigns.length === 0)
-                {
-                    throw new Error('Campaign not found.')
-                }
+            // if(campaignId || token)
+            // {
+            //     if(campaigns.length === 0)
+            //     {
+            //         throw new Error('Campaign not found.')
+            //     }
 
-                let campaign = campaigns[0]
+            //     let campaign = campaigns[0]
 
-            }
+            // }
                 
                 // if(isHandler)
                 // {
@@ -88,13 +89,12 @@ export default function makeGetCampaigns({fetchCampaigns})
             //         reportCases[0].unreadCount = 0;
             //     }
             // }
-
             return {
                 headers: {
                     'Content-Type': "application/json"
                 },
                 statusCode: 200,
-                body: {campaigns}
+                body: {campaigns:campaigns}
             }
         }
         catch(e)

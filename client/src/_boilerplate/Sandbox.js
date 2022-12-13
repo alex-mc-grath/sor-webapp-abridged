@@ -33,12 +33,12 @@ export const Sandbox = () => {
             <li>- priority component</li>
           </ol>
           <div>
-            <MainButton>Main Button</MainButton>
-            <MainButton type="empty">Main Button - type 'empty'</MainButton>
+            <MainButton text='test' />
+            {/* <MainButton type="empty">Main Button - type 'empty'</MainButton>
             <MainButton color="pink">Main Button - color pink</MainButton>
             <MainButton type="empty" color="pink">
               Main Button - type='empty' color pink
-            </MainButton>
+            </MainButton> */}
           </div>
         </Row>
       </div>

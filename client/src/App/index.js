@@ -7,10 +7,13 @@ import GlobalStyle from '../app/theme/global-styles';
 
 // import setAuthToken from '../utils/setAuthToken';
 import { loadUser } from './context/actions/auth'
-import { PrivateRoute } from '../utils/routing/PrivateRoute';
+
+import {PrivateRoute} from '../_boilerplate/utils/routing/PrivateRoute'
 // import { AppMainLayout } from '../components/gui/layout/AppMainLayout';
 import { Sandbox } from '../_boilerplate/Sandbox';
 import { AllCampaigns } from '../pages/sor-app/AllCampaigns';
+import { Login } from '../pages/sor-app/Login';
+import { DashboardPage } from '../pages/sor-app/Dashboard';
 import setAuthToken from '../_boilerplate/utils/auth/setAuthToken';
 
 const App = () => {
@@ -34,17 +37,16 @@ const App = () => {
       <Routes>
         <Route exact path='/' element={
         // <PrivateRoute>
-          // <Dashboard />
-          <Sandbox />
+            <Sandbox />
         // </PrivateRoute>
         } />
-        {/* <Route exact path="/sandbox" element={<Sandbox />} /> */}
-        <Route path='/app/all-campaigns' element={
-          // <PrivateRoute accountType='ADMIN' element={
-        <AllCampaigns />
-        } 
-        // />} 
-        />
+        
+
+        <Route exact path="/app/login" element={<Login />} />
+        <Route path='/app/campaigns' element={<AllCampaigns />} />
+        <Route path='/app/dashboard' element={
+        <PrivateRoute><DashboardPage /></PrivateRoute>} />
+
         <Route path="*" element={<p>Path not resolved</p>} />
       </Routes>
 

@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^14.2.0",
     "axios": "^0.27.2",
     "devextreme": "^21.2.7",
-    "devextreme-react": "^21.2.7",
+    "devextreme-react": "^21.2.11",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.6",
     "gsap": "^3.11.3",

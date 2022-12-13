@@ -1,5 +1,6 @@
-import api from '../../../../utils/api';
-import setAuthToken from '../../../../utils/setAuthToken';
+
+import api from '../../../lib/api';
+import setAuthToken from '../../../_boilerplate/utils/auth/setAuthToken';
 
 export const signIn = ({ email, password }) => async (dispatch) => {
   

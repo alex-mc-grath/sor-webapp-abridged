@@ -5,6 +5,6 @@ export const GridRow = styled.div`
   /* grid-template-columns: ${(props) => props.col} */
   grid-template-columns: repeat(${(props) => props.col}, minmax(0, 1fr));
   ${(props) => props.colTemplate && `grid-template-columns: ${props.colTemplate};`}
-  grid-gap: 2rem;
+  grid-gap: ${(props) => props.gridGap || '2rem'};
   margin: ${(props) => props.margin};
 `;

@@ -3,8 +3,6 @@ import newStore from '../../_boilerplate/utils/redux/newStore'
 import authReducer from '../context/reducers/auth'
 import setAuthToken from '../../_boilerplate/utils/auth/setAuthToken';
 
-
-
 const reducers = combineReducers({
     auth: authReducer
 });

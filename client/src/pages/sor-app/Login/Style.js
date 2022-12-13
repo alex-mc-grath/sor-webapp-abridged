@@ -5,7 +5,7 @@ position:relative;
   background: #22242b;
   
   color: #727f89;
-  height: 96.89vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,14 @@ position:relative;
     color:white;
 
   
+    h2{
+      background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 3rem;
+      font-family:'Playfair Display'
+      font-weight:medium; 
+    }
 /* 
   @media (min-width: 1000px) {
     form {
@@ -34,13 +42,13 @@ position:relative;
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    width: 95%;
-    background: #0e2967;
-    background: #1a1a40;
-    
-    padding: 2rem;
+    width: 75%;
+    /* background: #0e2967;
+    background: #1a1a40; */
+    background: white;
+    padding: 4rem;
     height: 50vh;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     border-radius: 1rem;
     /* background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a); */
     
@@ -64,11 +72,11 @@ position:relative;
         border-radius: .4rem .4rem 0 0;
         margin:auto;
         margin-bottom: .34rem;
-        padding: 0.3rem 0.5rem;
+        padding: 1.3rem 1.5rem;
         cursor: pointer;
         font-size: 1.75rem;
         width:100%;
-        height: 3.3rem;
+        /* height: 3.3rem; */
 
         &::placeholder{
           font-size:1.75rem;
@@ -84,7 +92,7 @@ position:relative;
       }
 
 
-    button {
+    /* button {
       background: #292c6d;
       color: #161853;
       border: none;
@@ -99,7 +107,54 @@ position:relative;
         color: white;
         transition: 0.3s all ease-in-out;
       }
+    } */
+
+    button {
+     
+      border-radius: 0 0 4px 4px;
+      padding: 0.3rem 0.5rem;
+      
+      &::before {
+    content: "";
+    position: absolute;
+    left: .15rem;
+    right: .15rem;
+    top: .15rem;
+    bottom: .15rem;
+    /* border-radius: .4rem; */
+    border-radius: 4rem;
+    background: radial-gradient(780px at 37.8% 100.3%, rgb(19, 55, 115) 2.2%, rgb(32, 7, 80) 20.2%, rgb(27, 88, 111) 58.6%, rgb(115, 88, 44) 75%, rgb(99, 19, 90) 89.6%, rgb(12, 51, 76) 96.1%);
+    z-index: -1;
+    transition: 200ms
+  }
+
+  &::after{
+    color:white;
+  }
+
+  border-radius: 0.3rem;
+  
+  &:hover{
+    &::before {
+      background:white;
+      left: .2rem;
+    right: .2rem;
+    top: .2rem;
+    bottom: .2rem;
+      opacity:1;
+      border-radius: 0.4rem;
     }
+
+    &::after{
+      background: radial-gradient(780px at 37.8% 100.3%, rgb(19, 55, 115) 2.2%, rgb(32, 7, 80) 20.2%, rgb(27, 88, 111) 58.6%, rgb(115, 88, 44) 75%, rgb(99, 19, 90) 89.6%, rgb(12, 51, 76) 96.1%);
+      -webkit-background-clip: text;
+      color: transparent;
+      
+  }
+
+  }
+
+    } 
   }
 
 

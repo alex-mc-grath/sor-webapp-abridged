@@ -11,15 +11,17 @@ export const PrivateRoute = ({ accountType = null, children, ...props }) => {
       if (accountType === null || accountType === auth.accountType || (Array.isArray(accountType) && accountType.includes(auth.accountType)) ) {
         return (
           // <AppMainLayout isLoggedIn menuUi={2} menuTabs={''} {...props}>
+          <>
             {children}
+          </>  
           // </AppMainLayout>
         );
       } else {
-        return <Navigate to='/login' />;
+        return <Navigate to='/app/login' />;
       }
     }
 
-    return <Navigate to='/login' />;
+    return <Navigate to='/app/login' />;
   }
 
   return 'Loader'

@@ -48,6 +48,9 @@ export default function makeFetchCampaigns ({campaignDb})
         else
         {
             console.log('else')
+
+            return await campaignDb.findAll()
+
             // if(isHandler)
             // {
             //     cases = await db.getCollection("categoryPermissions").aggregate([
@@ -68,6 +71,8 @@ export default function makeFetchCampaigns ({campaignDb})
             // {
             //     cases = await reportCasesDb.findByOrgId(organizationId)
             // }
+
+
 
             // return cases.map((c) => {
             //     return {

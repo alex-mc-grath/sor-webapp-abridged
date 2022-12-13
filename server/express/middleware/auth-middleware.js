@@ -12,6 +12,8 @@ export default function makeAuthMiddleware(authenticator)
                     res.status(401).json({"error": "Authorization header is required for authentication"});
                     return;
                 }
+                // skips 'Bearer '
+                token = token.substr(7)
 
                 const authData = authenticator.authenticate(token);
 

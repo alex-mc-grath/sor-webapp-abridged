@@ -1,35 +1,35 @@
 import { useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux'
-import LogoAnimation from '../../sor-dev/LogoAnimation';
+// import LogoAnimation from '../../sor-dev/LogoAnimation';
 import { StyledLogin, StyledFormError, StyledFieldError } from './Style';
-import styled from 'styled-components/macro';
 
 import {useFormik} from 'formik'
 import * as yup from 'yup'
+
 import { motion } from 'framer-motion';
-import { variants1 } from '../../../utils/animationVariants';
+// import { variants1 } from '../../../utils/animationVariants';
 
 import { signIn } from './action';
 import { Navigate } from 'react-router-dom';
-import { LoginAnimation } from './LoginAnimation';
+import { MainButton } from '../../../_boilerplate/inputs/MainButton';
+// import { LoginAnimation } from './LoginAnimation';
 
-import { BubbleMenu } from '../../../layout/BubbleMenu';
+// import { BubbleMenu } from '../../../layout/BubbleMenu';
 
-import LoadingIndicator from '../../../layout/bp-components/LoadingIndicator'
-import { Col } from '../../../layout/Col';
+// import LoadingIndicator from '../../../layout/bp-components/LoadingIndicator'
+// import { Col } from '../../../layout/Col';
 
-const CutomizedLogoAnimation = styled(LogoAnimation)`
-  /* background: ${(props) => props.theme.colors.black}; */
-  min-height: 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+// const CutomizedLogoAnimation = styled(LogoAnimation)`
+//   min-height: 20vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
 
-  .sor-dev-logo-container {
-    margin: auto;
-  }
-`;
+//   .sor-dev-logo-container {
+//     margin: auto;
+//   }
+// `;
 
 export const Login = () => {
 
@@ -76,7 +76,7 @@ export const Login = () => {
 
   if(isLoggedIn)
   {
-    return <Navigate to='/app/analytics' replace={true}/>
+    return <Navigate to='/app/dashboard' replace={true}/>
   }
 
 
@@ -93,25 +93,27 @@ export const Login = () => {
       <StyledLogin>
         {/* <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/growth']} textOptions={['Dev', 'Growth']} /> */}
         <form onSubmit={formik.handleSubmit}>
+            <h2>Sign in</h2>
 
-          {view === '' ? <CutomizedLogoAnimation branchName='APP' /> : <LoginAnimation />}
+          {/* {view === '' ? <CutomizedLogoAnimation branchName='APP' /> : <LoginAnimation />} */}
 
-          
-
-          <Col width='100%'>
+          {/* <Col width='100%'> */}
 
           <div style={{position:'relative'}}>
-            <input type='email' name='email' onChange={formik.handleChange} placeholder='email' value={formik.values.email} onBlur={formik.handleBlur}/>
+            <input type='email' name='email' onChange={formik.handleChange} placeholder='Email' value={formik.values.email} onBlur={formik.handleBlur}/>
             {formik.touched.email && formik.errors.email && <StyledFieldError>{formik.errors.email}</StyledFieldError>}
             </div>
           <div style={{position:'relative'}}>
-            <input type='password' name='password' onChange={formik.handleChange} placeholder='password' value={formik.values.password} onBlur={formik.handleBlur}/>
+            <input type='password' name='password' onChange={formik.handleChange} placeholder='Password' value={formik.values.password} onBlur={formik.handleBlur}/>
             {formik.touched.password && formik.errors.password && <StyledFieldError>{formik.errors.password}</StyledFieldError>}
             </div>
 
-            {showSpinner? (<LoadingIndicator />) : <button type="submit">Connect</button>}
+            {showSpinner ? (
+            // <LoadingIndicator />
+            'loading...'
+            ) : <MainButton text='Next' />}
             <span className='forgot-password'>Forgot Password?</span>
-          </Col>
+          {/* </Col> */}
           {formErrorMessage && <StyledFormError>{formErrorMessage}</StyledFormError>}
         </form>
       </StyledLogin>

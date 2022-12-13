@@ -3,7 +3,9 @@ import api from '../../../lib/api'
 const setAuthToken = (token) => {
     if(token)
     {
-        api.defaults.headers.common['Authorization'] = token;
+
+        api.defaults.headers.common['Authorization'] = 'Bearer '+token;
+
         localStorage.setItem('token', token);
     }
     else
