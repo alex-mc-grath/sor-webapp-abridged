@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DropdownItem, DropdownStyle, SelectContainer, SelectLabelButton, Textlabel } from './Style';
-import flag from '../../../../media/img/us-flag.png';
+// import flag from '../../../../media/img/us-flag.png';
 import { useEffect } from 'react';
 
 //settings prop(optional): hidden (boolean), side ('left' or 'right'), itemPadding(string)
@@ -63,7 +63,9 @@ export const Select = ({ textLabel, label, values = [], onChange, type, onReques
       <SelectContainer onClick={(e) => e.stopPropagation()}>
         {textLabel && <Textlabel>{textLabel}</Textlabel>}
         <SelectLabelButton hidden={hidden} type={type} onClick={handleOpen}>
-          {type === 'language' && <img src={flag} width="30px" alt="" />} {currentValue !== '' ? (currentValue.text || currentValue) : label} <i className="far fa-chevron-down"></i>
+          {type === 'language' && <>language</>
+          // <img src={flag} width="30px" alt="" />
+          } {currentValue !== '' ? (currentValue.text || currentValue) : label} <i className="far fa-chevron-down"></i>
         </SelectLabelButton>
         <DropdownStyle isVisible={open} side={side} dropdownWidth={dropdownWidth}>
           {values.map((value, index) => (

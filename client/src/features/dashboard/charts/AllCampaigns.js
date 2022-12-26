@@ -7,6 +7,12 @@ import styled from 'styled-components';
 const StyledChart = styled.div`
   width: 100%;
 
+  h4{
+    margin:0;
+    margin-top:.4rem;
+    margin-bottom:1.2rem;
+  }
+
   > div {
     width: 100%;
   }
@@ -66,28 +72,30 @@ let monthIndexMap = {
   "11": "Dec"
 }
 
-export const AllCampaigns = ({data}) => {
+export const AllCampaigns = ({title, data}) => {
   const [initChart, setInitChart] = useState(null);
   const chartData = useMemo(() => {
 
     if(data === null){return []}
 
-    /*let start = (new Date()).getMonth() - 11
-    if(start < 0){start += 12}
+    // let start = (new Date()).getMonth() - 11
+    // if(start < 0){start += 12}
+
+    // let toReturn = []
+
+    // for(let i=0; i < 12; i++)
+    // {
+    //   toReturn.push({month: monthIndexMap[start.toString()], active: data[start.toString()]})
+
+    //   start++
+    //   if(start >= 12){start = 0}
+    // }
+
+    // return toReturn
 
     let toReturn = []
 
-    for(let i=0; i < 12; i++)
-    {
-      toReturn.push({month: monthIndexMap[start.toString()], active: data[start.toString()]})
-
-      start++
-      if(start >= 12){start = 0}
-    }
-
-    return toReturn*/
-
-    let toReturn = []
+  
 
     if(data.length > 12)
     {
@@ -111,18 +119,21 @@ export const AllCampaigns = ({data}) => {
   useEffect(() => {
     let width = document.getElementById('casesChart').getBoundingClientRect().width;
     setInitChart({ width });
-  }, []);
+  }, [])
 
   return (
     <StyledChart id="casesChart">
+      <h4>{title}</h4>
       {initChart && (
-        <Chart palette={['#418eeb', '#ff6d4c']} dataSource={chartData}>
+        <Chart palette={['#08a2e5', '#ff6d4c']} dataSource={chartData}>
           <CommonSeriesSettings argumentField="month" type="spline" />
 
-          <Size width={initChart.width} height={300} />
+          <Size width={initChart.width}
+           height={180} 
+           />
 
           <CommonAxisSettings>
-            <Grid visible={true} />
+            <Grid visible={false} />
           </CommonAxisSettings>
 
           {/* <Series key={'submitted'} valueField="submitted" name="submitted" /> */}

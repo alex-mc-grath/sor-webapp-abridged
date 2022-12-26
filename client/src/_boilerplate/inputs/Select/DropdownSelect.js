@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Dropdown, Header, List } from './Dropdown';
 import { SelectLabelButton, SelectLabelButtonFilled, SelectLabelButtonForm } from './Style';
 import styled, { css } from 'styled-components/macro';
-import { useEvent } from '../../../hooks/useEvent';
+import { useEvent } from '../../../_boilerplate/hooks/useEvent'
 
 const styleMap = {
   fill: SelectLabelButtonFilled,
@@ -55,6 +55,7 @@ const StyledItem = styled.div`
   display: flex;
   padding: 1.3rem 1.3rem;
   background: ${props=>props.bgColor ? props.bgColor : 'white'};
+  background: ${props=>props.theme.colors.secondaryShade1};
   border-radius:0;
   /* width: 100%; */
   font-size: 1.4rem;
@@ -73,7 +74,7 @@ const StyledItem = styled.div`
 
   &:hover {
     
-    background: #418eeb;
+    background:${props=>props.theme.colors.secondaryShade2} ;
     border-radius: 1.2rem;
     color: white;
 

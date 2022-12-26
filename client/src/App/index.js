@@ -15,6 +15,8 @@ import { AllCampaigns } from '../pages/sor-app/AllCampaigns';
 import { Login } from '../pages/sor-app/Login';
 import { DashboardPage } from '../pages/sor-app/Dashboard';
 import setAuthToken from '../_boilerplate/utils/auth/setAuthToken';
+import { CreateNewCampaign } from '../features/campaigns/CreateNewCampaign';
+import { ScheduledScans } from '../features/scheduledScans';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -43,9 +45,13 @@ const App = () => {
         
 
         <Route exact path="/app/login" element={<Login />} />
-        <Route path='/app/campaigns' element={<AllCampaigns />} />
-        <Route path='/app/dashboard' element={
-        <PrivateRoute><DashboardPage /></PrivateRoute>} />
+        <Route path='/app/campaigns' element={<PrivateRoute><AllCampaigns /></PrivateRoute>} />
+            <Route path='/app/create-new-campaign' element={<PrivateRoute><CreateNewCampaign /></PrivateRoute>} />
+            
+        <Route path='/app/select-connections' element={<PrivateRoute><CreateNewCampaign /></PrivateRoute>} />
+        <Route path='/app/scheduled-scans' element={<PrivateRoute><ScheduledScans /></PrivateRoute>} />
+
+        <Route path='/app/dashboard' element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
 
         <Route path="*" element={<p>Path not resolved</p>} />
       </Routes>

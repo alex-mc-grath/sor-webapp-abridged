@@ -7,6 +7,11 @@ import {MainButton} from '../_boilerplate/inputs/MainButton'
 // import { DropdownSelect, DefaultItem, Item } from './input/Select/DropdownSelect';
 // import { DropdownSearch, PinnedItem, Item as SearchItem } from './input/Select/DropdownSearch';
 
+import { TableLineItem } from '../_boilerplate/elements/Table/TableLineItem';
+import { Table } from '../_boilerplate/elements/Table';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+
 const StyledSandbox = styled.div`
   width: 80%;
   margin: auto;
@@ -19,10 +24,68 @@ const StyledSandbox = styled.div`
   }
 `;
 
+
 export const Sandbox = () => {
+
+  const navigate = useNavigate()
+  const [state, setState] = useState(0)
+
   return (
     <StyledSandbox>
       <h1>Sandbox - sor app</h1>
+<div></div>
+<button onClick={()=>setState(state+1)}>{state}</button>
+
+    controls
+      Filter
+      Pagination
+      SortableList
+      Sort
+      DragAndDrop
+
+    elements
+      H1, H2, H3
+      IMG
+      List
+      ListItem
+
+      LoadingIndicator
+      PageLabel
+
+    
+    hoc
+    hooks
+    inputs
+    layouts
+    utils
+
+
+    <Table 
+              colHeaders={[
+                <>controls</>,
+                <>elements</>,
+                <>hoc</>,
+                <>hooks</>,
+                <>inputs</>,
+                <>utils</>
+                // <>Breach Category<SortControl sortKey="category"><TableSortArrows /></SortControl></>,
+                // <>Breach Type<SortControl sortKey="subject"><TableSortArrows /></SortControl></>,
+                // // <>Company<SortControl sortKey="company"><TableSortArrows /></SortControl></>,
+                // <>Created Date<SortControl sortKey="createdDate"><TableSortArrows /></SortControl></>,
+                // <>Created By<SortControl sortKey="createdBy"><TableSortArrows /></SortControl></>,
+                // <>Source<SortControl sortKey="source"><TableSortArrows /></SortControl></>,
+                // <>Status<SortControl sortKey="status"><TableSortArrows /></SortControl></>,
+                // <>Action</>
+              ]}
+              LineItem={<>
+                <td>Filter</td>
+                <td>Filter2</td>
+                </>
+              }
+              />
+
+
+
       <div>
         <h2>Main Button</h2>
         <Row>
@@ -33,7 +96,7 @@ export const Sandbox = () => {
             <li>- priority component</li>
           </ol>
           <div>
-            <MainButton text='test' />
+            <MainButton text='test' onClick={()=>navigate('/app/dashboard')} />
             {/* <MainButton type="empty">Main Button - type 'empty'</MainButton>
             <MainButton color="pink">Main Button - color pink</MainButton>
             <MainButton type="empty" color="pink">

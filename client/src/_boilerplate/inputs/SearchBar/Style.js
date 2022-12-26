@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { dfrcc } from '../../../../App/theme/mixins';
 
 export const StyledSearchBar = styled.div`
-  ${dfrcc};
+  display:flex;
+  flex-direction:column;
   justify-content: space-between;
   background: #f3f4f6;
   padding: 0rem 1rem;

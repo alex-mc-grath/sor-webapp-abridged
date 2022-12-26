@@ -4,7 +4,8 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   
-  display: inline-block;
+  display: flex;
+  justify-content:center;
   background: transparent;
   color: ${(props) => props.theme.colors.primary};
   padding: 0.3rem 1.5rem;

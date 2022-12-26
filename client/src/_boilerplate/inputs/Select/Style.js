@@ -15,14 +15,16 @@ export const Textlabel = styled.div`
 
 export const SelectLabelButton = styled.div`
   display: ${(props) => (props.hidden ? 'none' : 'flex')};
+  margin: 1rem 0;
   padding: ${(props) => (props.type === 'language' ? '.8rem 1.5rem' : '1.7rem 2rem')};
   min-width: 7rem;
   width: ${(props) => (props.type === 'language' ? '180px' : '290px')};
   width: 100%;
   color: ${(props) => (props.type === 'language' ? '#484848' : '')};
   font-weight: ${(props) => (props.type === 'language' ? '500' : '900')};
-  background-color: ${(props) => (props.type === 'language' ? '#F3F4F6' : '#fff')};
-  border: ${(props) => (props.type === 'language' ? 'none' : '1px solid #a5a5a5')};
+  /* background-color: ${(props) => (props.type === 'language' ? '#F3F4F6' : '#fff')}; */
+  background-color: ${(props) => props.theme.colors.secondaryShade2};
+  /* border: ${(props) => (props.type === 'language' ? 'none' : '1px solid #a5a5a5')}; */
   border-radius: ${(props) => (props.type === 'language' ? '12px' : '5px')};
   justify-content: space-between;
   align-items: center;
@@ -122,7 +124,7 @@ export const SelectLabelButton = styled.div`
     `}
 
   &:hover {
-    background-color: #fafafa;
+    background-color: ${props=>props.theme.colors.secondaryShade1};
   }
 
   i {
@@ -396,7 +398,7 @@ export const DropdownItem = styled.div`
       font-weight: 500;
     `}
   &:hover, :focus, :focus:hover {
-    background-color: #418eeb;
+    background-color: ${props=>props.theme.colors.secondary};
     color: white;
     outline: none;
 

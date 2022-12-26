@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Loader} from '../../_boilerplate/elements/Loader'
+import {Loader} from '../../components/elements/Loader'
 
 let previousAction = null;
 let previousData = null

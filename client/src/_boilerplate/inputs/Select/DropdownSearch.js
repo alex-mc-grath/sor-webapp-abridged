@@ -17,6 +17,7 @@ const StyledDropdownSearch = styled.div`
   /* margin: 1rem; */
   /* margin-top: 0px; */
   width: 100%;
+  
 `;
 
 export const Item = ({ value = '', text = '', children, disabled = false }) => {

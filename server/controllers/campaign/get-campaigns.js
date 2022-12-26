@@ -7,7 +7,7 @@ export default function makeGetCampaigns({fetchCampaigns})
     {
         try
         {
-            let campaignId = httpRequest.params.caseId || null
+            let campaignId = httpRequest.params.campaignId || null
 
             let token = httpRequest.params.token || null
 
@@ -24,7 +24,8 @@ export default function makeGetCampaigns({fetchCampaigns})
                 // organizationId = user.organization
             }
 
-            const campaigns = await fetchCampaigns({campaignId, token, organizationId})
+            const campaigns = await fetchCampaigns({campaignId, token})
+            console.log('testAlex',campaigns.filter(campaign => campaign._id !== campaignId));
 
             // if(campaignId || token)
             // {

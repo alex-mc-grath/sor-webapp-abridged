@@ -18,7 +18,7 @@ position:relative;
     h2{
       background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
       -webkit-background-clip: text;
-      color: transparent;
+      color: #fafafa;
       font-size: 3rem;
       font-family:'Playfair Display'
       font-weight:medium; 
@@ -32,6 +32,7 @@ position:relative;
 
   .forgot-password {
     margin-left: auto;
+    margin-top: 0.4rem;
     cursor: pointer;
     font-size: 1rem;
   }
@@ -43,9 +44,9 @@ position:relative;
     justify-content: center;
     margin: auto;
     width: 75%;
+    background: #222252;
     /* background: #0e2967;
-    background: #1a1a40; */
-    background: white;
+    /* background: white; */
     padding: 4rem;
     height: 50vh;
     font-size: 1.75rem;

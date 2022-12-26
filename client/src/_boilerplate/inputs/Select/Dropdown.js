@@ -9,7 +9,10 @@ const StyledDropdown = styled.div`
   ${({ width = null }) => (width ? `width: ${width};` : '')}
 `;
 
-const StyledHeader = styled.div``;
+const StyledHeader = styled.div`
+  display:flex;
+  justify-content:center;
+`;
 
 const StyledList = styled.div`
   position: absolute;

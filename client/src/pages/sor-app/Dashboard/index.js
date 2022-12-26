@@ -12,7 +12,7 @@
 
 import { AnimatePresence } from "framer-motion"
 import { Helmet } from "react-helmet"
-import { Dashboard } from "../../../features/dashboard"
+import { Dashboard } from "../../../features/dashboard/index"
 
 import { Layout } from "../../../features/dashboard/Style"
 import withActionPageLoader from "../../../_boilerplate/hoc/withActionPageLoader"
@@ -33,13 +33,13 @@ export const DashboardPage = () => {
     <meta name='description' content='A modern organic growth approach for b2b' />
 </Helmet>    
 
-  return (
+  return <Dashboard />
 
 // Page animation
     // <motion.div variants={variants1} initial='enter' animate='center' exit='exit' transition={transition}>
-        <Dashboard />
+        
     // </motion.div>
-  )
+  
 }
 
 
