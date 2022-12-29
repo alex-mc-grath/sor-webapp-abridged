@@ -52,11 +52,11 @@ export const AllCampaigns = withActionPageLoader(getAllCampaigns, ({loadedPageDa
                 <>Type</>,
                 <>Client name</>,
                 <>Username</>,
-                <></>,
+                <>Edit</>,
                 <></>,
 
             ]}
-              colCustomSize="2.5fr 3fr 2fr 2fr 3fr"
+              colCustomSize="2.5fr 3fr 2fr 2fr 2fr 1fr"
               LineItem={({ row }) => (
                 <tr>
                   <td>{row.campaignName}</td>
@@ -64,6 +64,7 @@ export const AllCampaigns = withActionPageLoader(getAllCampaigns, ({loadedPageDa
                   <td>{row.campaignType}</td>
                   <td>{row.username}</td>
                   <td>{row.username}</td>
+                  <td><MainButton text='edit' width='fit-content' /></td>
                 </tr>
               )} />
 

@@ -23,6 +23,10 @@ import { StatsCard } from '../../components/layouts/StatsCard';
 import { ProgressMeter } from '../../_boilerplate/elements/ProgressMeter';
 import { LiveReport } from './liveReport';
 import { EngineHealth } from './engineHealth'
+import { GeoPenetration } from './geoPenetration'
+import { Row } from '../../_boilerplate/layouts/Row'
+import { StatsNumber } from '../../components/elements/StatsNumber'
+import { TargetAccountList } from '../campaigns/TargetAccountList'
 
 
 export const Dashboard = withActionPageLoader(getDashboardData,({loadedPageData}) => {
@@ -30,6 +34,7 @@ export const Dashboard = withActionPageLoader(getDashboardData,({loadedPageData}
 // should we have a custom hook for our UI management?
 const [ui, setUi] = useState({ latestActivityView: false, datePickerView: false });
 
+const [view, setView] = useState(false);
 
 let hardcodedSelectedCampaign = loadedPageData.campaigns[1]
 let {campaignName} = hardcodedSelectedCampaign
@@ -40,6 +45,16 @@ let {campaignName} = hardcodedSelectedCampaign
         <H1>Dashboard</H1>
           <Link to='/app/campaigns' className='title-navigation'>All campaigns</Link> &nbsp;<i className="fa-sharp fa-solid fa-seedling"></i>&nbsp; <span className="campaign-name">{'Exia New Funnel' || campaignName}</span>
         
+          {view &&
+            <GridRow>
+              <Card height='73vh'>
+                <TargetAccountList />
+              </Card>
+            </GridRow>
+            }
+
+          {!view &&
+          <>
         <GridRow colTemplate='4fr 3fr'>
 
           <Card justify='space-between' direction='row'>
@@ -81,35 +96,41 @@ let {campaignName} = hardcodedSelectedCampaign
             <LiveReport />
           </Card>
         </GridRow>
+        
         <GridRow col='3'>
-        <Card height='16vh' justify='center' align='flex-start' display='block'  >
+        <Card height='19vh' justify='center' align='flex-start' display='block'  >
           <H4>GEO penetration</H4>
-          {/* <StatsCard name="%" statsNumber={75} /> */}
+          <GeoPenetration />
         </Card>
         <Card justify='center' align='flex-start' display='block' >
-            <H4>Scan progress&nbsp; /&nbsp; Validation</H4>
+            {/* <H4>Scan progress&nbsp; |&nbsp; Validation &nbsp; |&nbsp; Active</H4> */}
+            <H4>Campaign progress</H4>
+          <GridRow col='3' gridGap='1rem 0' margin='0' textAlign='center'>
+            <Label active>Scan</Label>
+            <Label>Validation</Label>
+            <Label>Active</Label>
+            <i class="fa-solid fa-badge-check" style={{color:'#08a2e5'}}></i>
+            <i class="fa-thin fa-list-check" style={{color:'#08a2e5'}}></i>
+            {/* <i class="fa-thin fa-badge-check" style={{color:'#08a2e5'}}></i> */}
+            {/* <i class="fa-duotone fa-circle-play"></i> */}<i class="fa-thin fa-circle-play"></i>
+            {/* <i class="fa-duotone fa-cubes-stacked"></i> */}
+            {/* <i class="fa-solid fa-list-check"></i> */}
+            </GridRow>
         </Card>
         <Card justify='flex-start' align='flex-start'>
-            {/* <H4>Queued actions</H4> */}
+            <Row margin='0' justify='space-between' width='100%'>
+            <H4>Target Account List</H4>
+            <Label fontSize='1.8rem'><i class="fa-solid fa-rectangle-list" onClick={()=>setView(true)}></i></Label>
+            </Row>
+            <Row justify='space-between' width='70%'>
+              <Label><StatsNumber>847</StatsNumber> accounts</Label>
+              <Label><StatsNumber>932</StatsNumber> prospects</Label>
+            </Row>
           </Card>
         </GridRow>
+        </>
+        }
 
     </Layout>
   )
-
-//   return (
-//     <Layout>
-//         <H1>Dashboard</H1>
-
-//         <GridRow col='3'>
-//             <Chart1 />
-//             <Chart2 />
-//             <Chart3 />
-//         </GridRow>
-
-//         <GridRow col='1'>
-//             <LongChart />
-//         </GridRow>
-//     </Layout>
-//   )
 })

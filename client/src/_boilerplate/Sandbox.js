@@ -11,6 +11,12 @@ import { TableLineItem } from '../_boilerplate/elements/Table/TableLineItem';
 import { Table } from '../_boilerplate/elements/Table';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { Col } from './layouts/Col';
+
+const EmptyButton = styled(MainButton)`
+    background:transparent;
+    color:none;
+`
 
 const StyledSandbox = styled.div`
   width: 80%;
@@ -24,6 +30,10 @@ const StyledSandbox = styled.div`
   }
 `;
 
+export const Questions = styled.ul`
+    font-size: 1.2rem;
+`;
+
 
 export const Sandbox = () => {
 
@@ -33,6 +43,35 @@ export const Sandbox = () => {
   return (
     <StyledSandbox>
       <h1>Sandbox - sor app</h1>
+
+      <Col>
+        <h3>Elements</h3>
+        <div>{"<Text />"}</div>
+        <div>{"<Label />"}</div>
+        <div>{"<Badge />"}</div>
+
+        <Questions>
+          <li>how to deal with sizes coming in as fixed from theme settings?</li>
+        </Questions>
+      </Col>
+
+      <Col>
+        <h3>Layouts</h3>
+        {"<TextBox />"}
+      </Col>
+
+
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+
+
+
 <div></div>
 <button onClick={()=>setState(state+1)}>{state}</button>
 
@@ -84,6 +123,9 @@ export const Sandbox = () => {
               }
               />
 
+_boilerplate
+component (app)
+used in feature:
 
 
       <div>
@@ -97,6 +139,7 @@ export const Sandbox = () => {
           </ol>
           <div>
             <MainButton text='test' onClick={()=>navigate('/app/dashboard')} />
+            <EmptyButton text='test empty' type='empty' onClick={()=>navigate('/app/dashboard')} />
             {/* <MainButton type="empty">Main Button - type 'empty'</MainButton>
             <MainButton color="pink">Main Button - color pink</MainButton>
             <MainButton type="empty" color="pink">

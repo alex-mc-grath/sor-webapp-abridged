@@ -48,10 +48,9 @@ export const Style = styled.div`
     
 `;
 
-
-export const StatsCard = ({name, statsNumber, variation = -10}) => {
+export const StatsCard = ({name, statsNumber, variation = -10, ...props}) => {
   return (
-    <Style>
+    <Style {...props}>
         <span className='name'>{name}</span>
         <span className='stats-number'>{statsNumber}</span>
         <VariationArrow variation={variation} color={variation >= 0 ? '' : 'red'} />

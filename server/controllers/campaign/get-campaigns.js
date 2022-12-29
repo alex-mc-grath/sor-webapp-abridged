@@ -25,7 +25,7 @@ export default function makeGetCampaigns({fetchCampaigns})
             }
 
             const campaigns = await fetchCampaigns({campaignId, token})
-            console.log('testAlex',campaigns.filter(campaign => campaign._id !== campaignId));
+            // console.log('testAlex',campaigns.filter(campaign => campaign._id !== campaignId));
 
             // if(campaignId || token)
             // {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledSearchSelect = styled.div`
   width: -webkit-fill-available;
   .wrapper {
-    max-width: 40%;
+    max-width: 100%;
     padding: 0 1.5em;
     /* border: 1px solid lightgray; */
     border-radius: 1.5em;

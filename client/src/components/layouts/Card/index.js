@@ -7,6 +7,7 @@ export const DarkCard = styled(Card)`
     /* gap: calc(15% - .5rem); */
     gap: ${props=>props.gap || 'calc(15% - .5rem)'};
     display: ${props=>props.display};
+    padding: 2rem;
 
     h4{
         font-weight:600;

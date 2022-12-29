@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import styled, { css } from 'styled-components';
 import { Img } from '../../../components/elements/Img';
+import { ToggleSwitchWithText } from '../../../_boilerplate/inputs/ToggleSwitchWithText';
 // this logo can be turned into an svg
 import logo from '../../assets/imgs/logo-sor-center-shadow.png'
 
@@ -186,6 +187,7 @@ export const SideNavigationMenu = ({menuTabs, menuUi, setMenuUi, ...props}) => {
               <li className={`${menuUi === 4 ? 'selected' : ''}`} onClick={() => {setMenuUi(4); navigate('/app/dashboard')}}>
                 {menuTabs[3]}
               </li>
+              <ToggleSwitchWithText switchActive={true} setSwitchActive={console.log('dark')} options={['Dark mode', 'Light mode']} />
         </ul>
 
     </StyledSideNavigationMenu>

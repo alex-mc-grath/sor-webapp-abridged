@@ -7,7 +7,8 @@ export const GridRow = styled.div`
   ${(props) => props.colTemplate && `grid-template-columns: ${props.colTemplate};`}
   grid-gap: ${(props) => props.gridGap || '2rem'};
   margin: ${(props) => props.margin || "2.5rem 0"};
-  width: ${props=>props.width};
+  width: ${props=>props.width || '100%'};
   height: ${props=>props.height};
+  text-align: ${props=>props.textAlign};
 
 `;

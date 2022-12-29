@@ -31,24 +31,20 @@ export const AlertBadge = styled.div`
     height: 1.8rem;
     position:absolute;
     border-radius: 50%;
-    top:-1rem;
-    right:0;
+    top:-1.2rem;
+    right:1rem;
     color: white;
     font-weight:bold;
 
     ${props=>props.count > 0 && css`
         display:flex;
         background: ${props=>props.color};
-         
-        /* &:first-child{
-            background: ${props=>props.theme.colors.danger};
-        }
-        &:nth-child(2){
-            background: ${props=>props.theme.colors.warning};
-        }
-        &:nth-child(3){
-            background: ${props=>props.theme.colors.success};
+
+        /* &:nth-of-type(2):before{
+            background: linear-gradient(to right, ${props=>props.color}, #00FFAA);
         } */
+        
+         
     `}
 
     &::before{
@@ -81,7 +77,8 @@ export const Card = styled.div`
     }
 
     :last-of-type::before{
-    display:none;}
+    display:none;
+}
 
     ${props=>props.count > 0 && css`
         
@@ -95,7 +92,7 @@ export const Card = styled.div`
             color: ${props=>props.theme.colors.warning} !important;
         }
         &:nth-of-type(3){
-            color: ${props=>props.theme.colors.success} !important;
+            color: #00FFAA !important;
         }
     `}
 
@@ -107,11 +104,11 @@ export const QuickMetricsIconsDashboard = () => {
     return (
     	<Layout>
             <GridRow col='3' margin='0' gridGap=''>
-                <Card count={0}>
+                <Card count={10}>
                        
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <span>scanning error</span>
-                <AlertBadge color='red' count={0} />
+                <AlertBadge color='#DA2C38' count={10} />
                 </Card>
                 
                 <Card count={0}>
@@ -119,14 +116,14 @@ export const QuickMetricsIconsDashboard = () => {
                     <i class="fa-duotone fa-triangle-exclamation"></i>
                     <span>warning: not completed</span>
                 
-                <AlertBadge color='yellow' count={0}/>
+                <AlertBadge color='#e6cf25' count={0}/>
                 </Card>
                 
-                <Card count={0}>
+                <Card count={1}>
                        
                     <i class="fa-light fa-triangle-exclamation"></i>
                     <span>upstream warning</span>
-                <AlertBadge color='green' count={0} />
+                <AlertBadge color='#006744' count={1} />
                 </Card>
             </GridRow>
     	</Layout>

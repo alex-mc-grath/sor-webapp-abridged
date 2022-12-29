@@ -18,6 +18,31 @@ import { Layout } from './Style';
 import { useFormManager } from './useFormManager';
 import { Step0 } from './Step0';
 import { DropdownSearch } from '../../../_boilerplate/inputs/Select/DropdownSearch';
+import { SearchSelectMulti } from '../../../components/inputs/SearchSelectMulti/index'
+
+import {Badge} from '../../../_boilerplate/elements/Badge'
+import styled from 'styled-components';
+
+
+export const Search = styled.div`
+    background: blue;
+    opacity:0.6;
+    width: auto;
+
+`;
+
+export const Content = styled.div`
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    opacity:0.6;
+    width:100%;
+    height:10vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+`;
+
 
 export const CreateNewCampaign = withActionPageLoader(loadSettings, ({loadedPageData}) => {
 
@@ -49,31 +74,96 @@ export const CreateNewCampaign = withActionPageLoader(loadSettings, ({loadedPage
 
   const {setFormIndex} = manager.current
 
-
+const onSubmit = () => {
+  console.log('onSubmit');
+}
 
   return (
     <Layout>
 
         <H1>Create new campaign</H1>
 
-        <GridRow col='2' height='60vh' margin='8rem auto'>
+        <GridRow col='2' colTemplate='2fr 3fr' height='60vh' margin='8rem auto'>
             <FormProgress setFormIndex={setFormIndex} />
             
-            {campaignData.formIndex === 0 && <Card align='flex-start' justify='flex-start'>
-              <h3>1) Build TAL & TPL with automated scans</h3>
+            
+            {campaignData.formIndex === 0 && <Form onSubmit={onSubmit}>
+            <Card align='flex-start' justify='flex-start' height='100%' gap='2rem'>
+              <h3>1) Build Lists TAL & TPL (with automated scans)</h3>
+
               <Col margin='0' align='flex-start'>
-                <h4>Build target account list (organizations)</h4>
-                  <Label>industries:</Label><DropdownSearch><></></DropdownSearch>
-                  <Label>geo:</Label>
-                  <Label>keywords: (+ -)</Label>
-                </Col>
+                  <h4>Build target account list (organizations)</h4>
+                  <GridRow col='2' colTemplate='1fr 2fr' margin='0rem 0'>
+                    <Col margin='0'>
+                      <SearchSelectMulti name="Industries" />
+                    </Col>
+                    <Content>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                    </Content>
+                  </GridRow>
+
+                  <GridRow col='2' colTemplate='1fr 2fr' margin='0rem 0'>
+                    <Col margin='0'>
+                      <SearchSelectMulti name='Geo' />
+                    </Col>
+                    <Content>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>TestTestTestTest asfda</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                    </Content>
+                  </GridRow>
+                  
+                  <GridRow col='2' colTemplate='1fr 2fr' margin='0rem 0'>
+                    <Col margin='0'>
+                      <SearchSelectMulti name="Keywords" />
+                    </Col>
+                    <Content>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                      <Badge>Test</Badge>
+                    </Content>
+                  </GridRow>
+
+
+
+
+              </Col>
+
               <Col margin='0' align='flex-start'>
               <h4>Build target prospects list (people)</h4>
                 <Label>title:</Label>
                 <Label>geo:</Label>
                 <Label>keywords: (+ -)</Label>
               </Col>
-            </Card>}
+              <SubmitWrapper>
+                <MainButton text='next: automated sequence' />
+              </SubmitWrapper>
+            </Card>
+            </Form>
+            }
+
+
             {campaignData.formIndex === 1 && <Card>
               <h4>Define sequence (automated actions)</h4>
               <Row>
@@ -91,38 +181,65 @@ export const CreateNewCampaign = withActionPageLoader(loadSettings, ({loadedPage
                   </div>
               </Row>
             </Card>}
-            {campaignData.formIndex === 2 && <Card>
-              <Col>
-              <h4>Campaign settings (2 / 2)</h4>
-                <Label>send on weekends:</Label>
-                <Label>messages?:</Label>
-              </Col>
-            </Card>}
-            {campaignData.formIndex === 3 && <>3</>}
-            {campaignData.formIndex === 4 && <>4</>}
+
+            {campaignData.formIndex === 2 && 
+            <Form onSubmit={onSubmit}>
+              <Card>
+                <Col>
+                <h4>Campaign settings (2 / 2)</h4>
+                  <Label>Start date: Jan 1st, 2023</Label>
+                  <Label>End date: March 30th, 2023</Label>
+                  <Label>Start time: 7:30</Label>
+                  <Label>End time: 17:00</Label>
+                  <Label></Label>
+                  <Label>send on weekends:</Label>
+                  <Label>messages?:</Label>
+                </Col>
+              </Card>
+            </Form>
+            }
             
+            {campaignData.formIndex === 3 && 
+            <Form onSubmit={onSubmit}>
+              <Card>
+                <GridRow col='2'>
+                  <Col>
+                  <h4>Campaign objectives & financials</h4>
+                    <Label>Average revenue per client: 40 000$</Label>
+                    <Label>Campaign cost:</Label>
+                    <Label>Campaign ROI:</Label>
+                  </Col>
+
+                  <Col>
+                    <h4>Funnel projections</h4>
+                    <Col>
+                      LinkedIn Results: 10 667 (for initial filters)
+                      Actual companies: 5 440 (+ geo validation)
+                      Companies after keywords filter: 864
+                      Accounts (org.) selected: 259
+                      Prospects selected: 316
+
+                    </Col>
+                    <Col>
+                      Selected accounts:
+                      Invitations sent:
+                      New connections:
+                      M1 sent:
+                      Replies:
+                      Good replies:
+                      Sent to sales:
+                    </Col>
+                    
+                  </Col>
+                </GridRow>
+              </Card>
+            </Form>
+            }
             
         </GridRow>
 
 
-{/* 1) Build TAL & TPL with automated scans
-
-Build target account list (organizations)
-  industries:
-  geo:
-  keywords (positive & neg):
-
-Build target prospects list (people)
-  industries:
-
-  keywords:
-
-
-2) Define Sequence
-
-
-Campaign settings (is this really necessary? can't it just be total 3 steps)
-    other things like send on weekends,
+{/* 1) 
 
 
 Campaign objectives & financials (commit to revenue per client:)(this is a great opportunity and a small dynamic tool)

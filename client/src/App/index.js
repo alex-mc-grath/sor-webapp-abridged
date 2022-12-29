@@ -17,6 +17,7 @@ import { DashboardPage } from '../pages/sor-app/Dashboard';
 import setAuthToken from '../_boilerplate/utils/auth/setAuthToken';
 import { CreateNewCampaign } from '../features/campaigns/CreateNewCampaign';
 import { ScheduledScans } from '../features/scheduledScans';
+import { Portfolio, PortfolioPage } from '../pages/sor-dev/Portfolio';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ const App = () => {
         <Route path='/app/scheduled-scans' element={<PrivateRoute><ScheduledScans /></PrivateRoute>} />
 
         <Route path='/app/dashboard' element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
+        <Route path='/dev/portfolio' element={<PortfolioPage />} />
 
         <Route path="*" element={<p>Path not resolved</p>} />
       </Routes>

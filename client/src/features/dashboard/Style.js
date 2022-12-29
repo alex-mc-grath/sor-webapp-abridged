@@ -33,4 +33,5 @@ export const Layout = styled.div`
         width:100%;
         height: 40vh;
     }
+
 `;
