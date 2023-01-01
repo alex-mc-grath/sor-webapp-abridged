@@ -6,6 +6,9 @@ import baytaqLogin from '../../app/assets/imgs/portfolio-images/baytaq-login.png
 
 import sorappDashboard from '../../app/assets/imgs/portfolio-images/sorapp-dashboard.png'
 import sorappDashboard2 from '../../app/assets/imgs/portfolio-images/sorapp-dashboard2.png'
+import sorapp1 from '../../app/assets/imgs/portfolio-images/sorapp1.png'
+import sorapp2 from '../../app/assets/imgs/portfolio-images/sorapp2.png'
+import sorapp3 from '../../app/assets/imgs/portfolio-images/sorapp3.png'
 import whistlawDashboard from '../../app/assets/imgs/portfolio-images/whistlaw-dashboard.png'
 import whistlawDashboard2 from '../../app/assets/imgs/portfolio-images/whistlaw-dashboard2.png'
 import whistlawDepartment from '../../app/assets/imgs/portfolio-images/whistlaw-department.png'
@@ -71,7 +74,9 @@ export const projects = [{
 
     description: "Account-based platform, advanced automation queueing system amd insights",
     logo: null,
-    imgs: [sorappDashboard,sorappDashboard2],
+    imgs: [sorapp1, sorapp2, sorapp3, 
+      // sorapp4
+    ],
     color: "#08a2e5"
 },
 {

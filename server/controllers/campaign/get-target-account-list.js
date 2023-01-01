@@ -19,16 +19,22 @@ export default function makeGetTargetAccountList({fetchCampaigns})
                 if(!user){throw new Error('invalid user')}
             }
 
-            let targetAccountList = await db.getCollection('prospectAutomation').find({username: "luc.landreville@gmail.com"})
+            let targetAccountList = await db.getCollection('prospectAutomation').find({username: "luc.landreville@gmail.com"},true,'asc',25)
                 // httpRequest.auth._id
-          
+          console.log(targetAccountList)
 
             const toReturn = targetAccountList.map((c) => {
 
                 return {
                     "_id": c._id,
                     "campaignName": c.campaignName,
-                    "firstName": c.firstName
+                    "firstName": c.firstName,
+                    "lastName": c.lastName,
+                    "companyName": c.companyName,
+                    "companyURL": c.companyURL,
+                    "status":c.active,
+                    "dateAdded":c.insertDate,
+                    "connected":c.connected
                 }})
   
                 console.log('trying tal',toReturn)

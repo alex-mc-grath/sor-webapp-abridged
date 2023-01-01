@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { MainButton } from '../../input/MainButton';
-import { PreviousButton } from '../Table/PreviousButton';
+import { MainButton } from '../../inputs/MainButton';
+
+// import { PreviousButton } from '../Table/PreviousButton';
 import { StyledPagination } from './Style';
 
 export const Pagination = ({ currentPage, numberOfPages, showCount, totalCount, nextPage, previousPage, setPage, TextComponent = null, dataName = 'data' }) => {
@@ -26,13 +27,13 @@ export const Pagination = ({ currentPage, numberOfPages, showCount, totalCount, 
         }
 
         <div className='page-nav'>
-          <PreviousButton onClick={previousPage}>
+          <MainButton onClick={previousPage}>
             <svg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <path d='M7 13.5L1 7.5L7 1.5' stroke='#D3D6E4' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
               <path d='M14 13.5L8 7.5L14 1.5' stroke='#D3D6E4' stroke-opacity='0.35' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
             </svg>
             &nbsp;Previous
-          </PreviousButton>
+          </MainButton>
           <ul className='page-numbers'>
             {pageNumbers.map((number) => (
               <li className={`${currentPage === number ? 'active' : ''}`} key={'page_' + number} onClick={() => setPage(number)}>

@@ -60,9 +60,11 @@ export const CampaignObjectives = () => {
                     </Col>
 
                     SOME FIELDS "PLAYABLE WITH":
-                      REVENUE PER CLIENT
-                      CAMPAIGN DURATION
-                      
+                      AVG REVENUE PER CLIENT
+
+                      campaign costs (duration X 2500$)
+                      campaign duration months (slider)
+                      campaign ROI (fixed)
                     
                   </Col>
                 </GridRow>

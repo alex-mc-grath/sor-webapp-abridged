@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { dfrcc } from '../../../../App/theme/mixins';
 
 export const StyledPagination = styled.div`
   .page-nav {
@@ -34,13 +33,19 @@ export const StyledPagination = styled.div`
   .page-numbers {
     background: #e3e4eb;
     border-radius: 6px;
-    ${dfrcc};
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
     padding: 0.5rem;
     width: fit-content;
 
     li {
       list-style: none;
-      ${dfrcc};
+      display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
       width: 4rem;
       height: 4rem;
       color: #418eeb;

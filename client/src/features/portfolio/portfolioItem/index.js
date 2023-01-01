@@ -14,7 +14,7 @@ export const PortfolioItem = ({name, overview, highlights, description, logo, im
                         <TextContainer>
                             <Label>Client name:</Label>
                             {/* {console.log(logo)} */}
-                            {logo ? <img src={logo} alt="logo" style={{width:"30%", marginTop:'1rem'}} /> : <p>{name}</p> }
+                            {logo ? <img src={logo} className='logo' alt="logo" style={{width:"30%", marginTop:'1rem'}} /> : <p>{name}</p> }
                             {/* <Logo src={logo} />  */}
                             {/* {name} */}
                             {/* <WhistLawLongLogo width='20rem' height='100px' /> */}
