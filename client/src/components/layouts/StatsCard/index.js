@@ -48,7 +48,10 @@ export const Style = styled.div`
     
 `;
 
-export const StatsCard = ({name, statsNumber, variation = -10, ...props}) => {
+export const StatsCard = ({name, statsNumber, ...props}) => {
+
+    let variation = ((statsNumber + 100) / statsNumber).toFixed(2)
+
   return (
     <Style {...props}>
         <span className='name'>{name}</span>

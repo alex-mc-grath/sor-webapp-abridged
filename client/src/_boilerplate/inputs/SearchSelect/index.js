@@ -4,7 +4,7 @@ import { StyledSearchSelect } from './Style';
 // Dummy data
 const REQUEST_URL = 'https://jonasjacek.github.io/colors/data.json';
 
-export const SearchSelect = () => {
+export const SearchSelect = ({name}) => {
   const [state, setState] = useState({
     data: null,
     search: '',
@@ -44,7 +44,7 @@ export const SearchSelect = () => {
     <StyledSearchSelect>
       <div className='wrapper'>
         <div className='search'>
-          <input id='search' type='search' value={state.search} placeholder='Search here...' onChange={onInput} onFocus={onFocus} onBlur={onBlur} autocomplete='off' />
+          <input id='search' type='search' value={state.search} placeholder={name ? `Add ${name}...` :'Search here...'} onChange={onInput} onFocus={onFocus} onBlur={onBlur} autoComplete='off' />
           <i class='fas fa-search'></i>
         </div>
         {search.length > 1 && filtered.length > 0 && (

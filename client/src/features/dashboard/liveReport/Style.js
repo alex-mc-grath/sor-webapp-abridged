@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/macro';
-import { DarkCard } from '../../../components/layouts/Card';
+import { DarkCard } from '../../../components/layouts/DarkCard';
 
 export const Style = styled.div`
     width:100%;
@@ -19,6 +19,8 @@ export const Card = styled(DarkCard)`
         ${props=>props.active && css`
 
         background: #001016;
+        box-shadow: 2px 6px 10px -8px rgb(30 166 250 / 36%);
+}
 
         i.fa-duotone{
                 color: ${props=>props.theme.colors.secondary};

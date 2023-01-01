@@ -14,7 +14,7 @@ import { H1 } from '../../components/elements/H1';
 import { TempGreyPlaceholder } from '../../_boilerplate/elements/TempGreyPlaceholder';
 import { Link } from 'react-router-dom';
 import { Img } from '../../components/elements/Img';
-import { DarkCard as Card } from '../../components/layouts/Card';
+import { DarkCard as Card } from '../../components/layouts/DarkCard';
 import companyLogo from '../../app/assets/imgs/exia-logo.png'
 import { ProfileImgThumbnail } from '../../components/elements/ProfileImgThumbnail';
 import {Col} from '../../_boilerplate/layouts/Col'
@@ -76,8 +76,8 @@ let {campaignName} = hardcodedSelectedCampaign
                 
           <Card direction='row'>
             <StatsCard name="New Connections" statsNumber={3803} />
-            <StatsCard name="Accounts connected" statsNumber={25} />
-            <StatsCard name="Formally introduced" statsNumber={75} />
+            <StatsCard name="Accounts connected" statsNumber={941} />
+            <StatsCard name="Formally introduced" statsNumber={45} />
           </Card>
       
         </GridRow>
@@ -110,7 +110,7 @@ let {campaignName} = hardcodedSelectedCampaign
             <Label>Validation</Label>
             <Label>Active</Label>
             <i class="fa-solid fa-badge-check" style={{color:'#08a2e5'}}></i>
-            <i class="fa-thin fa-list-check" style={{color:'#08a2e5'}}></i>
+            <i class="fa-thin fa-list-check"></i>
             {/* <i class="fa-thin fa-badge-check" style={{color:'#08a2e5'}}></i> */}
             {/* <i class="fa-duotone fa-circle-play"></i> */}<i class="fa-thin fa-circle-play"></i>
             {/* <i class="fa-duotone fa-cubes-stacked"></i> */}

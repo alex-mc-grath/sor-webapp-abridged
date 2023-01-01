@@ -18,31 +18,5 @@ export const Layout = styled.div`
         margin:0;
     }
 
-    .box{
-        position:relative;
-        background: ${props=>props.theme.colors.secondaryShade1};
-        width: 10rem;
-        height: 10rem;
-        border-radius: 1rem;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-
-        &:before{
-            content:'➡';
-
-            position:absolute;
-            color:white;
-            top:50%;
-            right:-10%;
-            transform:translate(-0%,-50%);
-
-            &:last-of-type{
-                display:none;
-                background: #000;
-            }
-        }
-    }
 `;
    

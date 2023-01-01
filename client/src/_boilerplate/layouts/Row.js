@@ -7,8 +7,10 @@ export const Row = styled.div`
   justify-content: ${(props) => props.justify};
   align-items: ${(props) => props.align};
   margin: ${(props) => props.margin || '2rem auto'};
+  padding: ${(props) => props.padding};
   margin-right: ${(props) => props.marginRight || ''};
   margin-left: ${(props) => props.marginLeft || ''};
+  margin-top: ${(props) => props.marginTop || ''};
   gap: ${({gap}) => gap || "1rem"};
   flex-wrap: wrap;
 `;

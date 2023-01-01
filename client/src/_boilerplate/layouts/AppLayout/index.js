@@ -78,7 +78,7 @@ export const AppLayout = ({ children, menuTabs, isLoggedIn }) => {
 
   return (
     <StyledAppLayout>
-        <SideNavigationMenu openMenu={openMenu} menuUi={menuUi} setMenuUi={setMenuUi}  menuTabs={['Dashboard','All campaigns', 'Automated Sequence', 'Settings']} onClick={onClick} />
+        <SideNavigationMenu openMenu={openMenu} menuUi={menuUi} setMenuUi={setMenuUi}  menuTabs={['Dashboard','All campaigns', 'Settings']} onClick={onClick} />
         <Header openMenu={openMenu} onClick={onClick} mainColor='' />
         <PageContent openMenu={openMenu}>{children}</PageContent> 
     </StyledAppLayout>

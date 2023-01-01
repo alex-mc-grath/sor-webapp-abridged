@@ -4,11 +4,11 @@ export const StyledSearchSelect = styled.div`
   width: -webkit-fill-available;
   .wrapper {
     max-width: 100%;
-    padding: 0 1.5em;
+    padding: 0.2rem .85rem;
     /* border: 1px solid lightgray; */
     border-radius: 1.5em;
     overflow: hidden;
-    background: #f3f4f6;
+    /* background: #f3f4f6; */
     border-radius: 12px;
     &:hover,
     &.focus {
@@ -32,6 +32,7 @@ export const StyledSearchSelect = styled.div`
     }
     i {
       color: #a5a5a5;
+      font-size:1.4rem;
     }
   }
 

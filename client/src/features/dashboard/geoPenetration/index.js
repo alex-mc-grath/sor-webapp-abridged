@@ -73,8 +73,8 @@ export const Card = styled(StatsCard)`
 export const GeoPenetration = () => {
     return (
     	<Layout>
-            <Row margin='0 0' marginLeft='auto' width='40%' align='flex-start' justify='flex-start'>
-                <Col width='50%' justify='flex-start' margin='0'>
+            <Row margin='0 0' marginLeft='auto' width='60%' align='flex-start' justify='flex-start'>
+                <Col width='60%' justify='flex-start' margin='0'>
                     <ColoredTag text='wave 1' />
                     <ColoredTag text='wave 2' active />
                     <ColoredTag text='wave 3' />

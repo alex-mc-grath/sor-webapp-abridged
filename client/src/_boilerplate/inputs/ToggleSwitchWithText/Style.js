@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+let width = 5.5
+
 export const StyleToggleSwitchWithText = styled.label`
   /* The switch - the box around the slider */
 
@@ -7,9 +9,8 @@ export const StyleToggleSwitchWithText = styled.label`
   display: inline-block;
   /* width: 60px; */
   width: fit-content;
-  min-width: 140px;
-  height: 34px;
-  height: 4.7rem;
+  min-width: ${width}rem;
+  height: ${width / 2.2}rem;
 
   /* Hide default HTML checkbox */
   &.switch input {
@@ -53,11 +54,11 @@ export const StyleToggleSwitchWithText = styled.label`
   .slider:before {
     position: absolute;
     content: '';
-    height: 4rem;
-    width: 4rem;
+    height: ${width / 2.8}rem;
+    width: ${width / 2.8}rem;
     /* width: 26px; */
     left: 5px;
-    bottom: 4px;
+    bottom: 2px;
     background: #418eeb;
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -68,9 +69,9 @@ export const StyleToggleSwitchWithText = styled.label`
     /* border: 1px solid #d6d6d6; */
   }
   .slider.active:before {
-    -webkit-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    transform: translateX(90px);
+    -webkit-transform: translateX(${width / 2}rem);
+    -ms-transform: translateX(${width / 2}rem);
+    transform: translateX(${width / 2}rem);
     background-color: #c4c4c4;
   }
 

@@ -6,8 +6,6 @@ export const ToggleSwitchWithText = ({ options, switchActive, setSwitchActive })
 
   return (
     <StyleToggleSwitchWithText className='switch' onClick={() => setSwitchActive(switchActive)}>
-      {/* <input type='checkbox' /> */}
-
       <span className={`slider round ${switchActive ? 'active' : ''}`}></span>
       <span className={`text ${switchActive ? 'active' : ''}`}>{switchActive ? options[1] : options[0]}</span>
     </StyleToggleSwitchWithText>

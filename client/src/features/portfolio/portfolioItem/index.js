@@ -3,48 +3,58 @@ import { GridRow } from "../../../_boilerplate/layouts/GridRow"
 import { Row } from "../../../_boilerplate/layouts/Row"
 import { Logo } from "../../../_boilerplate/elements/Logo"
 
-import { Badge, Container, Label, Section, TextContainer } from "../Style"
+import { Badge, Container, Label, List, Section, TextContainer } from "../Style"
+import { WhistLawLongLogo } from "../../../app/assets/icons/whistlawLongLogo"
 
-export const PortfolioItem = ({name, overview, highlights, description, logo, imgs, financials, timeline}) => {
+export const PortfolioItem = ({name, overview, highlights, description, logo, imgs, financials, timeline, color}) => {
     return (
     	<Section>
                 <Container>
-                    <GridRow col='2' colTemplate='4fr 5fr' gridGap='0'>
+                    <GridRow col='2' colTemplate='4fr 5fr' gridGap='0' margin='0'>
                         <TextContainer>
                             <Label>Client name:</Label>
                             {/* {console.log(logo)} */}
-                            {/* {logo ? <Logo src={logo} /> : {name}} */}
-                            {name}
+                            {logo ? <img src={logo} alt="logo" style={{width:"30%", marginTop:'1rem'}} /> : <p>{name}</p> }
+                            {/* <Logo src={logo} />  */}
+                            {/* {name} */}
+                            {/* <WhistLawLongLogo width='20rem' height='100px' /> */}
+                            
 
-                            <Col margin='2rem 0'>
+
+                            <Col margin='0.5rem 0'  marginTop="2rem">
                                 <Label>Project overview:</Label>
                                 
-                                <Row justify='flex-start' margin='2rem 0'>
+                                <Row justify='flex-start' margin='1rem 0'>
                                     {overview.map((item, idx)=>
-                                    <Badge>
+                                    <Badge
+                                     color={color}
+                                     >
                                         {item || '$10 K - $15 K'}
                                     </Badge>)}
                                 </Row>
                             </Col>
 
-                            <Col margin='2rem 0'>
+                            <Col margin='0.5rem 0'  marginTop="2rem">
                                 <Label>Project description:</Label>
-                                <p>{description ||'Modern reporting whistleblowing system under EU Law'}</p>
-                            </Col>
-                            <Col margin='2rem 0'>
-                                <Label>Key highlights:</Label>
-                                    {/* {highlights.map((highlight)=>
-                                <ul>
-                                    <li>{highlight.map((i)=><li>{i}</li>)}</li>
-                                    
-                                </ul>
-                                    )} */}
+                                <p className="description">{description ||'Modern reporting whistleblowing system under EU Law'}</p>
                             </Col>
 
+                            <Col margin='0rem 0' marginTop="2rem">
+                                <Label>Key highlights:</Label>
+                                <GridRow col='2' gridGap='0rem 2rem' width='100%' padding='0 2rem' margin='0' justify='space-between'>
+                                    {highlights.map((highlight)=>
+                                        <List>
+                                            {highlight.map((i)=><li>{i}</li>)}
+                                        </List>
+                                    )}
+                                </GridRow>
+                            </Col>
+                         
                         </TextContainer>
 
                         <img src={imgs[0]} alt="" className="test-img" />
                     </GridRow>
+                    
 
                     <GridRow col='3'>
                         {/* <Img src={sorappDashboard}  />

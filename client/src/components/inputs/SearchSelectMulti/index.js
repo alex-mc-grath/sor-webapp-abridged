@@ -7,8 +7,8 @@ import { Label } from "../../elements/Label"
 export const SearchSelectMulti = ({name}) => {
     return (
     	<Layout>
-            <Label>{name}:</Label>
-            <SearchSelectMultiB />
+            {/* <Label>{name}:</Label> */}
+            <SearchSelectMultiB name={name} />
     	</Layout>
     )
 }

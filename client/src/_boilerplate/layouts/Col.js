@@ -8,4 +8,5 @@ export const Col = styled.div`
   width: ${(props) => props.width || '100%'};
   margin: ${(props) => props.margin || '2rem auto'};
   margin-left: ${(props) => props.marginLeft};
+  margin-top: ${(props) => props.marginTop || ''};
 `;

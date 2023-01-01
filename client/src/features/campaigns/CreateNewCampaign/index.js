@@ -4,7 +4,7 @@ import { listOfIndustries } from '../../../app/data/industries'
 import { H1 } from '../../../components/elements/H1';
 import { Label } from '../../../components/elements/Label';
 import { DropdownField } from '../../../components/inputs/Form/DropdownField'
-import { DarkCard as Card } from '../../../components/layouts/Card';
+import { DarkCard as Card } from '../../../components/layouts/DarkCard';
 import withActionPageLoader from '../../../_boilerplate/hoc/withActionPageLoader';
 import { Form, SubmitWrapper } from '../../../_boilerplate/inputs/Form'
 import {MainButton} from '../../../_boilerplate/inputs/MainButton'
@@ -22,6 +22,10 @@ import { SearchSelectMulti } from '../../../components/inputs/SearchSelectMulti/
 
 import {Badge} from '../../../_boilerplate/elements/Badge'
 import styled from 'styled-components';
+import { DefineSequence } from './Steps/DefineSequence';
+import { CampaignSettings } from './Steps/CampaignSettings';
+import { CampaignObjectives } from './Steps/CampaignObjectives';
+import { BuildCampaignLists } from './Steps/BuildCampaignLists';
 
 
 export const Search = styled.div`
@@ -33,14 +37,23 @@ export const Search = styled.div`
 
 export const Content = styled.div`
     display: flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex: 1 1 auto;
+    flex-wrap:wrap;
     overflow-y: auto;
-    opacity:0.6;
+
     width:100%;
-    height:10vh;
+    height:6.0vh;
     overflow-x: hidden;
-    overflow-y: scroll;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  
 `;
 
 
@@ -68,12 +81,11 @@ export const CreateNewCampaign = withActionPageLoader(loadSettings, ({loadedPage
     }
   }
 
+  const { manager, campaignData, setCampaignData } = useFormManager()
+  const {formIndex} = campaignData
+  const {setFormIndex, previousStep} = manager.current
+
   
-
-  const { manager, formIndex, campaignData } = useFormManager()
-
-  const {setFormIndex} = manager.current
-
 const onSubmit = () => {
   console.log('onSubmit');
 }
@@ -83,189 +95,20 @@ const onSubmit = () => {
 
         <H1>Create new campaign</H1>
 
-        <GridRow col='2' colTemplate='2fr 3fr' height='60vh' margin='8rem auto'>
-            <FormProgress setFormIndex={setFormIndex} />
+        <GridRow col='2' colTemplate='2fr 4fr' height='60vh' margin='8rem auto'>
             
+            <FormProgress formIndex={formIndex} previousStep={previousStep} setFormIndex={setFormIndex} setCampaignData={setCampaignData} />
             
-            {campaignData.formIndex === 0 && <Form onSubmit={onSubmit}>
-            <Card align='flex-start' justify='flex-start' height='100%' gap='2rem'>
-              <h3>1) Build Lists TAL & TPL (with automated scans)</h3>
 
-              <Col margin='0' align='flex-start'>
-                  <h4>Build target account list (organizations)</h4>
-                  <GridRow col='2' colTemplate='1fr 2fr' margin='0rem 0'>
-                    <Col margin='0'>
-                      <SearchSelectMulti name="Industries" />
-                    </Col>
-                    <Content>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                    </Content>
-                  </GridRow>
+            {campaignData.formIndex === 0 && <BuildCampaignLists manager={manager.current} campaign={campaignData} />}
 
-                  <GridRow col='2' colTemplate='1fr 2fr' margin='0rem 0'>
-                    <Col margin='0'>
-                      <SearchSelectMulti name='Geo' />
-                    </Col>
-                    <Content>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>TestTestTestTest asfda</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                    </Content>
-                  </GridRow>
-                  
-                  <GridRow col='2' colTemplate='1fr 2fr' margin='0rem 0'>
-                    <Col margin='0'>
-                      <SearchSelectMulti name="Keywords" />
-                    </Col>
-                    <Content>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                      <Badge>Test</Badge>
-                    </Content>
-                  </GridRow>
+            {campaignData.formIndex === 1 && <DefineSequence manager={manager.current} campaign={campaignData}  />}
 
-
-
-
-              </Col>
-
-              <Col margin='0' align='flex-start'>
-              <h4>Build target prospects list (people)</h4>
-                <Label>title:</Label>
-                <Label>geo:</Label>
-                <Label>keywords: (+ -)</Label>
-              </Col>
-              <SubmitWrapper>
-                <MainButton text='next: automated sequence' />
-              </SubmitWrapper>
-            </Card>
-            </Form>
-            }
-
-
-            {campaignData.formIndex === 1 && <Card>
-              <h4>Define sequence (automated actions)</h4>
-              <Row>
-                  <div className='box'>
-                      <span className="action">visit profile</span>
-                      <i className="fa-solid fa-text"></i>
-                  </div>
-                  <div className='box'>
-                      <span className="action">invite</span>
-                      <i className="fa-solid fa-user"></i>
-                  </div>
-                  <div className='box'>
-                      <span className="action">message</span>
-                      <i className="fa-solid fa-message"></i>
-                  </div>
-              </Row>
-            </Card>}
-
-            {campaignData.formIndex === 2 && 
-            <Form onSubmit={onSubmit}>
-              <Card>
-                <Col>
-                <h4>Campaign settings (2 / 2)</h4>
-                  <Label>Start date: Jan 1st, 2023</Label>
-                  <Label>End date: March 30th, 2023</Label>
-                  <Label>Start time: 7:30</Label>
-                  <Label>End time: 17:00</Label>
-                  <Label></Label>
-                  <Label>send on weekends:</Label>
-                  <Label>messages?:</Label>
-                </Col>
-              </Card>
-            </Form>
-            }
+            {campaignData.formIndex === 2 && <CampaignSettings manager={manager.current} campaign={campaignData}  />}
             
-            {campaignData.formIndex === 3 && 
-            <Form onSubmit={onSubmit}>
-              <Card>
-                <GridRow col='2'>
-                  <Col>
-                  <h4>Campaign objectives & financials</h4>
-                    <Label>Average revenue per client: 40 000$</Label>
-                    <Label>Campaign cost:</Label>
-                    <Label>Campaign ROI:</Label>
-                  </Col>
-
-                  <Col>
-                    <h4>Funnel projections</h4>
-                    <Col>
-                      LinkedIn Results: 10 667 (for initial filters)
-                      Actual companies: 5 440 (+ geo validation)
-                      Companies after keywords filter: 864
-                      Accounts (org.) selected: 259
-                      Prospects selected: 316
-
-                    </Col>
-                    <Col>
-                      Selected accounts:
-                      Invitations sent:
-                      New connections:
-                      M1 sent:
-                      Replies:
-                      Good replies:
-                      Sent to sales:
-                    </Col>
-                    
-                  </Col>
-                </GridRow>
-              </Card>
-            </Form>
-            }
+            {campaignData.formIndex === 3 && <CampaignObjectives manager={manager.current} campaign={campaignData} />}
             
         </GridRow>
-
-
-{/* 1) 
-
-
-Campaign objectives & financials (commit to revenue per client:)(this is a great opportunity and a small dynamic tool)
-    - X000$ for one new client, cost of marketing is 3000$/month, ROI of campaign: 103%, average meetings to get a sale: 6, avg discussions to get a meeting: 24, avg connections to get a discussion: 11, avg targeted invites to get new connection, avg TPL size, avg TAL list size, avg linkedin results scanned,
- */}
-
-
-
-        {/* <Form onSubmit={saveCampaign}>
-          <Col>
-            <Label>Campaign settings</Label>
-
-            <DropdownField
-                defaultValue={campaignName || 'Select Industries'}
-                items={listOfIndustries}
-                name="campaignName"
-            />
-            
-
-            <SubmitWrapper>
-              <MainButton width='30rem' text='Save' />
-            </SubmitWrapper>
-          </Col>  
- can't this be transformed to just FormButton... or even MainButton ? 
-
-        </Form> */}
 
     </Layout>
   )

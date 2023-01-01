@@ -63,7 +63,5 @@ const manager = useRef({
     // }
   }, [campaignData]);
 
-  let {formIndex} = manager
-
-    return { manager, formIndex, campaignData }
+    return { manager, campaignData, setCampaignData }
 }

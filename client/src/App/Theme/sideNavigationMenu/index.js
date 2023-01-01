@@ -90,6 +90,18 @@ const StyledSideNavigationMenu = styled.div`
 
 
             &.selected{
+              color: white !important;
+background: white;
+-webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        transition: 1.2s all ease-in-out;
+
+        border-bottom: 2px solid ${props=>props.theme.colors.secondary};
+        width:fit-content;
+
+}
 
            
             /* background: linear-gradient(40deg, #0e2967 10%, ${(props) => props.theme.colors.secondary}, ${(props) => props.theme.colors.secondary}); */
@@ -149,17 +161,6 @@ const StyledSideNavigationMenu = styled.div`
         }
     }
 
-li.selected{
-      
-      color: white !important;
-       
-      background-clip: unset;
-  -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
-  -webkit-box-decoration-break: unset;
-  box-decoration-break: unset;
-
-}
     `}
 `;
 
@@ -175,19 +176,19 @@ export const SideNavigationMenu = ({menuTabs, menuUi, setMenuUi, ...props}) => {
          />
         <ul>
           <h3>SOR APP</h3>
-              <li className={`${menuUi === 2 ? 'selected' : ''}`} onClick={() => {setMenuUi(1); navigate('/app/dashboard')}}>
+              <li className={`${menuUi === 1 ? 'selected' : ''}`} onClick={() => {setMenuUi(1); navigate('/app/dashboard')}}>
                 {menuTabs[0]}
               </li>
-              <li className={`${menuUi === 1 ? 'selected' : ''}`} onClick={() => {setMenuUi(2); navigate('/app/campaigns')}}>
+              <li className={`${menuUi === 2 ? 'selected' : ''}`} onClick={() => {setMenuUi(2); navigate('/app/campaigns')}}>
                 {menuTabs[1]}
               </li>
               <li className={`${menuUi === 3 ? 'selected' : ''}`} onClick={() => {setMenuUi(3); navigate('/app/dashboard')}}>
                 {menuTabs[2]}
               </li>
-              <li className={`${menuUi === 4 ? 'selected' : ''}`} onClick={() => {setMenuUi(4); navigate('/app/dashboard')}}>
+              {/* <li className={`${menuUi === 4 ? 'selected' : ''}`} onClick={() => {setMenuUi(4); navigate('/app/dashboard')}}>
                 {menuTabs[3]}
-              </li>
-              <ToggleSwitchWithText switchActive={true} setSwitchActive={console.log('dark')} options={['Dark mode', 'Light mode']} />
+              </li> */}
+              <ToggleSwitchWithText switchActive={true} setSwitchActive={console.log('dark')} options={['Dark mode', 'Light mode']}  />
         </ul>
 
     </StyledSideNavigationMenu>

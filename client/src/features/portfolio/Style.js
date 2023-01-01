@@ -6,12 +6,19 @@ export const Layout = styled.div`
 
     p{
         font-family:'Libre Caslon Text';
-        font-size: 2.1rem;
+        font-size: 2rem;
         font-weight: 400;
         letter-spacing: -0px;
         margin:0;
         margin-top: 0.6rem;
+
+        &.description{
+            font-size: 1.4rem;
+            font-family: 'Source Sans Pro'
+        }
+        
     }
+
 
     .test-img{
         width:100%;
@@ -59,7 +66,29 @@ export const Section = styled.div`
     position:relative;
     background: ${props=>props.background};
     width:100%;
-    height:100vh;
+    min-height:100vh;
+    margin: 7rem auto;
+
+    &:nth-of-type(1){
+       margin:0;
+    }
+
+    &:nth-of-type(odd):not(:first-child){
+        background: #fafafa;
+        width: 97%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: rotate3d(-.6, .6, .6,  1deg);
+        padding: 4rem 0;
+        border-radius: 1.5rem;
+        transition: 0.2s all ease-in-out;
+
+        &:hover{
+            transform: rotate3d(-.6, .6, .6,  0deg);
+            transition: 0.2s all ease-in-out;
+            box-shadow: rgba(100, 100, 111, 0.1) 0px 1px 2px 0px;
+            background:white;
+        }
+    }
 `
 
 export const Img = styled.img`
@@ -104,30 +133,31 @@ export const H2 = styled.h2`
 
 export const TextContainer = styled.div`
     padding: 0 0rem;
-    width:100%;
+    width:90%;
     height: 100%;
 `;
 export const Label = styled.div`
     font-family: 'Inter';
     font-weight:600;
-    font-size: 2rem;
+    font-size: 1.8rem;
 `;
 export const Badge = styled.span`
-    background: #333333;
+    background: ${props=>props.color ? props.color : '#333333'};
     color:white;
-    padding: 0.4rem 2rem;
+    padding: 0.3rem 2rem;
     margin: 0 0rem;
     border-radius:1.5rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight:medium;
     display:flex;
     justify-content:center;
     align-items:center;
 
     &:nth-of-type(1){
-        width: 45%;
+        width: 35%;
     }
     &:nth-of-type(2){
-        width: 45%;
+        width: 35%;
     }
 `;
 
@@ -169,4 +199,19 @@ export const Subject = styled.span`
 
 export const Logo = styled.img`
     
+`;
+
+export const List = styled.ul`
+        font-size: 1.4rem;
+        padding:0;
+        width:fit-content;
+        
+
+        li{
+            /* list-style-type:"→"; */
+
+        ::marker{
+                background: #000;
+            }
+        }
 `;

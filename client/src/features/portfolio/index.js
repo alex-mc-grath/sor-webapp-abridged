@@ -40,6 +40,7 @@ export const Portfolio = () => {
                     description={project.description}
                     logo={project.logo}
                     imgs={project.imgs}
+                    color={project.color}
                 /> )}
     	</Layout>
     )

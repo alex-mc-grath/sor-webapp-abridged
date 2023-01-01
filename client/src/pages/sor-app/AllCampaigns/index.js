@@ -8,7 +8,7 @@ import { H1 } from '../../../components/elements/H1';
 import { Table } from '../../../_boilerplate/elements/Table';
 import { Col } from '../../../_boilerplate/layouts/Col';
 import { GridRow } from '../../../_boilerplate/layouts/GridRow';
-import { DarkCard as Card } from '../../../components/layouts/Card'
+import { DarkCard as Card } from '../../../components/layouts/DarkCard'
 
 export const AllCampaigns = withActionPageLoader(getAllCampaigns, ({loadedPageData}) => {
 
@@ -17,53 +17,38 @@ export const AllCampaigns = withActionPageLoader(getAllCampaigns, ({loadedPageDa
   const allCampaigns = loadedPageData.campaigns
   console.log(allCampaigns);
 
-    // const allCampaigns = useMemo(() => {
-
-        // let toReturn = []
-        // loadedPageData.campaigns.forEach(row => {
-    
-        //   toReturn.push({ 
-        //     ...row,
-        //   })
-        // });
-    
-        // return toReturn
-    
-      // }, [loadedPageData]);
-
   return (
     <StyledAllCampaigns>
         <H1>All campaigns</H1>
 
-        {/* <GridRow col='2' colTemplate='5fr 1fr'> */}
-        <Col>
+        <Col width='75%'>
           <MainButton marginLeft='auto' margin='2rem 0' onClick={()=>navigate('/app/create-new-campaign')} width='fit-content'>+</MainButton>
-          {/* <MainButton marginLeft='auto' margin='2rem 0' onClick={()=>navigate('/app/create-new-campaign')}>Create new campaign</MainButton> */}
             <Table
               data={allCampaigns}
               colHeaders={[
                 // <>Category<SortControl sortKey="category"><TableSortArrows /></SortControl></>, 
-                // <>Cases Submitted<SortControl sortKey="casesSubmitted"><TableSortArrows /></SortControl></>, 
-                // <>New Cases<SortControl sortKey="newCases"><TableSortArrows /></SortControl></>, 
-                // <>Status<SortControl sortKey="isActive"><TableSortArrows /></SortControl></>, 
-                // <>Action</>
+
+
+// This table should have:
+
+
+
+
                 <>Campaign name</>,
                 <>Description</>,
                 <>Type</>,
                 <>Client name</>,
-                <>Username</>,
-                <>Edit</>,
                 <></>,
 
             ]}
-              colCustomSize="2.5fr 3fr 2fr 2fr 2fr 1fr"
+              colCustomSize="2fr 3fr 2fr 2fr 2fr"
               LineItem={({ row }) => (
                 <tr>
                   <td>{row.campaignName}</td>
                   <td>{row.campaignDescription}</td>
                   <td>{row.campaignType}</td>
                   <td>{row.username}</td>
-                  <td>{row.username}</td>
+                  {/* <td>{row.username}</td> */}
                   <td><MainButton text='edit' width='fit-content' /></td>
                 </tr>
               )} />

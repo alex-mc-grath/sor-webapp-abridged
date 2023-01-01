@@ -6,6 +6,7 @@ export const Layout = styled.div`
 
 .wrapper{
 	background: ${props=>props.theme.colors.secondaryShade1};
+	background: #282828;
 }
 .search {
 	height:2.8rem;
@@ -15,10 +16,10 @@ export const Layout = styled.div`
 }
 `;
     
-export const SearchSelectMulti = () => {
+export const SearchSelectMulti = ({name}) => {
     return (
     	<Layout>
-    		<SearchSelect/>
+    		<SearchSelect name={name} />
     	</Layout>
     )
 }
