@@ -6,8 +6,9 @@ const StyledButton = styled.button`
   
   display: flex;
   justify-content:center;
+  align-items:center;
   background: transparent;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
   padding: 0.3rem 1.5rem;
   cursor: pointer;
   font-weight: bold;

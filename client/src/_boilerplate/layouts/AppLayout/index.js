@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled, { css } from 'styled-components/macro';
 // import { SideNavigationMenu } from '../../../../App/theme/SideNavigationMenu';
-import { Header } from '../../../app/theme/header/Header';
+import { Header } from '../../../app/theme/header-app';
 // import setAuthToken from '../../../../utils/setAuthToken';
 import { useNavigate } from 'react-router-dom';
 import { SideNavigationMenu } from '../../../app/theme/sideNavigationMenu';
@@ -45,7 +45,7 @@ export const PageContent = styled.div`
       transition: all .5s ease-in-out;
       /* transition-delay: 1s; */
 
-      ${props=>props.openMenu && css`
+      ${props => props.openMenu && css`
           background: #161616;
           transform: scale(0.975);
           *{
@@ -66,26 +66,26 @@ export const AppLayout = ({ children, menuTabs, isLoggedIn }) => {
   const unmanage = () => {
     // clearPageLoaderCache()
     // setAuthToken(auth.whistlaw.token)
-    dispatch({type:"UNMANAGE"})
-    dispatch({type:"REMOVE_MANAGED_IMAGE"})
+    dispatch({ type: "UNMANAGE" })
+    dispatch({ type: "REMOVE_MANAGED_IMAGE" })
     navigate('/')
   }
-  
-  const [menuUi,setMenuUi] = useState(1)
+
+  const [menuUi, setMenuUi] = useState(1)
   const [openMenu, setOpenMenu] = useState(false)
 
-  const onClick = () => {setOpenMenu(!openMenu) }
+  const onClick = () => { setOpenMenu(!openMenu) }
 
   return (
     <StyledAppLayout>
-        <SideNavigationMenu openMenu={openMenu} menuUi={menuUi} setMenuUi={setMenuUi}  menuTabs={['Dashboard','All campaigns', 'Settings']} onClick={onClick} />
-        <Header openMenu={openMenu} onClick={onClick} mainColor='' />
-        <PageContent openMenu={openMenu}>{children}</PageContent> 
+      <SideNavigationMenu openMenu={openMenu} menuUi={menuUi} setMenuUi={setMenuUi} menuTabs={['Dashboard', 'All campaigns', 'Settings']} onClick={onClick} />
+      <Header openMenu={openMenu} onClick={onClick} mainColor='' />
+      <PageContent openMenu={openMenu}>{children}</PageContent>
     </StyledAppLayout>
   )
 }
 
-      {/* {isLoggedIn && (
+{/* {isLoggedIn && (
         <>
           <Header>
             <ul>
@@ -103,10 +103,10 @@ export const AppLayout = ({ children, menuTabs, isLoggedIn }) => {
               </li>
             </ul>
           </Header> */}
-      {/* <div className="right-panel"> */}
-        {/* <Header accountType={auth.accountType}/> */}
-        {/* {auth.whistlaw && <p className="whitlaw-banner">Logged into {auth.organization}, your modifications will appear as Whistlaw Admin. (<a href="#" onClick={unmanage}>Sign out</a>)</p>}
+{/* <div className="right-panel"> */ }
+{/* <Header accountType={auth.accountType}/> */ }
+{/* {auth.whistlaw && <p className="whitlaw-banner">Logged into {auth.organization}, your modifications will appear as Whistlaw Admin. (<a href="#" onClick={unmanage}>Sign out</a>)</p>}
       {/* </div> */}
-      
-      {/* </> */}
-    
+
+{/* </> */ }
+

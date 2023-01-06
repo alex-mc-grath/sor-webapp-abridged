@@ -1,9 +1,8 @@
-// from all campaign you can "enter in a specific campaign's dashboard"
-// but you can also within the dashboard toggle a dropdown and change campaign
 
+// but you can also within the dashboard toggle a dropdown and change campaign
 // so it starts at Page level, where only the <Dashboard /> (feature) is rendered
 // <Dashboard /> (feature) is coded to receive data, independantly of the app, because it's a feature (reuseability)
-// Therefore, it's in Page that we set up the withActionPageLoader hoc
+// Therefore, it's maybe not in Page that we set up the withActionPageLoader hoc
 
 // PAGE-LEVEL-ONLY, no styling, no actions - What else usually goes into the page level? SEO? Loadable? Page Animation?
 

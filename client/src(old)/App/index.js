@@ -83,11 +83,11 @@ const App = () => {
       <AnimatePresence exitBeforeEnter={false} initial={false}>
         <Routes location={location} key={location.pathname}>
 
-        {/* /RESOURCES/ */}
+          {/* /RESOURCES/ */}
           <Route path='/resources' element={<Resources />} />
           <Route path='/resources/abm-guide-and-definitions' element={<AbmGuideDefinitionsPage />} />
 
-          
+
           <Route path='/contact' element={<Contact />} />
 
 
@@ -101,17 +101,17 @@ const App = () => {
           {/* why sor, why seo, where exactly does seo matter, UX and organic marketing */}
           <Route path='/organic-marketing-and-search-engine-optimization' element={<Growth />} />
 
-          
+
 
           {/* /DEV/  */}
           <Route path='/dev' element={<DevHomePage />} />
-          
+
           <Route path='/dev/portfolio' element={<Portfolio />} />
           <Route path='/dev/recent-mern-stack-projects' element={<RecentProjects />} />
           <Route path='/dev/our-tech' element={<TechStack />} />
           <Route path='/dev/about' element={<About />} />
 
-          
+
           <Route path='/dev/demo' element={<DevHomePage />} />
           <Route path='/dev/demo-reel' element={<DemoReel />} />
           <Route path='/dev/contact' element={<DevHomePage />} />
@@ -123,14 +123,14 @@ const App = () => {
           <Route path='/app/select-connections' element={<Login />} />
           <Route path='/app/analytics' element={<PrivateRoute accountType='ADMIN' element={<Analytics />} />} />
           <Route path='/app/all-campaigns' element={<PrivateRoute accountType='ADMIN' element={<AllCampaigns />} />} />
-          
+
         </Routes>
-      
+
         <Footer />
       </AnimatePresence>
 
       <ScrollToTop />
-     
+
       <GlobalStyle />
     </AppWrapper>
   );

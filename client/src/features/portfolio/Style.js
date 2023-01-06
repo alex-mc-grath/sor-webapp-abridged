@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Layout = styled.div`
 
@@ -73,22 +73,6 @@ export const Section = styled.div`
        margin:0;
     }
 
-    &:nth-of-type(odd):not(:first-child){
-        background: #fafafa;
-        width: 97%;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        transform: rotate3d(-.6, .6, .6,  1deg);
-        padding: 4rem 0;
-        border-radius: 1.5rem;
-        transition: 0.2s all ease-in-out;
-
-        &:hover{
-            transform: rotate3d(-.6, .6, .6,  0deg);
-            transition: 0.2s all ease-in-out;
-            box-shadow: rgba(100, 100, 111, 0.1) 0px 1px 2px 0px;
-            background:white;
-        }
-    }
 `
 
 export const Img = styled.img`
@@ -125,6 +109,15 @@ export const Container = styled.div`
     margin: auto;
     width: 92%;
     height:94%;
+
+    @media (max-width:50rem){
+    ${props=>props.mobile && css`
+        >*:not(:first-child){
+            display:none;
+        }
+        `}
+    }
+
 `;
 
 export const H2 = styled.h2`

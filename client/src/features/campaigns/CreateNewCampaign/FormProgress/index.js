@@ -15,7 +15,7 @@ export const FormProgress = ({formIndex, previousStep, setFormIndex, setCampaign
   }
 
     return (
-    	<Layout>
+    	<Layout formIndex={formIndex}>
             {data.map((item,idx) => 
                 <div key={idx} className={`li-wrapper ${formIndex === idx ? 'active' : ''}`} 
                 // onClick={()=>setFormIndex(idx - 1)}

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Badge = styled.span`
-    background: ${props=>props.theme.colors.primary};
+    background: ${props=>props.theme.colors.secondary};
     color:white;
     padding: 0.3rem 1.8rem;
     margin: 0.2rem;

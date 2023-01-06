@@ -44,6 +44,62 @@ export const Sandbox = () => {
     <StyledSandbox>
       <h1>Sandbox - sor app</h1>
 
+
+          <Table
+              data={[{
+                controls:'control1',
+                elements:'element1',
+                hoc: 'hoc1',
+                hooks: 'hook1',
+                inputs: 'input1',
+                utils: 'util1'
+            
+            },{
+              controls:'control2',
+              elements:'element2',
+              hoc: 'hoc2',
+              hooks: 'hook2',
+              inputs: 'input2',
+              utils: 'util2'
+          
+          },{
+            controls:'control3',
+            elements:'element3',
+            hoc: 'hoc3',
+            hooks: 'hook3',
+            inputs: 'input3',
+            utils: 'util3'
+        
+        }]} 
+              colHeaders={[
+                <>controls</>,
+                <>elements</>,
+                <>hoc</>,
+                <>hooks</>,
+                <>inputs</>,
+                <>utils</>
+                // <>Breach Category<SortControl sortKey="category"><TableSortArrows /></SortControl></>,
+                // <>Breach Type<SortControl sortKey="subject"><TableSortArrows /></SortControl></>,
+                // // <>Company<SortControl sortKey="company"><TableSortArrows /></SortControl></>,
+                // <>Created Date<SortControl sortKey="createdDate"><TableSortArrows /></SortControl></>,
+                // <>Created By<SortControl sortKey="createdBy"><TableSortArrows /></SortControl></>,
+                // <>Source<SortControl sortKey="source"><TableSortArrows /></SortControl></>,
+                // <>Status<SortControl sortKey="status"><TableSortArrows /></SortControl></>,
+                // <>Action</>
+              ]}
+               LineItem={({ row }) => (
+                <tr>
+                  <td>{row.controls}</td>
+                  <td>{row.elements}</td>
+                  <td>{row.hoc}</td>
+                  <td>{row.hooks}</td>
+                  <td>{row.inputs}</td>
+                  <td>{row.utils}</td>
+                </tr>
+               )}
+              />
+
+
       <Col>
         <h3>Elements</h3>
         <div>{"<Text />"}</div>
@@ -57,7 +113,10 @@ export const Sandbox = () => {
 
       <Col>
         <h3>Layouts</h3>
-        {"<TextBox />"}
+        <p>{"<TextBox />"}</p>
+        <p>{"<SplitScreen />"}</p>
+        <p>{"<Splash />"}</p>
+        <p>{"<Hero />"}</p>
       </Col>
 
 
@@ -99,34 +158,16 @@ export const Sandbox = () => {
     utils
 
 
-    <Table 
-              colHeaders={[
-                <>controls</>,
-                <>elements</>,
-                <>hoc</>,
-                <>hooks</>,
-                <>inputs</>,
-                <>utils</>
-                // <>Breach Category<SortControl sortKey="category"><TableSortArrows /></SortControl></>,
-                // <>Breach Type<SortControl sortKey="subject"><TableSortArrows /></SortControl></>,
-                // // <>Company<SortControl sortKey="company"><TableSortArrows /></SortControl></>,
-                // <>Created Date<SortControl sortKey="createdDate"><TableSortArrows /></SortControl></>,
-                // <>Created By<SortControl sortKey="createdBy"><TableSortArrows /></SortControl></>,
-                // <>Source<SortControl sortKey="source"><TableSortArrows /></SortControl></>,
-                // <>Status<SortControl sortKey="status"><TableSortArrows /></SortControl></>,
-                // <>Action</>
-              ]}
-              LineItem={<>
-                <td>Filter</td>
-                <td>Filter2</td>
-                </>
-              }
-              />
+    
 
 _boilerplate
 component (app)
 used in feature:
 
+<br/>
+      <br/>
+      <br/>
+      <br/>
 
       <div>
         <h2>Main Button</h2>

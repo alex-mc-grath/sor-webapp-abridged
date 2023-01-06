@@ -15,7 +15,7 @@ import { TempGreyPlaceholder } from '../../_boilerplate/elements/TempGreyPlaceho
 import { Link } from 'react-router-dom';
 import { Img } from '../../components/elements/Img';
 import { DarkCard as Card } from '../../components/layouts/DarkCard';
-import companyLogo from '../../app/assets/imgs/exia-logo.png'
+import companyLogo from '../../app/assets/imgs/fake-company-logo.png'
 import { ProfileImgThumbnail } from '../../components/elements/ProfileImgThumbnail';
 import {Col} from '../../_boilerplate/layouts/Col'
 import { Loader } from '../../components/elements/Loader';
@@ -55,6 +55,14 @@ let {campaignName} = hardcodedSelectedCampaign
 
           {!view &&
           <>
+
+{/* 
+    <GridRow colTemplate='4fr 3fr'>
+        <CampaignGeneralInfo />
+        <KeyStats />
+    </GridRow>
+*/}
+
         <GridRow colTemplate='4fr 3fr'>
 
           <Card justify='space-between' direction='row'>
@@ -83,7 +91,7 @@ let {campaignName} = hardcodedSelectedCampaign
         </GridRow>
 
         <GridRow col='3'>
-          <Card  justify='flex-start' align='flex-start'>
+          <Card justify='flex-start' align='flex-start'>
             <H4>Sum of actions</H4>
             <SumOfActions />
           </Card>
@@ -98,29 +106,31 @@ let {campaignName} = hardcodedSelectedCampaign
         </GridRow>
         
         <GridRow col='3'>
-        <Card height='19vh' justify='center' align='flex-start' display='block'  >
-          <H4>GEO penetration</H4>
-          <GeoPenetration />
-        </Card>
-        <Card justify='center' align='flex-start' display='block' >
+          <Card height='19vh' justify='center' align='flex-start' display='block'  >
+            <H4>GEO penetration</H4>
+            <GeoPenetration />
+          </Card>
+        
+          <Card justify='center' align='flex-start' display='block' >
             {/* <H4>Scan progress&nbsp; |&nbsp; Validation &nbsp; |&nbsp; Active</H4> */}
             <H4>Campaign progress</H4>
-          <GridRow col='3' gridGap='1rem 0' margin='0' textAlign='center'>
-            <Label active>Scan</Label>
-            <Label>Validation</Label>
-            <Label>Active</Label>
-            <i class="fa-solid fa-badge-check" style={{color:'#08a2e5'}}></i>
-            <i class="fa-thin fa-list-check"></i>
-            {/* <i class="fa-thin fa-badge-check" style={{color:'#08a2e5'}}></i> */}
-            {/* <i class="fa-duotone fa-circle-play"></i> */}<i class="fa-thin fa-circle-play"></i>
-            {/* <i class="fa-duotone fa-cubes-stacked"></i> */}
-            {/* <i class="fa-solid fa-list-check"></i> */}
-            </GridRow>
-        </Card>
-        <Card justify='flex-start' align='flex-start'>
+              <GridRow col='3' gridGap='1rem 0' margin='0' textAlign='center'>
+                <Label active>Scan</Label>
+                <Label>Validation</Label>
+                <Label>Active</Label>
+                <i class="fa-solid fa-badge-check" style={{color:'#08a2e5'}}></i>
+                <i class="fa-thin fa-list-check"></i>
+                {/* <i class="fa-thin fa-badge-check" style={{color:'#08a2e5'}}></i> */}
+                {/* <i class="fa-duotone fa-circle-play"></i> */}<i class="fa-thin fa-circle-play"></i>
+                {/* <i class="fa-duotone fa-cubes-stacked"></i> */}
+                {/* <i class="fa-solid fa-list-check"></i> */}
+                </GridRow>
+          </Card>
+
+          <Card justify='flex-start' align='flex-start'>
             <Row margin='0' justify='space-between' width='100%'>
-            <H4>Target Account List</H4>
-            <Label fontSize='1.8rem'><i class="fa-solid fa-rectangle-list" onClick={()=>setView(true)}></i></Label>
+              <H4>Target Account List</H4>
+              <Label fontSize='1.8rem'><i class="fa-solid fa-rectangle-list" onClick={()=>setView(true)}></i></Label>
             </Row>
             <Row justify='space-between' width='70%'>
               <Label><StatsNumber>847</StatsNumber> accounts</Label>

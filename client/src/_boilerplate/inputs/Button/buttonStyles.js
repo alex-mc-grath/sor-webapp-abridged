@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 const buttonStyles = css`
   display: inline-block;
   background: transparent;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
   margin: auto 0rem;
   padding: 0.3rem 1.5rem;
   border: 2px solid ${(props) => props.theme.colors.secondary};

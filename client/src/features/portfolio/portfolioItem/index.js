@@ -10,7 +10,7 @@ export const PortfolioItem = ({name, overview, highlights, description, logo, im
     return (
     	<Section>
                 <Container>
-                    <GridRow col='2' colTemplate='4fr 5fr' gridGap='0' margin='0'>
+                    <GridRow col='2' colTemplate='4fr 5fr' gridGap='0' margin='0' mobile>
                         <TextContainer>
                             <Label>Client name:</Label>
                             {/* {console.log(logo)} */}
@@ -44,7 +44,7 @@ export const PortfolioItem = ({name, overview, highlights, description, logo, im
                                 <GridRow col='2' gridGap='0rem 2rem' width='100%' padding='0 2rem' margin='0' justify='space-between'>
                                     {highlights.map((highlight)=>
                                         <List>
-                                            {highlight.map((i)=><li>{i}</li>)}
+                                            {highlight.map((i)=><li>{i}</li>).slice(0, 3)}
                                         </List>
                                     )}
                                 </GridRow>

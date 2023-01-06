@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {Badge} from '../../../../_boilerplate/elements/Badge'
 
 export const Layout = styled.div`
@@ -12,6 +12,29 @@ margin:3rem auto;
   justify-content: space-between;
   align-items:flex-start;
 
+  ${props=>props.formIndex >= 1 && css`
+    .li-wrapper:nth-of-type(${props=props.formIndex}){
+          border-left: solid .4rem ${props=>props.theme.colors.secondary};
+
+          .circle{
+            border: solid 2px ${props=>props.theme.colors.secondary};
+            background: ${props=>props.theme.colors.secondaryShade2};
+        }
+        }
+
+        .li-wrapper:nth-of-type(1),.li-wrapper:nth-of-type(2){
+          border-left: solid .4rem ${props=>props.theme.colors.secondary};
+
+          .circle{
+            border: solid 2px ${props=>props.theme.colors.secondary};
+            background: ${props=>props.theme.colors.secondaryShade2};
+        }
+        }
+
+        
+  /* background: blue; */
+  `}
+
 .li-wrapper {
   position: relative;
   border-left: solid .4rem ${props=>props.theme.colors.secondaryShade1};
@@ -23,7 +46,11 @@ margin:3rem auto;
   cursor:pointer;
 
 
+
+
   &.active{
+    border-left: dotted .4rem ${props=>props.theme.colors.secondary};
+
 
 
     .circle {

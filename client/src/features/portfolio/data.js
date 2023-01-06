@@ -9,6 +9,7 @@ import sorappDashboard2 from '../../app/assets/imgs/portfolio-images/sorapp-dash
 import sorapp1 from '../../app/assets/imgs/portfolio-images/sorapp1.png'
 import sorapp2 from '../../app/assets/imgs/portfolio-images/sorapp2.png'
 import sorapp3 from '../../app/assets/imgs/portfolio-images/sorapp3.png'
+import sorapp4 from '../../app/assets/imgs/portfolio-images/sorapp4.png'
 import whistlawDashboard from '../../app/assets/imgs/portfolio-images/whistlaw-dashboard.png'
 import whistlawDashboard2 from '../../app/assets/imgs/portfolio-images/whistlaw-dashboard2.png'
 import whistlawDepartment from '../../app/assets/imgs/portfolio-images/whistlaw-department.png'
@@ -28,6 +29,7 @@ import whistlawLogo from '../../app/assets/imgs/portfolio-images/whistlawLogo.pn
 import baytaqLogo from '../../app/assets/imgs/portfolio-images/baytaq-logo-mod.png'
 import swiftLogo from "../../app/assets/imgs/portfolio-images/swift-logo.png";
 import packmartLogo from "../../app/assets/imgs/portfolio-images/packmart-logo.png";
+import sorseoLogo from "../../app/assets/imgs/portfolio-images/sorseo-logo.png";
   
 
 
@@ -73,8 +75,8 @@ export const projects = [{
   ],
 
     description: "Account-based platform, advanced automation queueing system amd insights",
-    logo: null,
-    imgs: [sorapp1, sorapp2, sorapp3, 
+    logo: sorseoLogo,
+    imgs: [sorappDashboard, sorappDashboard2, sorapp3, sorapp4
       // sorapp4
     ],
     color: "#08a2e5"

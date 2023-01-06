@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const GridRow = styled.div`
   display: grid;
@@ -11,4 +11,9 @@ export const GridRow = styled.div`
   height: ${props=>props.height};
   text-align: ${props=>props.textAlign};
 
+  @media (max-width:50rem){
+  ${props=>props.mobile && css`
+      grid-template-columns: 1fr;
+  `}
+  }
 `;

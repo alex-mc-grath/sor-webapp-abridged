@@ -11,7 +11,7 @@ position:relative;
   justify-content: center;
   background: #171717;
   background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a);
-  
+  background: ${props => props.theme.colors.secondaryShade1};
     color:white;
 
   
@@ -20,7 +20,7 @@ position:relative;
       -webkit-background-clip: text;
       color: #fafafa;
       font-size: 3rem;
-      font-family:'Playfair Display'
+      font-family:'Source Sans Pro';
       font-weight:medium; 
     }
 /* 
@@ -45,12 +45,12 @@ position:relative;
     margin: auto;
     width: 75%;
     background: #222252;
-    /* background: #0e2967;
-    /* background: white; */
+    background: #222222;
     padding: 4rem;
+    border-radius: 1rem;
+    /* background: #0e2967;
     height: 50vh;
     font-size: 1.75rem;
-    border-radius: 1rem;
     /* background: linear-gradient(-145deg, #0a0a0a, #1a1a40, #0a0a0a); */
     
     >div>div{
@@ -75,12 +75,12 @@ position:relative;
         margin-bottom: .34rem;
         padding: 1.3rem 1.5rem;
         cursor: pointer;
-        font-size: 1.75rem;
+        font-size: 1.55rem;
         width:100%;
         /* height: 3.3rem; */
 
         &::placeholder{
-          font-size:1.75rem;
+          font-size:1.55rem;
         }
 
         &:nth-of-type(2) {
@@ -109,53 +109,6 @@ position:relative;
         transition: 0.3s all ease-in-out;
       }
     } */
-
-    button {
-     
-      border-radius: 0 0 4px 4px;
-      padding: 0.3rem 0.5rem;
-      
-      &::before {
-    content: "";
-    position: absolute;
-    left: .15rem;
-    right: .15rem;
-    top: .15rem;
-    bottom: .15rem;
-    /* border-radius: .4rem; */
-    border-radius: 4rem;
-    background: radial-gradient(780px at 37.8% 100.3%, rgb(19, 55, 115) 2.2%, rgb(32, 7, 80) 20.2%, rgb(27, 88, 111) 58.6%, rgb(115, 88, 44) 75%, rgb(99, 19, 90) 89.6%, rgb(12, 51, 76) 96.1%);
-    z-index: -1;
-    transition: 200ms
-  }
-
-  &::after{
-    color:white;
-  }
-
-  border-radius: 0.3rem;
-  
-  &:hover{
-    &::before {
-      background:white;
-      left: .2rem;
-    right: .2rem;
-    top: .2rem;
-    bottom: .2rem;
-      opacity:1;
-      border-radius: 0.4rem;
-    }
-
-    &::after{
-      background: radial-gradient(780px at 37.8% 100.3%, rgb(19, 55, 115) 2.2%, rgb(32, 7, 80) 20.2%, rgb(27, 88, 111) 58.6%, rgb(115, 88, 44) 75%, rgb(99, 19, 90) 89.6%, rgb(12, 51, 76) 96.1%);
-      -webkit-background-clip: text;
-      color: transparent;
-      
-  }
-
-  }
-
-    } 
   }
 
 
@@ -179,8 +132,8 @@ bottom:0;
 left:50%;
 width:84%;
 transform:translateX(-50%);
-  background: ${({theme}) => theme.colors.error};
-  color: ${({theme}) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.error};
+  color: ${({ theme }) => theme.colors.white};
   font-weight: bold;
   padding: 0.5rem;
   border-radius: 0.2rem;
@@ -188,9 +141,9 @@ transform:translateX(-50%);
 
 export const StyledFieldError = styled.p`
   position: absolute;
-  color: ${({theme}) => theme.colors.error};
+  color: ${({ theme }) => theme.colors.error};
   font-size: 1.2rem;
-  top:.2rem;
+  top:25%;
   right:.6rem;
   transform:translateY(-50%);
 

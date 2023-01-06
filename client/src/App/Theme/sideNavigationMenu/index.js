@@ -14,7 +14,8 @@ let logoWidth = headerHeight * .9
 
 const StyledSideNavigationMenu = styled.div`
     position:relative;
-    width: ${headerHeight+1}rem;
+    font-family:'Source Sans Pro';
+    width: ${headerHeight + 1}rem;
     background: #181818;
     z-index:0;
     transition: 1.2s all ease-in-out;
@@ -32,7 +33,7 @@ const StyledSideNavigationMenu = styled.div`
             transition: 1.2s all ease-in-out;
         }
 
-    ${props=>props.openMenu && css`
+    ${props => props.openMenu && css`
         width: 53vh;
         width: ${borderWidth * 5}rem;
         background: #282828;
@@ -98,7 +99,7 @@ background: white;
         box-decoration-break: clone;
         transition: 1.2s all ease-in-out;
 
-        border-bottom: 2px solid ${props=>props.theme.colors.secondary};
+        border-bottom: 2px solid ${props => props.theme.colors.secondary};
         width:fit-content;
 
 }
@@ -136,7 +137,7 @@ background: white;
     }
 
 
-    ${props=>props.openMenu && css`
+    ${props => props.openMenu && css`
     ul{
         transform:translateX(0%);
         opacity:1;
@@ -164,32 +165,32 @@ background: white;
     `}
 `;
 
-export const SideNavigationMenu = ({menuTabs, menuUi, setMenuUi, ...props}) => {
+export const SideNavigationMenu = ({ menuTabs, menuUi, setMenuUi, ...props }) => {
 
   const navigate = useNavigate()
 
   return (
     <StyledSideNavigationMenu openMenu={props.openMenu} {...props}>
-        <Img src={logo} width={logoWidth+'rem'} notDraggable alt="sor logo" 
+      <Img src={logo} width={logoWidth + 'rem'} notDraggable alt="sor logo"
         // onClick={()=>setOpenMenu(!openMenu)}
         onClick={props.onClick}
-         />
-        <ul>
-          <h3>SOR APP</h3>
-              <li className={`${menuUi === 1 ? 'selected' : ''}`} onClick={() => {setMenuUi(1); navigate('/app/dashboard')}}>
-                {menuTabs[0]}
-              </li>
-              <li className={`${menuUi === 2 ? 'selected' : ''}`} onClick={() => {setMenuUi(2); navigate('/app/campaigns')}}>
-                {menuTabs[1]}
-              </li>
-              <li className={`${menuUi === 3 ? 'selected' : ''}`} onClick={() => {setMenuUi(3); navigate('/app/dashboard')}}>
-                {menuTabs[2]}
-              </li>
-              {/* <li className={`${menuUi === 4 ? 'selected' : ''}`} onClick={() => {setMenuUi(4); navigate('/app/dashboard')}}>
+      />
+      <ul>
+        <h3>SOR APP</h3>
+        <li className={`${menuUi === 1 ? 'selected' : ''}`} onClick={() => { setMenuUi(1); navigate('/app/dashboard') }}>
+          {menuTabs[0]}
+        </li>
+        <li className={`${menuUi === 2 ? 'selected' : ''}`} onClick={() => { setMenuUi(2); navigate('/app/campaigns') }}>
+          {menuTabs[1]}
+        </li>
+        <li className={`${menuUi === 3 ? 'selected' : ''}`} onClick={() => { setMenuUi(3); navigate('/app/dashboard') }}>
+          {menuTabs[2]}
+        </li>
+        {/* <li className={`${menuUi === 4 ? 'selected' : ''}`} onClick={() => {setMenuUi(4); navigate('/app/dashboard')}}>
                 {menuTabs[3]}
               </li> */}
-              <ToggleSwitchWithText switchActive={true} setSwitchActive={console.log('dark')} options={['Dark mode', 'Light mode']}  />
-        </ul>
+        <ToggleSwitchWithText switchActive={true} setSwitchActive={console.log('dark')} options={['Dark mode', 'Light mode']} />
+      </ul>
 
     </StyledSideNavigationMenu>
   )

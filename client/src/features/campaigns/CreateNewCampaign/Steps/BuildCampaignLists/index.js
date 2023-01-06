@@ -10,7 +10,7 @@ import { MainButton } from '../../../../../_boilerplate/inputs/MainButton';
 import { IconButton } from '../../../../../_boilerplate/inputs/IconButton';
 
 export const Layout = styled.div`
-
+  position:relative;
 `;
     
 export const BuildCampaignLists = ({campaign, manager, formIndex}) => {
@@ -27,7 +27,7 @@ export const BuildCampaignLists = ({campaign, manager, formIndex}) => {
     		<Form onSubmit={onSubmit}>
               <h3>1) Build Target Account List</h3>
 <Col height='100%'>
-              <Col margin='2rem 0' align='flex-start'>
+              <Col margin='1rem 0' align='flex-start'>
                   {/* <h4>Build target account list (organizations)</h4> */}
                   <GridRow col='2' colTemplate='1fr 2fr' margin='0rem 0'>
                     <Col margin='1rem 0' justify='flex-start'>
@@ -35,7 +35,6 @@ export const BuildCampaignLists = ({campaign, manager, formIndex}) => {
                     </Col>
                     <Content>
                       <Badge>Computer Hardware</Badge>
-                      <Badge>Test</Badge>
                       <Badge>IT & Professional Services</Badge>
                       <Badge>Computer Networking</Badge>
                       <Badge>Computer Software</Badge>
@@ -132,9 +131,9 @@ export const BuildCampaignLists = ({campaign, manager, formIndex}) => {
                       <SearchSelectMulti name="Keywords" />
                     </Col>
                     <Content>
-                      <Badge>executive</Badge>
-                      <Badge>manager</Badge>
-                      <Badge>manager</Badge>
+                      <Badge>Executive</Badge>
+                      <Badge>Manager</Badge>
+                      <Badge>Manager</Badge>
                       <Badge>Financing</Badge>
                       <Badge>Human resources</Badge>
                       <Badge>Private accounts</Badge>

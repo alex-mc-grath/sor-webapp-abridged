@@ -9,4 +9,9 @@ export const Col = styled.div`
   margin: ${(props) => props.margin || '2rem auto'};
   margin-left: ${(props) => props.marginLeft};
   margin-top: ${(props) => props.marginTop || ''};
+  transform: ${props => props.transform};
+
+  @media (max-width : 600px){
+    width:100%;
+  }
 `;

@@ -4,7 +4,7 @@ export const Style = styled.div`
     position:${props=>props.position};
     /* top:1.1rem;
     right:2rem; */
-    border: .3rem solid ${props=>props.openMenu ? props=>props.theme.colors.secondary : props=>props.theme.colors.secondaryShade2};
+    border: .3rem solid ${props=>props.openMenu ? props=>props.theme.colors.secondary : props=>props.theme.colors.secondary};
     box-shadow: 0px 10px 49px rgba(0, 0, 0, 0.13);
     border-radius: 50%;
     height: ${props=>props.height || '7.5rem'};

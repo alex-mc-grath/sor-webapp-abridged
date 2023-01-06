@@ -8,6 +8,7 @@ import { AppLayout } from '../../_boilerplate/layouts/AppLayout';
 export const Layout = styled.div`
   /* background: pink !important; */
   width:100%;
+  font-family:'Source Sans Pro';
     
 
   .title-navigation{
@@ -27,11 +28,5 @@ export const Layout = styled.div`
     color: ${props=>props.theme.colors.secondary};
     transform: translateY(.2rem);
   }
-
-    .temp-grey-placeholder{
-        background: grey;
-        width:100%;
-        height: 40vh;
-    }
 
 `;

@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans','Source Sans Pro', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size: 1.6em
   }
@@ -60,9 +60,19 @@ const GlobalStyle = createGlobalStyle`
   a{
     text-decoration:none;
     color: unset;
-    margin:0 !important;
+    margin:0;
   }
-  
+
+
+  /* // special stuff */
+  .gradient-color4 {
+    background: linear-gradient(40deg, ${(props) => props.theme.colors.secondary} 10%, #0e2967 10%, ${(props) => props.theme.colors.secondary}, ${(props) => props.theme.colors.secondary});
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
 `;
 
 export default GlobalStyle;

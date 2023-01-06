@@ -29,16 +29,16 @@ function Button(props) {
   // );
 
   // If the Button has a handleRoute prop, we want to render a button
-  if (props.handleRoute) {
+  if (props.to) {
     button = (
-      <Link to={props.handleRoute} href={props.href} className={className} onClick={props.onClick}>
+      <Link to={props.to} href={props.href} className={className} onClick={props.onClick}>
         {Children.toArray(props.children)}
       </Link>
     );
   }
-  // if (props.handleRoute) {
+  // if (props.to) {
   //   button = (
-  //     <StyledButton className={className} onClick={props.handleRoute}>
+  //     <StyledButton className={className} onClick={props.to}>
   //       {Children.toArray(props.children)}
   //     </StyledButton>
   //   );
@@ -49,7 +49,7 @@ function Button(props) {
 }
 
 Button.propTypes = {
-  handleRoute: PropTypes.func,
+  to: PropTypes.func,
   href: PropTypes.string,
   onClick: PropTypes.func,
   // children: PropTypes.node.isRequired,
