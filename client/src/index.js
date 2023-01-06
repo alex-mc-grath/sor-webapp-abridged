@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './app';
+import App from './app/index';
 // import { Theme } from './App/theme/Theme';
 // import { BrowserRouter as Router } from 'react-router-dom';
 import store from './app/context/store'
@@ -16,9 +16,9 @@ const root = createRoot(container);
 root.render(
   <Provider store={store}>
     <ThemeProvider theme={themeSettings}>
-    <Router>
-      <App />
-    </Router>
+      <Router>
+        <App />
+      </Router>
     </ThemeProvider>
   </Provider>
 );
