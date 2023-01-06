@@ -36,7 +36,7 @@ const manager = useRef({
     saveCampaign: (formData) => {
       setCampaignData((currentState) => {
         let newState = { ...currentState, ...formData };
-        saveCampaign(newState);
+        //saveCampaign(newState); //TODO: doesn't exist
         return newState;
       });
     },

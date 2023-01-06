@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import GlobalStyle from './theme/global-styles';
+import GlobalStyle from './Theme/global-styles';
 
 import { loadUser } from './context/actions/auth'
 
@@ -10,16 +10,16 @@ import { PrivateRoute } from '../_boilerplate/utils/routing/PrivateRoute'
 import { ScrollToTop } from '../_boilerplate/utils/routing/ScrollToTop'
 
 import { Sandbox } from '../_boilerplate/Sandbox';
-import { AllCampaigns } from '../pages/sor-app/allCampaigns';
-import { Login } from '../pages/sor-app/login';
-import { DashboardPage } from '../pages/sor-app/dashboard';
+import { AllCampaigns } from '../pages/sor-app/AllCampaigns';
+import { Login } from '../pages/sor-app/Login';
+import { DashboardPage } from '../pages/sor-app/Dashboard';
 import setAuthToken from '../_boilerplate/utils/auth/setAuthToken';
 import { CreateNewCampaign } from '../features/campaigns/CreateNewCampaign';
 import { ScheduledScans } from '../features/scheduledScans';
-import { Portfolio, PortfolioPage } from '../pages/sor-dev/portfolio';
+import { Portfolio, PortfolioPage } from '../pages/sor-dev/Portfolio';
 import { HomePage } from '../pages/sor-seo/home';
 import { HomePageDev } from '../pages/sor-dev/home';
-import { Header } from './theme/header-sor-seo-dev';
+import { Header } from './Theme/header-sor-seo-dev';
 import { AnimatePresence } from 'framer-motion';
 import { TechStack } from '../pages/sor-dev/techStack';
 import { About } from '../pages/sor-dev/about';

@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 import { StyledTechStack } from './Style';
 import { Container } from '../../../_boilerplate/layouts/Container';
 
-import { SorSeoSvg } from '../../../app/assets/icons/SorSeoSvg';
+import { SorSeoSvg } from '../../../App/assets/icons/SorSeoSvg';
 
-import image from '../../../app/assets/imgs/dev-tech-logos/11(2).jpg';
+import image from '../../../App/assets/imgs/dev-tech-logos/11(2).jpg';
 
 import { Col } from '../../../_boilerplate/layouts/Col';
 import { GridRow } from '../../../_boilerplate/layouts/GridRow';
 
 
-import logo1 from '../../../app/assets/imgs/dev-tech-logos/react.png';
-import logo2 from '../../../app/assets/imgs/dev-tech-logos/nodejs.svg';
-import logo3 from '../../../app/assets/imgs/dev-tech-logos/express.png';
-import logo4 from '../../../app/assets/imgs/dev-tech-logos/mongodb.png';
-import logo5 from '../../../app/assets/imgs/dev-tech-logos/heroku.png';
-import logo6 from '../../../app/assets/imgs/dev-tech-logos/aws.png';
-import logo7 from '../../../app/assets/imgs/dev-tech-logos/azure.png';
-import logo8 from '../../../app/assets/imgs/dev-tech-logos/redux.png';
-import logo9 from '../../../app/assets/imgs/dev-tech-logos/graphql.png';
+import logo1 from '../../../App/assets/imgs/dev-tech-logos/react.png';
+import logo2 from '../../../App/assets/imgs/dev-tech-logos/nodejs.svg';
+import logo3 from '../../../App/assets/imgs/dev-tech-logos/express.png';
+import logo4 from '../../../App/assets/imgs/dev-tech-logos/mongodb.png';
+import logo5 from '../../../App/assets/imgs/dev-tech-logos/heroku.png';
+import logo6 from '../../../App/assets/imgs/dev-tech-logos/aws.png';
+import logo7 from '../../../App/assets/imgs/dev-tech-logos/azure.png';
+import logo8 from '../../../App/assets/imgs/dev-tech-logos/redux.png';
+import logo9 from '../../../App/assets/imgs/dev-tech-logos/graphql.png';
 
 import { MainButton } from '../../../_boilerplate/inputs/MainButton';
 

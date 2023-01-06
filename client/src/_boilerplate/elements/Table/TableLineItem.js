@@ -89,8 +89,8 @@ export const TableLineItem = ({row, shortened}) => {
   return (
     <StyledTableLineItem modalBoxOpen={modalBox}>
       <td>{row.breachCategory}</td>
-      <td className='shortened' onMouseOver={()=>setModalBox(true)} onMouseLeave={()=>setModalBox(false)}>{breachTypes[row.caseType]?.name || '--error--'}{modalBox ? <div className='black'>
-        {breachTypes[row.caseType]?.text || 'invalid case type'}
+      <td className='shortened' onMouseOver={()=>setModalBox(true)} onMouseLeave={()=>setModalBox(false)}>{'--error--'}{modalBox ? <div className='black'>
+        {'invalid case type'}
       </div> : ''}
       </td>
       {/* <td>{row.company}</td> */}

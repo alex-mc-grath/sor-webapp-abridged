@@ -1,35 +1,35 @@
 
-import baytaqHome1 from '../../app/assets/imgs/portfolio-images/baytaq-home1.png'
-import baytaqHome2 from '../../app/assets/imgs/portfolio-images/baytaq-home2.png'
-import baytaqForm from '../../app/assets/imgs/portfolio-images/baytaq-form.png'
-import baytaqLogin from '../../app/assets/imgs/portfolio-images/baytaq-login.png'
+import baytaqHome1 from '../../App/assets/imgs/portfolio-images/baytaq-home1.png'
+import baytaqHome2 from '../../App/assets/imgs/portfolio-images/baytaq-home2.png'
+import baytaqForm from '../../App/assets/imgs/portfolio-images/baytaq-form.png'
+import baytaqLogin from '../../App/assets/imgs/portfolio-images/baytaq-login.png'
 
-import sorappDashboard from '../../app/assets/imgs/portfolio-images/sorapp-dashboard.png'
-import sorappDashboard2 from '../../app/assets/imgs/portfolio-images/sorapp-dashboard2.png'
-import sorapp1 from '../../app/assets/imgs/portfolio-images/sorapp1.png'
-import sorapp2 from '../../app/assets/imgs/portfolio-images/sorapp2.png'
-import sorapp3 from '../../app/assets/imgs/portfolio-images/sorapp3.png'
-import sorapp4 from '../../app/assets/imgs/portfolio-images/sorapp4.png'
-import whistlawDashboard from '../../app/assets/imgs/portfolio-images/whistlaw-dashboard.png'
-import whistlawDashboard2 from '../../app/assets/imgs/portfolio-images/whistlaw-dashboard2.png'
-import whistlawDepartment from '../../app/assets/imgs/portfolio-images/whistlaw-department.png'
-import whistlawLogin from '../../app/assets/imgs/portfolio-images/whistlaw-login.png'
-import whistlawProfile from '../../app/assets/imgs/portfolio-images/whistlaw-profile.png'
-import packmart1 from "../../app/assets/imgs/portfolio-images/packmart1.png";
-import packmart2 from "../../app/assets/imgs/portfolio-images/packmart2.png";
-import packmart3 from "../../app/assets/imgs/portfolio-images/packmart3.png";
-import packmart4 from "../../app/assets/imgs/portfolio-images/packmart4.png";
-import changelogTool1 from "../../app/assets/imgs/portfolio-images/linear1.png";
-import changelogTool2 from "../../app/assets/imgs/portfolio-images/linear2.png";
-import swiftFinance2 from "../../app/assets/imgs/portfolio-images/swiftFinance3.png";
+import sorappDashboard from '../../App/assets/imgs/portfolio-images/sorapp-dashboard.png'
+import sorappDashboard2 from '../../App/assets/imgs/portfolio-images/sorapp-dashboard2.png'
+import sorapp1 from '../../App/assets/imgs/portfolio-images/sorapp1.png'
+import sorapp2 from '../../App/assets/imgs/portfolio-images/sorapp2.png'
+import sorapp3 from '../../App/assets/imgs/portfolio-images/sorapp3.png'
+import sorapp4 from '../../App/assets/imgs/portfolio-images/sorapp4.png'
+import whistlawDashboard from '../../App/assets/imgs/portfolio-images/whistlaw-dashboard.png'
+import whistlawDashboard2 from '../../App/assets/imgs/portfolio-images/whistlaw-dashboard2.png'
+import whistlawDepartment from '../../App/assets/imgs/portfolio-images/whistlaw-department.png'
+import whistlawLogin from '../../App/assets/imgs/portfolio-images/whistlaw-login.png'
+import whistlawProfile from '../../App/assets/imgs/portfolio-images/whistlaw-profile.png'
+import packmart1 from "../../App/assets/imgs/portfolio-images/packmart1.png";
+import packmart2 from "../../App/assets/imgs/portfolio-images/packmart2.png";
+import packmart3 from "../../App/assets/imgs/portfolio-images/packmart3.png";
+import packmart4 from "../../App/assets/imgs/portfolio-images/packmart4.png";
+import changelogTool1 from "../../App/assets/imgs/portfolio-images/linear1.png";
+import changelogTool2 from "../../App/assets/imgs/portfolio-images/linear2.png";
+import swiftFinance2 from "../../App/assets/imgs/portfolio-images/swiftFinance3.png";
 
 
 // logos
-import whistlawLogo from '../../app/assets/imgs/portfolio-images/whistlawLogo.png'
-import baytaqLogo from '../../app/assets/imgs/portfolio-images/baytaq-logo-mod.png'
-import swiftLogo from "../../app/assets/imgs/portfolio-images/swift-logo.png";
-import packmartLogo from "../../app/assets/imgs/portfolio-images/packmart-logo.png";
-import sorseoLogo from "../../app/assets/imgs/portfolio-images/sorseo-logo.png";
+import whistlawLogo from '../../App/assets/imgs/portfolio-images/whistlawLogo.png'
+import baytaqLogo from '../../App/assets/imgs/portfolio-images/baytaq-logo-mod.png'
+import swiftLogo from "../../App/assets/imgs/portfolio-images/swift-logo.png";
+import packmartLogo from "../../App/assets/imgs/portfolio-images/packmart-logo.png";
+import sorseoLogo from "../../App/assets/imgs/portfolio-images/sorseo-logo.png";
 
 
 

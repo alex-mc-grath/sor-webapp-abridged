@@ -1,15 +1,15 @@
-import { IconProfile } from "../../../app/assets/icons"
+import { IconProfile } from "../../../App/assets/icons"
 import { DefaultItem, DropdownSelect, Item } from '../../../_boilerplate/inputs/Select/DropdownSelect'
 import { Dropdown, Header as DropdownHeader, List } from '../../../_boilerplate/inputs/Select/Dropdown';
 
-import managedImage from '../../../app/assets/imgs/logo-sor-center-shadow.png'
+import managedImage from '../../../App/assets/imgs/logo-sor-center-shadow.png'
 import { Style } from "./Style";
 import Img from "../../../_boilerplate/elements/Img";
 
 export const ProfileImgThumbnail = ({ src, ...props }) => {
 
   // let profile = {managedImage:managedImage}
-  // let managedImage = require('../../../app/assets/img/logo-sor-center-shadow.png')
+  // let managedImage = require('../../../App/assets/img/logo-sor-center-shadow.png')
 
   return (
     <Style {...props}>

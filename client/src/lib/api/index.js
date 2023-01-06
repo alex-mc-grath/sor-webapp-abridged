@@ -1,5 +1,5 @@
 import axios from 'axios';
-import store from '../../app/context/store';
+import store from '../../App/context/store';
 import setAuthToken from '../../_boilerplate/utils/auth/setAuthToken';
 //import { showAlertMessage } from '../actions/alertActions'
 
