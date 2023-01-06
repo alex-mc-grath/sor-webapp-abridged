@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { listOfIndustries } from '../../../app/data/industries'
+import { listOfIndustries } from '../../../App/data/industries'
 import { H1 } from '../../../components/elements/H1';
 import { Label } from '../../../components/elements/Label';
 import { DropdownField } from '../../../components/inputs/Form/DropdownField'
 import { DarkCard as Card } from '../../../components/layouts/DarkCard';
 import withActionPageLoader from '../../../_boilerplate/hoc/withActionPageLoader';
 import { Form, SubmitWrapper } from '../../../_boilerplate/inputs/Form'
-import {MainButton} from '../../../_boilerplate/inputs/MainButton'
+import { MainButton } from '../../../_boilerplate/inputs/MainButton'
 import { Col } from '../../../_boilerplate/layouts/Col';
 import { Row } from '../../../_boilerplate/layouts/Row';
 import { GridRow } from '../../../_boilerplate/layouts/GridRow';
@@ -20,7 +20,7 @@ import { Step0 } from './Step0';
 import { DropdownSearch } from '../../../_boilerplate/inputs/Select/DropdownSearch';
 import { SearchSelectMulti } from '../../../components/inputs/SearchSelectMulti/index'
 
-import {Badge} from '../../../_boilerplate/elements/Badge'
+import { Badge } from '../../../_boilerplate/elements/Badge'
 import styled from 'styled-components';
 import { DefineSequence } from './Steps/DefineSequence';
 import { CampaignSettings } from './Steps/CampaignSettings';
@@ -57,11 +57,11 @@ export const Content = styled.div`
 `;
 
 
-export const CreateNewCampaign = withActionPageLoader(loadSettings, ({loadedPageData}) => {
+export const CreateNewCampaign = withActionPageLoader(loadSettings, ({ loadedPageData }) => {
 
   let loadedData = loadedPageData[0] || {};
-  let {industries} = loadedData
-  let {campaignName} = loadedPageData.campaigns[2]
+  let { industries } = loadedData
+  let { campaignName } = loadedPageData.campaigns[2]
 
   const [screenState, setScreenState] = useState('form');
   const [errorMessage, setErrorMessage] = useState('');
@@ -82,33 +82,33 @@ export const CreateNewCampaign = withActionPageLoader(loadSettings, ({loadedPage
   }
 
   const { manager, campaignData, setCampaignData } = useFormManager()
-  const {formIndex} = campaignData
-  const {setFormIndex, previousStep} = manager.current
+  const { formIndex } = campaignData
+  const { setFormIndex, previousStep } = manager.current
 
-  
-const onSubmit = () => {
-  console.log('onSubmit');
-}
+
+  const onSubmit = () => {
+    console.log('onSubmit');
+  }
 
   return (
     <Layout>
 
-        <H1>Create new campaign</H1>
+      <H1>Create new campaign</H1>
 
-        <GridRow col='2' colTemplate='2fr 4fr' height='60vh' margin='8rem auto'>
-            
-            <FormProgress formIndex={formIndex} previousStep={previousStep} setFormIndex={setFormIndex} setCampaignData={setCampaignData} />
-            
+      <GridRow col='2' colTemplate='2fr 4fr' height='60vh' margin='8rem auto'>
 
-            {campaignData.formIndex === 0 && <BuildCampaignLists manager={manager.current} campaign={campaignData} />}
+        <FormProgress formIndex={formIndex} previousStep={previousStep} setFormIndex={setFormIndex} setCampaignData={setCampaignData} />
 
-            {campaignData.formIndex === 1 && <DefineSequence manager={manager.current} campaign={campaignData}  />}
 
-            {campaignData.formIndex === 2 && <CampaignSettings manager={manager.current} campaign={campaignData}  />}
-            
-            {campaignData.formIndex === 3 && <CampaignObjectives manager={manager.current} campaign={campaignData} />}
-            
-        </GridRow>
+        {campaignData.formIndex === 0 && <BuildCampaignLists manager={manager.current} campaign={campaignData} />}
+
+        {campaignData.formIndex === 1 && <DefineSequence manager={manager.current} campaign={campaignData} />}
+
+        {campaignData.formIndex === 2 && <CampaignSettings manager={manager.current} campaign={campaignData} />}
+
+        {campaignData.formIndex === 3 && <CampaignObjectives manager={manager.current} campaign={campaignData} />}
+
+      </GridRow>
 
     </Layout>
   )

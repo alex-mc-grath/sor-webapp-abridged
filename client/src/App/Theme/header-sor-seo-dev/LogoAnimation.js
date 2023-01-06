@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoCenter from '../../../app/assets/imgs/logo-sor-center.png';
+import logoCenter from '../../assets/imgs/logo-sor-center.png';
 import styled, { css } from 'styled-components/macro';
 
 const StyledLogoAnimation = styled.div`

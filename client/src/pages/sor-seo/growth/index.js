@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { StyledHowItWorks } from './Style';
 
-import mimicHumanImage from '../../../app/assets/imgs/unsplash4.jpg'
+import mimicHumanImage from '../../../App/assets/imgs/unsplash4.jpg'
 import { ComparativeTable } from '../../../_boilerplate/layouts/ComparativeTable';
 import { Section } from '../../../_boilerplate/layouts/Section';
 
@@ -11,7 +11,7 @@ import { Col } from '../../../_boilerplate/layouts/Col';
 
 import { MainButton } from '../../../_boilerplate/inputs/MainButton';
 // import Marquee from '../../../layout/HorizontalTextMarquee';
-import LogoAnimation from '../../../app/theme/header-sor-seo-dev/LogoAnimation';
+import LogoAnimation from '../../../App/theme/header-sor-seo-dev/LogoAnimation';
 import { Row } from '../../../_boilerplate/layouts/Row';
 import { Animation } from '../../../_boilerplate/layouts/Animation'
 

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import newStore from '../../_boilerplate/utils/redux/newStore'
-import authReducer from '../context/reducers/auth'
+import authReducer from './reducers/auth'
 import setAuthToken from '../../_boilerplate/utils/auth/setAuthToken';
 
 const reducers = combineReducers({
@@ -16,8 +16,7 @@ store.subscribe(() => {
     let previousToken = currentToken;
     currentToken = store.getState().auth.token;
 
-    if(previousToken !== currentToken)
-    {
+    if (previousToken !== currentToken) {
         setAuthToken(currentToken);
     }
 

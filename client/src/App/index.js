@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import GlobalStyle from '../app/theme/global-styles';
+import GlobalStyle from './theme/global-styles';
 
 import { loadUser } from './context/actions/auth'
 

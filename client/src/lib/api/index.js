@@ -1,5 +1,5 @@
 import axios from 'axios';
-import store from '../../app/context/store';
+import store from '../../App/context/store';
 import setAuthToken from '../../_boilerplate/utils/auth/setAuthToken';
 //import { showAlertMessage } from '../actions/alertActions'
 
@@ -27,7 +27,7 @@ api.interceptors.response.use(
       //TODO
       //(showAlertMessage(err.message))(store.dispatch);
     }
-    
+
     throw new Error(err.response.data.message || err.response.data.error);
   }
 );
