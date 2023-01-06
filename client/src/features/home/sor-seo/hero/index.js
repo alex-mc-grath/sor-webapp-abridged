@@ -1,5 +1,5 @@
 import { Layout } from './Style'
-import heroImage from "../../../../App/assets/imgs/hero-header-img-xl.jpg"
+import heroImage from "../../../../app/assets/imgs/hero-header-img-xl.jpg"
 import Svg from './Svg'
 
 export const Hero = ({ content, view }) => {

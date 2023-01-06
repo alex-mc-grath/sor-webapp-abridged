@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { SorSeoSvg } from '../../../App/assets/icons/SorSeoSvg';
+import { SorSeoSvg } from '../../../app/assets/icons/SorSeoSvg';
 import { StyledBubbleMenu } from './Style';
-import { UserSvg } from '../../../App/assets/icons/UserSvg';
+import { UserSvg } from '../../../app/assets/icons/UserSvg';
 
 export const BubbleMenu = ({ showNav, onceToggled, textOptions, linkOptions, ...props }) => {
   const navigate = useNavigate();
