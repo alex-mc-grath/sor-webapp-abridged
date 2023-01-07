@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled, { css } from 'styled-components/macro';
-import { Header } from '../../../app/theme/header-app';
+import { Header } from '../../../App/theme/header-app';
 import { useNavigate } from 'react-router-dom';
-import { SideNavigationMenu } from '../../../app/theme/sideNavigationMenu';
+import { SideNavigationMenu } from '../../../App/theme/sideNavigationMenu';
 import { useState } from 'react';
 // import { clearPageLoaderCache } from '../../../hoc/withActionPageLoader';
 

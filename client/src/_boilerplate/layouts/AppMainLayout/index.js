@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { SideNavigationMenu } from '../../../../app/theme/SideNavigationMenu';
-import { Header } from '../../../../app/theme/Header';
+import { SideNavigationMenu } from '../../../../App/theme/SideNavigationMenu';
+import { Header } from '../../../../App/theme/Header';
 import setAuthToken from '../../../../utils/setAuthToken';
 import { useNavigate } from 'react-router-dom';
 import { clearPageLoaderCache } from '../../../hoc/withActionPageLoader';

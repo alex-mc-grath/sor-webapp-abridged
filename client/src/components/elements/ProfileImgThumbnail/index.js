@@ -1,8 +1,8 @@
-import { IconProfile } from "../../../app/assets/icons"
+import { IconProfile } from "../../../App/assets/icons"
 import { DefaultItem, DropdownSelect, Item } from '../../../_boilerplate/inputs/Select/DropdownSelect'
 import { Dropdown, Header as DropdownHeader, List } from '../../../_boilerplate/inputs/Select/Dropdown';
 
-import managedImage from '../../../app/assets/imgs/logo-sor-center-shadow.png'
+import managedImage from '../../../App/assets/imgs/logo-sor-center-shadow.png'
 import { Style } from "./Style";
 import Img from "../../../_boilerplate/elements/Img";
 

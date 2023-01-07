@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { dfrcc } from '../../../../app/theme/mixins';
+import { dfrcc } from '../../../../App/theme/mixins';
 
 export const StyledTable = styled.table`
   /* border-collapse: collapse; */

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { listOfIndustries } from '../../../app/data/industries'
+import { listOfIndustries } from '../../../App/data/industries'
 import { H1 } from '../../../components/elements/H1';
 import { Label } from '../../../components/elements/Label';
 import { DropdownField } from '../../../components/inputs/Form/DropdownField'
