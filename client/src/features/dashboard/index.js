@@ -6,7 +6,7 @@ import { Label } from '../../components/elements/Label'
 import { Status } from '../../components/elements/Status'
 import { getDashboardData } from './actions'
 import { useState } from 'react';
-import { AllCampaigns } from './charts/AllCampaigns';
+// import { AllCampaigns } from './charts/AllCampaigns';
 import { SumOfActions } from './charts/SumOfActions';
 
 import { GridRow } from '../../_boilerplate/layouts/GridRow';
