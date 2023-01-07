@@ -4,7 +4,7 @@ import { Row } from "../../../_boilerplate/layouts/Row"
 import { Logo } from "../../../_boilerplate/elements/Logo"
 
 import { Badge, Container, Label, List, Section, TextContainer } from "../Style"
-import { WhistLawLongLogo } from "../../../App/assets/icons/whistlawLongLogo"
+import { WhistLawLongLogo } from "../../../app/assets/icons/whistlawLongLogo"
 
 export const PortfolioItem = ({ name, overview, highlights, description, logo, imgs, financials, timeline, color }) => {
     return (

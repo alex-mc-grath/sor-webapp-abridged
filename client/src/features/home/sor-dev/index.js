@@ -3,9 +3,9 @@ import { Col } from "../../../_boilerplate/layouts/Col"
 import { SliderImg } from "../../../_boilerplate/layouts/SliderImg"
 import { Layout } from "./Style"
 
-import sorPortfolioOverview from '../../../App/assets/imgs/portfolio-images/sor-portfolio-overview2.png'
-import techstacklogos from '../../../App/assets/imgs/portfolio-images/techstack-logos.png'
-import flowers from '../../../App/assets/imgs/portfolio-images/flowers.jpg'
+import sorPortfolioOverview from '../../../app/assets/imgs/portfolio-images/sor-portfolio-overview2.png'
+import techstacklogos from '../../../app/assets/imgs/portfolio-images/techstack-logos.png'
+import flowers from '../../../app/assets/imgs/portfolio-images/flowers.jpg'
 import { Container } from "../../portfolio/Style"
 
 export const Home = () => {
