@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { listOfIndustries } from '../../../App/data/industries'
+import { listOfIndustries } from '../../../app/data/industries'
 import { H1 } from '../../../components/elements/H1';
 import { Label } from '../../../components/elements/Label';
 import { DropdownField } from '../../../components/inputs/Form/DropdownField'
@@ -15,7 +15,7 @@ import { GridRow } from '../../../_boilerplate/layouts/GridRow';
 import { createNewCampaign, loadSettings } from './actions';
 import { FormProgress } from './FormProgress';
 import { Layout } from './Style';
-import { useFormManager } from './useFormManager';
+import { useFormManager } from '../../../_boilerplate/hooks/useFormManager';
 import { Step0 } from './Step0';
 import { DropdownSearch } from '../../../_boilerplate/inputs/Select/DropdownSearch';
 import { SearchSelectMulti } from '../../../components/inputs/SearchSelectMulti/index'
@@ -98,7 +98,6 @@ export const CreateNewCampaign = withActionPageLoader(loadSettings, ({ loadedPag
       <GridRow col='2' colTemplate='2fr 4fr' height='60vh' margin='8rem auto'>
 
         <FormProgress formIndex={formIndex} previousStep={previousStep} setFormIndex={setFormIndex} setCampaignData={setCampaignData} />
-
 
         {campaignData.formIndex === 0 && <BuildCampaignLists manager={manager.current} campaign={campaignData} />}
 

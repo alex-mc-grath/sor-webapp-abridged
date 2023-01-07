@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { StyledHowItWorks } from './Style';
 
-import mimicHumanImage from '../../../App/assets/imgs/unsplash4.jpg'
+import mimicHumanImage from '../../../app/assets/imgs/unsplash4.jpg'
 import { ComparativeTable } from '../../../_boilerplate/layouts/ComparativeTable';
 import { Section } from '../../../_boilerplate/layouts/Section';
 
@@ -11,33 +11,10 @@ import { Col } from '../../../_boilerplate/layouts/Col';
 
 import { MainButton } from '../../../_boilerplate/inputs/MainButton';
 // import Marquee from '../../../layout/HorizontalTextMarquee';
-import LogoAnimation from '../../../App/Theme/header-sor-seo-dev/LogoAnimation';
+import LogoAnimation from '../../../app/theme/header-sor-seo-dev/LogoAnimation';
 import { Row } from '../../../_boilerplate/layouts/Row';
 import { Animation } from '../../../_boilerplate/layouts/Animation'
 
-
-const variants1 = {
-  enter: (direction) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 1,
-    };
-  },
-  center: () => {
-    return {
-      zIndex: 2,
-      x: 0,
-      opacity: 1,
-    };
-  },
-  exit: (direction) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 1,
-    };
-  },
-};
 
 export const Growth = () => {
   const [showNav, setShowNav] = useState(false);
@@ -67,15 +44,7 @@ export const Growth = () => {
   //  Sor seo has developed a solution to carefully automate 75-90% of the heavy lifting initially done by your Sales to even get to talk to new opportunities
 
   return (
-    // <motion.div
-    //   variants={variants1}
-    //   initial='enter'
-    //   animate='center'
-    //   exit='exit'
-    //   transition={{
-    //     x: { type: 'spring', stiffness: 300, damping: 30 },
-    //     opacity: { duration: 0.2 },
-    //   }}>
+
     <StyledHowItWorks>
       <Helmet>
         <title>SOR SEO | Account-based Experience</title>
@@ -158,13 +127,6 @@ export const Growth = () => {
 
         <ComparativeTable item={'item1'} itemDescription={'itemDesc 1'} />
 
-        {/* <Col width="85%">
-          <h4 className="gradient-color4">organic means alive, it means colorful, healthy and vibrant. organic encompasses all scenarios. it can be reassuring, comforting, like the warmth of an old friend. its exploration can be somewhat unpredictable, with potentially damaging obstacles and its growth is definitely asymetical. thus it is unique.</h4>
-          </Col> */}
-
-        {/* call to action - with image or short video (need to have at least one short video effect) */}
-        {/* The easiest way to grow your sales pipeline */}
-
         <Section height="60vh" className='cta bg-gradient'>
           <Col width="80%">
             <h2>Get started with <span className="gradient-color4 lineBreakMobile">SOR SEO</span></h2>
@@ -176,6 +138,6 @@ export const Growth = () => {
         </Section>
       </Animation>
     </StyledHowItWorks>
-    // </motion.div>
+
   );
 };
