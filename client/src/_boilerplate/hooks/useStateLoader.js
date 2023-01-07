@@ -1,56 +1,47 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
-import {Loader} from '../theme/base/Loader'
+import { Loader } from '../Theme/base/Loader'
 
-export default function useStateLoader({action, callback = null, errorElement = (<></>), initialValue = null, loaderSizeRatio=1})
-{
-    const [data,setData] = useState(initialValue)
-    const [loadState, setLoadState] = useState({loading: false, loaded: false})
+export default function useStateLoader({ action, callback = null, errorElement = (<></>), initialValue = null, loaderSizeRatio = 1 }) {
+    const [data, setData] = useState(initialValue)
+    const [loadState, setLoadState] = useState({ loading: false, loaded: false })
     const [error, setError] = useState(false)
 
     const load = async (params) => {
-        try
-        {
-            setLoadState({loading: true, loaded: false})
+        try {
+            setLoadState({ loading: true, loaded: false })
 
             let data = await action(params)
             setData(data);
 
             setError(false)
-            setLoadState({loading: false, loaded: true})
+            setLoadState({ loading: false, loaded: true })
 
-            if(callback)
-            {
+            if (callback) {
                 callback(data);
             }
         }
-        catch(error)
-        {
+        catch (error) {
             setError(true)
             setData(null)
-            setLoadState({loading: false, loaded: false})
+            setLoadState({ loading: false, loaded: false })
             throw error
         }
     }
 
-    const LoaderElement = ({children}) => {
+    const LoaderElement = ({ children }) => {
 
-        if(loadState.loading)
-        {
-            return (<Loader sizeRatio={loaderSizeRatio}/>)
+        if (loadState.loading) {
+            return (<Loader sizeRatio={loaderSizeRatio} />)
         }
-        else
-        {
-            if(error)
-            {
+        else {
+            if (error) {
                 return (<>{errorElement}</>)
             }
-            else if(loadState.loaded)
-            {
+            else if (loadState.loaded) {
                 return (<>{children}</>)
             }
-            else
-            {
+            else {
                 return (<></>)
             }
         }
