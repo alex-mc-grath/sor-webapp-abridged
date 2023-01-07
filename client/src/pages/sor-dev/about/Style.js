@@ -18,7 +18,8 @@ export const StyledAbout = styled.article`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height:100vh;
+  min-height:100vh;
+  padding-top:10vh;
 
   ul{
     padding:0;

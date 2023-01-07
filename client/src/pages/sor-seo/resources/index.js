@@ -68,5 +68,4 @@ export const Resources = () => {
   )
 }
 
-// Account-based Marketing & B2B Growth - a deep-dive (Nov 2021)   category="growth"
 

@@ -7,6 +7,7 @@ export const Col = styled.div`
   align-items: ${(props) => props.align};
   width: ${(props) => props.width || '100%'};
   margin: ${(props) => props.margin || '2rem auto'};
+  padding: ${(props) => props.padding};
   margin-left: ${(props) => props.marginLeft};
   margin-top: ${(props) => props.marginTop || ''};
   transform: ${props => props.transform};

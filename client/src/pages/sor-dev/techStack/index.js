@@ -27,10 +27,7 @@ import { MainButton } from '../../../_boilerplate/inputs/MainButton';
 export const TechStack = () => {
   return (
     <StyledTechStack img={image}>
-      {/* <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/how-it-works']} textOptions={['Back', 'Growth']}/> */}
       <Container>
-        {/* // add icons?  */}
-        {/* add button "see demo reels" */}
         <Col width='80%'>
           <h1>our tech stack</h1>
           <p>With our modern stack, proprietary library and cutting-edge tools, we're more capable than ever - we're delighted to create, and happy to serve.</p>
@@ -65,6 +62,7 @@ export const TechStack = () => {
             <img src={logo9} alt="" />
           </div>
         </GridRow>
+
         <GridRow col="3" margin='1rem 0' mobile>
           <ul>
             <h3>Frontend</h3>

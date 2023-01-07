@@ -5,8 +5,8 @@ export const Layout = styled.div`
     flex-direction:column;
     justify-content:center;
     min-height:70vh;
-    width: 85%;
-    padding: 5rem 0;
+    /* width: 85%; */
+    padding: 2rem;
     align-items:flex-start;
 
 

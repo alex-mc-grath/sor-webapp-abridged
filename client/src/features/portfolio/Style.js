@@ -64,7 +64,7 @@ export const Layout = styled.div`
 export const Section = styled.div`
     display:flex;
     position:relative;
-    background: ${props=>props.background};
+    background: ${props => props.background};
     width:100%;
     min-height:100vh;
     margin: 7rem auto;
@@ -78,10 +78,10 @@ export const Section = styled.div`
 export const Img = styled.img`
     position: absolute;
     width:46vw;
-    top: ${props=>props.top};
-    right: ${props=>props.right};
-    bottom: ${props=>props.bottom};
-    left: ${props=>props.left};
+    top: ${props => props.top};
+    right: ${props => props.right};
+    bottom: ${props => props.bottom};
+    left: ${props => props.left};
     border-radius: 1.6rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     
@@ -111,9 +111,17 @@ export const Container = styled.div`
     height:94%;
 
     @media (max-width:50rem){
-    ${props=>props.mobile && css`
+    ${props => props.mobile && css`
         >*:not(:first-child){
             display:none;
+            
+        }
+        >*:first-child{
+            transform: rotate3d(-.0, .0, .0, -0deg) !important;
+            width:100%;
+            position:relative;
+            right:0;
+            top:0;
         }
         `}
     }
@@ -135,7 +143,7 @@ export const Label = styled.div`
     font-size: 1.8rem;
 `;
 export const Badge = styled.span`
-    background: ${props=>props.color ? props.color : '#333333'};
+    background: ${props => props.color ? props.color : '#333333'};
     color:white;
     padding: 0.3rem 2rem;
     margin: 0 0rem;
@@ -162,6 +170,10 @@ export const StyledNameSignature = styled.div`
     width: 40vw;
     height: 30vh;
     padding: 0rem 5rem;  
+
+    @media (min-width : 400px){
+        width:100%;
+    }
 `;
 
 export const Slug = styled.span`

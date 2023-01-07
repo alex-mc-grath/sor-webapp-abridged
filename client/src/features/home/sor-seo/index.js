@@ -9,22 +9,22 @@ import { GetStarted } from './getStarted';
 export const Layout = styled.div`
 
 `;
-    
+
 export const Home = () => {
     return (
-    	<Layout>
-    		
-            <Hero view={true} content={{h1: 'introText'}} />
- 
+        <Layout>
+
+            <Hero view={true} content={{ h1: 'introText' }} />
+
             <ClientLogos />
 
             <Why />
 
             <Why2 />
-          
+
             <Testimonials />
 
             <GetStarted />
-    	</Layout>
+        </Layout>
     )
 }

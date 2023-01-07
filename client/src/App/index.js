@@ -49,29 +49,23 @@ const App = () => {
       <Header />
       <AnimatePresence exitBeforeEnter={true} initial={true}>
         <Routes location={location} key={location.pathname}>
+
           <Route exact path='/' element={<HomePage />} />
+          <Route path='/organic-growth-marketing' element={<Growth />} />
 
           <Route exact path="/app" element={<Login />} />
           <Route exact path="/app/login" element={<Login />} />
           <Route path='/app/campaigns' element={<PrivateRoute><AllCampaigns /></PrivateRoute>} />
           <Route path='/app/create-new-campaign' element={<PrivateRoute><CreateNewCampaign /></PrivateRoute>} />
-
           <Route path='/app/select-connections' element={<PrivateRoute><CreateNewCampaign /></PrivateRoute>} />
           <Route path='/app/scheduled-scans' element={<PrivateRoute><ScheduledScans /></PrivateRoute>} />
-
           <Route path='/app/dashboard' element={<PrivateRoute><DashboardPage /></PrivateRoute>} />
 
 
-
-          {/* /SOR SEO - growth/  */}
-          {/* <Route path='/' element={<HomePage />} />
-        <Route path='/organic-growth-marketing' element={<Growth />} /> */}
-
-          {/* deep dive page */}
-          <Route path='/organic-growth-marketing' element={<Growth />} />
-
           {/* why sor, why seo, where exactly does seo matter, UX and organic marketing */}
           {/* <Route path='/organic-marketing-and-search-engine-optimization' element={<Growth />} /> */}
+
+
 
           {/* /RESOURCES/ */}
           <Route path='/resources' element={<Resources />} />
@@ -79,16 +73,12 @@ const App = () => {
           {/* <Route path='/contact' element={<Contact />} /> */}
 
 
-
-
-
           <Route path='/dev' element={<HomePageDev />} />
           <Route path='/dev/portfolio' element={<PortfolioPage />} />
           <Route path='/dev/our-tech' element={<TechStack />} />
-          {/* <Route path='/dev/recent-mern-stack-projects' element={<RecentProjects />} /> */}
           <Route path='/dev/about' element={<About />} />
 
-          <Route path="*" element={<p>Path not resolved</p>} />
+          <Route path="*" element={<p>Page not found</p>} />
         </Routes>
       </AnimatePresence>
 

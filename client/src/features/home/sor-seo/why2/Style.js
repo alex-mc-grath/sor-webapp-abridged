@@ -22,7 +22,6 @@ export const Layout = styled.div`
         /* margin:0 auto; */
         margin-right:auto;
         margin-bottom: 2rem;
-        width: 85%;
         padding: 0 0rem;
     }
 

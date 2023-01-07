@@ -24,6 +24,7 @@ export const SliderImg = styled.div`
 
   ${props => props.cover && css`
     background-size:cover !important;
+    background-position: ${props => props.backgroundPosition || '0% 58%'} !important;
     `}
 
   &:nth-of-type(1){

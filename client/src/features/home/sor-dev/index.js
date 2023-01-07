@@ -38,7 +38,7 @@ export const Home = () => {
           </SliderImg>
         </Link>
         <Link to='/dev/about' className='card'>
-          <SliderImg img={sliderImgs[2]} cover>
+          <SliderImg img={sliderImgs[2]} cover backgroundPosition='bottom'>
             <h4>about SOR DEV</h4>
             <p>Enterprise-level software solutions, stunning user experiences and lightning speed site performance. Discover what it's like to work with us.</p>
           </SliderImg>
