@@ -11,7 +11,7 @@ import { ScrollToTop } from '../_boilerplate/utils/routing/ScrollToTop'
 
 import { Sandbox } from '../_boilerplate/Sandbox';
 import { AllCampaigns } from '../pages/sor-app/allCampaigns';
-import { Login } from '../pages/sor-app/Login';
+import { Login } from '../pages/sor-app/login';
 import { DashboardPage } from '../pages/sor-app/dashboard';
 import setAuthToken from '../_boilerplate/utils/auth/setAuthToken';
 import { CreateNewCampaign } from '../features/campaigns/CreateNewCampaign';
