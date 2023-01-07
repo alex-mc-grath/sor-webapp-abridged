@@ -10,7 +10,7 @@ import { PrivateRoute } from '../_boilerplate/utils/routing/PrivateRoute'
 import { ScrollToTop } from '../_boilerplate/utils/routing/ScrollToTop'
 
 import { Sandbox } from '../_boilerplate/Sandbox';
-import { AllCampaigns } from '../pages/sor-app/allCampaigns';
+// import { AllCampaigns } from '../pages/sor-app/allCampaigns';
 import { Login } from '../pages/sor-app/login';
 import { DashboardPage } from '../pages/sor-app/dashboard';
 import setAuthToken from '../_boilerplate/utils/auth/setAuthToken';
@@ -55,7 +55,7 @@ const App = () => {
 
           <Route exact path="/app" element={<Login />} />
           <Route exact path="/app/login" element={<Login />} />
-          <Route path='/app/campaigns' element={<PrivateRoute><AllCampaigns /></PrivateRoute>} />
+          {/* <Route path='/app/campaigns' element={<PrivateRoute><AllCampaigns /></PrivateRoute>} /> */}
           <Route path='/app/create-new-campaign' element={<PrivateRoute><CreateNewCampaign /></PrivateRoute>} />
           <Route path='/app/select-connections' element={<PrivateRoute><CreateNewCampaign /></PrivateRoute>} />
           <Route path='/app/scheduled-scans' element={<PrivateRoute><ScheduledScans /></PrivateRoute>} />
