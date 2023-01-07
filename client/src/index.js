@@ -7,7 +7,7 @@ import store from './app/context/store'
 import { Provider } from 'react-redux';
 
 import { ThemeProvider } from 'styled-components';
-import { themeSettings } from './app/Theme/theme-settings';
+import { themeSettings } from './app/theme/theme-settings';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
