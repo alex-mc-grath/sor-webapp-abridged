@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { SideNavigationMenu } from '../../../../App/theme/SideNavigationMenu';
-import { Header } from '../../../../App/theme/Header';
+import { SideNavigationMenu } from '../../../../app/theme/SideNavigationMenu';
+import { Header } from '../../../../app/theme/Header';
 import setAuthToken from '../../../../utils/setAuthToken';
 import { useNavigate } from 'react-router-dom';
 import { clearPageLoaderCache } from '../../../hoc/withActionPageLoader';
@@ -51,8 +51,8 @@ export const AppMainLayout = ({ children, menuUi, setMenuUi, menuTabs, isLoggedI
   const unmanage = () => {
     clearPageLoaderCache()
     setAuthToken(auth.whistlaw.token)
-    dispatch({type:"UNMANAGE"})
-    dispatch({type:"REMOVE_MANAGED_IMAGE"})
+    dispatch({ type: "UNMANAGE" })
+    dispatch({ type: "REMOVE_MANAGED_IMAGE" })
     navigate('/')
   }
 
@@ -79,7 +79,7 @@ export const AppMainLayout = ({ children, menuUi, setMenuUi, menuTabs, isLoggedI
             </ul>
           </Header> */}
       <div className="right-panel">
-        <Header accountType={auth.accountType}/>
+        <Header accountType={auth.accountType} />
         {auth.whistlaw && <p className="whitlaw-banner">Logged into {auth.organization}, your modifications will appear as Whistlaw Admin. (<a href="#" onClick={unmanage}>Sign out</a>)</p>}
         <div className="page-content">{children}</div>
       </div>
