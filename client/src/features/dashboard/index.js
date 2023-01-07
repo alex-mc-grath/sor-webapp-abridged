@@ -15,7 +15,7 @@ import { TempGreyPlaceholder } from '../../_boilerplate/elements/TempGreyPlaceho
 import { Link } from 'react-router-dom';
 import { Img } from '../../components/elements/Img';
 import { DarkCard as Card } from '../../components/layouts/DarkCard';
-import companyLogo from '../../App/assets/imgs/fake-company-logo.png'
+import companyLogo from '../../app/assets/imgs/fake-company-logo.png'
 import { ProfileImgThumbnail } from '../../components/elements/ProfileImgThumbnail';
 import { Col } from '../../_boilerplate/layouts/Col'
 import { Loader } from '../../components/elements/Loader';

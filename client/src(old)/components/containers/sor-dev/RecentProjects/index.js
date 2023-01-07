@@ -23,7 +23,7 @@ import image4 from '../../../../media/img/parkingsystem2.png';
 import image5 from '../../../../media/img/staystuck1.png';
 import image6 from '../../../../media/img/staystuck2.png';
 import { useState } from 'react';
-import { CTAButton } from '../../AppComponents/CTAButton';
+import { CTAButton } from '../../appComponents/CTAButton';
 
 // import image7 from '../../../../media/img/staystuck3.png';
 
@@ -57,7 +57,7 @@ export const RecentProjects = () => {
       desc: 'Update tickets and issues directly from LinearAPI',
       images: [image1, image2],
       links: ['link1', 'https://github.com/alex-mc-grath/changelog-builder'],
-      featuresList: ['custom React storefront on Shopify’s API','box/order builder module', '3D box model in threeJS', 'price and size automatically adjusted on user input'],
+      featuresList: ['custom React storefront on Shopify’s API', 'box/order builder module', '3D box model in threeJS', 'price and size automatically adjusted on user input'],
     },
     {
       title: 'Parking System MVP',
@@ -119,14 +119,14 @@ export const RecentProjects = () => {
     //     x: { type: 'spring', stiffness: 300, damping: 30 },
     //     opacity: { duration: 0.2 },
     //   }}>
-      <StyledRecentProjects>
-        <h2>our recent projects</h2>
-        {/* {projects.map((project, idx) => (
+    <StyledRecentProjects>
+      <h2>our recent projects</h2>
+      {/* {projects.map((project, idx) => (
           <Project key={project.title} projectInfo={projects[idx]} />
         ))} */}
-        <Project key={projects[idx].title} projectInfo={projects[idx]} idxManager={idxManager} />
-        <CTAButton width='75%' margin='2rem auto' text='more about SOR DEV' to='/dev/our-tech' type='gradient' />
-      </StyledRecentProjects>
+      <Project key={projects[idx].title} projectInfo={projects[idx]} idxManager={idxManager} />
+      <CTAButton width='75%' margin='2rem auto' text='more about SOR DEV' to='/dev/our-tech' type='gradient' />
+    </StyledRecentProjects>
     // </motion.div>
   );
 };

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 
 import { MainButton } from '../MainButton'
-// import { Loader } from "../../../../App/AppComponents/Loader"
+// import { Loader } from "../../../../app/AppComponents/Loader"
 
 export const ButtonLoadWrapper = ({ onClick, ButtonComponent = MainButton, spinnerSize = "3rem", SpinnerElement = Loader, ...props }) => {
 

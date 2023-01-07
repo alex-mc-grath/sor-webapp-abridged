@@ -4,7 +4,7 @@ import { GridRow } from '../../../_boilerplate/layouts/GridRow'
 import { StyledResources, Wrapper } from './Style'
 import { Col } from '../../../_boilerplate/layouts/Col'
 import { AbmGuideDefinitionsPage } from './abmGuideDefinitionsPage'
-import resource1 from '../../../App/assets/imgs/resource1.png'
+import resource1 from '../../../app/assets/imgs/resource1.png'
 import { Helmet } from 'react-helmet'
 
 export const Resources = () => {

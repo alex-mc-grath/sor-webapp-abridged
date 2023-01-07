@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import {WhistlawLogo} from '../../.././../../App/IconsAndSvgs/WhistawLogo';
+import { WhistlawLogo } from '../../.././../../app/IconsAndSvgs/WhistawLogo';
 import image1 from '../../../../../media/img/exia-logo.png';
 import image2 from '../../../../../media/img/swift-logo.png';
 import image3 from '../../../../../media/img/mc2-logo2.png';
@@ -33,9 +33,9 @@ export const ClientLogos = () => {
       </div> */}
       <div className='client-group-boxes'>
         <div className='client-logo-box'>
-          <WhistlawLogo/>
+          <WhistlawLogo />
         </div>
-        
+
         <div className='client-logo-box'>
           <img src={image6} alt='' />
         </div>

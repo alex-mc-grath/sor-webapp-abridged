@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Loader } from '../Theme/base/Loader'
+import { Loader } from '../theme/base/Loader'
 
 export default function useStateLoader({ action, callback = null, errorElement = (<></>), initialValue = null, loaderSizeRatio = 1 }) {
     const [data, setData] = useState(initialValue)

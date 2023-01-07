@@ -18,7 +18,7 @@ import OnRouteChange from '../components/utils/OnRouteChangeWorker'
 
 import HomePage from '../components/containers/sor-seo/HomePage/Loadable';
 
-import GlobalStyle from './Theme/global-styles';
+import GlobalStyle from './theme/global-styles';
 import { Contact } from '../components/containers/sor-seo/Contact';
 import { Login } from '../components/containers/sor-app/Login';
 import { DevHomePage } from '../components/containers/sor-dev/HomePage';

@@ -9,7 +9,7 @@ import { Container } from '../../../layout/Container';
 // import { variants1 } from '../../../utils/animationVariants'
 
 import H1 from '../../../layout/bp-components/H1';
-import {Row} from '../../../layout/Row';
+import { Row } from '../../../layout/Row';
 import BubbleMenu from '../../../layout/BubbleMenu';
 
 import ctaImage from '../../../../media/img/unsplash2.jpg';
@@ -17,7 +17,7 @@ import blendingInImage from '../../../../media/img/unsplash5.jpg';
 import mimicHumanImage from '../../../../media/img/unsplash4.jpg';
 import { ClientLogos } from './ClientLogos';
 import { ComparativeTable } from '../ComparativeTable';
-import { CTAButton } from '../../AppComponents/CTAButton';
+import { CTAButton } from '../../appComponents/CTAButton';
 
 
 const variants1 = {
@@ -89,54 +89,54 @@ export const Growth2 = () => {
     //     x: { type: 'spring', stiffness: 300, damping: 30 },
     //     opacity: { duration: 0.2 },
     //   }}>
-      <StyledGrowth2>
-        <Helmet>
-          <title>SOR SEO | Account-based Experience</title>
-          <meta name='description' content='Account-based Experience, demand generation' />
-        </Helmet>
+    <StyledGrowth2>
+      <Helmet>
+        <title>SOR SEO | Account-based Experience</title>
+        <meta name='description' content='Account-based Experience, demand generation' />
+      </Helmet>
 
 
-          <div className='hero'>
+      <div className='hero'>
 
-              <LogoAnimation branchName='SEO' />
-              <H1>There's touch of organic behind every interaction</H1>
-              {/* <H1>Organic marketing at its finest</H1> */}
-              {/* (People like us that do things like this) */}
+        <LogoAnimation branchName='SEO' />
+        <H1>There's touch of organic behind every interaction</H1>
+        {/* <H1>Organic marketing at its finest</H1> */}
+        {/* (People like us that do things like this) */}
 
-            {/* <p>Next-gen account engagement solutions for complex B2b sales cycles</p> */}
-          </div>
+        {/* <p>Next-gen account engagement solutions for complex B2b sales cycles</p> */}
+      </div>
 
 
-        {/* 2 IDEAS : SKEW BG IMG ON MOUSE MOVE AND 2) APPEAR SECTION LEFT AND RIGHT LIKE IN 50IN50 PROJECT */}
-        {/* <Container type='large' className='special-container'> */}
+      {/* 2 IDEAS : SKEW BG IMG ON MOUSE MOVE AND 2) APPEAR SECTION LEFT AND RIGHT LIKE IN 50IN50 PROJECT */}
+      {/* <Container type='large' className='special-container'> */}
 
-          <div className='section blending-in' ref={box}>
-            <div className='text-box'>
-              <h2>Tired of blending in?</h2>
-              <p>
-                Engagement can be done in many ways. But in our business the way you do things matter. All our campaigns are built onto our 3 core values:
-                
-              </p>
+      <div className='section blending-in' ref={box}>
+        <div className='text-box'>
+          <h2>Tired of blending in?</h2>
+          <p>
+            Engagement can be done in many ways. But in our business the way you do things matter. All our campaigns are built onto our 3 core values:
 
-                <span className="bold l">
-                It has to be authentic.
-                <br />
-                It has to be humble.
-                <br />
-                And it has to be light.
-                </span>
-                
-                <br />
-            </div>
-            <div className='blendingIn-Image' />
-            {/* 
+          </p>
+
+          <span className="bold l">
+            It has to be authentic.
+            <br />
+            It has to be humble.
+            <br />
+            And it has to be light.
+          </span>
+
+          <br />
+        </div>
+        <div className='blendingIn-Image' />
+        {/* 
             <Link to='/resources' className='main-btn'>
               Resources &nbsp;<i class='fa-thin fa-arrow-right'></i>
             </Link> */}
-          </div>
+      </div>
 
 
-          {/* <div className='section authenticity' ref={box}>
+      {/* <div className='section authenticity' ref={box}>
             <div className='text-box'>
               <h2>Authenticity at the forefront</h2>
               <p>
@@ -149,7 +149,7 @@ export const Growth2 = () => {
             </div>
           </div> */}
 
-          {/* <div className='section mimicHuman' ref={box}>
+      {/* <div className='section mimicHuman' ref={box}>
             <img src={mimicHumanImage} alt='' width={'100%'} />
             <div className='text-box'>
               <h2>Time your messages and actions to mimic human-like behaviour</h2>
@@ -170,8 +170,8 @@ export const Growth2 = () => {
               </Link>
             </div>
           </div> */}
-          <ComparativeTable item={'item1'} itemDescription={'itemDesc 1'} />
-          {/* <div className='section' ref={box}>
+      <ComparativeTable item={'item1'} itemDescription={'itemDesc 1'} />
+      {/* <div className='section' ref={box}>
             <div>
               <h2>Time your messages and behaviours to mimic human-like behaviour</h2>
               <p>Done-for-you, seamlessly integrated, next-gen sales process</p>
@@ -188,24 +188,24 @@ export const Growth2 = () => {
               </Link>
             </div>
           </div> */}
-          {/* social proof - greyed out logos */}
-          {/* comparative table */}
-          {/* call to action - with image or short video (need to have at least one short video effect) */}
-          {/* The easiest way to grow your sales pipeline */}
-          {/* Elevate your organic marketing game, and see your growth SOR */}
-          {/* Reach buying committees with full insights
+      {/* social proof - greyed out logos */}
+      {/* comparative table */}
+      {/* call to action - with image or short video (need to have at least one short video effect) */}
+      {/* The easiest way to grow your sales pipeline */}
+      {/* Elevate your organic marketing game, and see your growth SOR */}
+      {/* Reach buying committees with full insights
           Ready-to-go, */}
-          <div className='section cta'>
-            <img src={ctaImage} alt='' width={'40%'} />
-            <div>
-              <h2>Get started with SOR SEO today</h2>
-              <Row>
-                <CTAButton text="resources" to='resources' />
-                <CTAButton text="contact us" to='contact' />
-              </Row>
-            </div>
-          </div> 
-      </StyledGrowth2>
+      <div className='section cta'>
+        <img src={ctaImage} alt='' width={'40%'} />
+        <div>
+          <h2>Get started with SOR SEO today</h2>
+          <Row>
+            <CTAButton text="resources" to='resources' />
+            <CTAButton text="contact us" to='contact' />
+          </Row>
+        </div>
+      </div>
+    </StyledGrowth2>
     // </motion.div>
   );
 };

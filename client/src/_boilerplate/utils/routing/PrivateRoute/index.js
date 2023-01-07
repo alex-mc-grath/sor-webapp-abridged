@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { AppLayout } from '../../../layouts/AppLayout';
-// import { Loader } from '../../App/AppComponents/Loader';
+// import { Loader } from '../../app/AppComponents/Loader';
 // import { AppMainLayout } from '../../components/gui/layout/AppMainLayout';
 
 export const PrivateRoute = ({ accountType = null, children, ...props }) => {
@@ -9,7 +9,7 @@ export const PrivateRoute = ({ accountType = null, children, ...props }) => {
 
   if (auth.loaded) {
     if (auth.isAuthenticated) {
-      if (accountType === null || accountType === auth.accountType || (Array.isArray(accountType) && accountType.includes(auth.accountType)) ) {
+      if (accountType === null || accountType === auth.accountType || (Array.isArray(accountType) && accountType.includes(auth.accountType))) {
         return (
           // <AppMainLayout isLoggedIn menuUi={2} menuTabs={''} {...props}>
           <AppLayout isLoggedIn>

@@ -1,10 +1,10 @@
 import React from 'react';
-import App from './App/';
+import App from './app/';
 import { createRoot } from 'react-dom/client'
-import {BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import { ThemeProvider } from 'styled-components';
-import { themeSettings } from './App/Theme/theme-settings'
+import { themeSettings } from './app/Theme/theme-settings'
 import { Provider } from 'react-redux'
 import store from './store'
 import OnRouteChangeWorker from './components/utils/OnRouteChangeWorker';
