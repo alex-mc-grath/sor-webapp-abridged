@@ -1,9 +1,9 @@
-import {useRef, useState} from 'react'
+import { useRef, useState } from 'react'
 
 import { MainButton } from '../MainButton'
-import {Loader} from "../../../../App/AppComponents/Loader"
+// import { Loader } from "../../../../app/AppComponents/Loader"
 
-export const ButtonLoadWrapper = ({onClick, ButtonComponent = MainButton, spinnerSize="3rem", SpinnerElement=Loader, ...props}) => {
+export const ButtonLoadWrapper = ({ onClick, ButtonComponent = MainButton, spinnerSize = "3rem", SpinnerElement = Loader, ...props }) => {
 
     const [loading, setLoading] = useState(false)
 
@@ -15,8 +15,8 @@ export const ButtonLoadWrapper = ({onClick, ButtonComponent = MainButton, spinne
 
     return (
         <>
-        {loading && <SpinnerElement size={spinnerSize} margin="0"/>}
-        {!loading && <ButtonComponent onClick={wrappedOnCLick} {...props} />}
+            {loading && <SpinnerElement size={spinnerSize} margin="0" />}
+            {!loading && <ButtonComponent onClick={wrappedOnCLick} {...props} />}
         </>
-    ) 
+    )
 }
