@@ -70,16 +70,16 @@ export const CreateNewCampaign = withActionPageLoader(loadSettings, ({ loadedPag
 
   const navigate = useNavigate()
 
-  const saveCampaign = async (data) => {
-    try {
-      setScreenState('saving');
-      let insertedId = await createNewCampaign(data);
-      navigate('/campaigns/' + insertedId);
-      setScreenState('success');
-    } catch (err) {
-      setErrorMessage(err.message);
-    }
-  }
+  // const saveCampaign = async (data) => {
+  //   try {
+  //     setScreenState('saving');
+  //     let insertedId = await createNewCampaign(data);
+  //     navigate('/campaigns/' + insertedId);
+  //     setScreenState('success');
+  //   } catch (err) {
+  //     setErrorMessage(err.message);
+  //   }
+  // }
 
   const { manager, campaignData, setCampaignData } = useFormManager()
   const { formIndex } = campaignData
