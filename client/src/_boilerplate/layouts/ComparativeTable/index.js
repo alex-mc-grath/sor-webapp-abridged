@@ -43,12 +43,12 @@ export const ComparativeTable = ({ item, itemDescription }) => {
           </tr>
           <tr>
             <td className='table-comparison-text'>
-              LinkedIn detection
+              Dedicated Azure server with designated IP
               <span className='question-circle-o toggler-tooltip' id='toggler-tooltip-2' tabindex='0'>
                 <a
                   href='javascript:void(0)'
                   className='comparison_table_tooltip'
-                  data-text="Commute to the therapist's location, spend time in the waiting room, sit in their office"
+                  data-text=""
                   data-original-title=''
                   title=''>
                   <i className='info-circle' aria-hidden='true'></i>
@@ -56,10 +56,10 @@ export const ComparativeTable = ({ item, itemDescription }) => {
               </span>
             </td>
             <td className='table-comparison-icon feature-present-not'>
-              <i class='fa-solid fa-xmark'></i>
+              <i className='fa-solid fa-check'></i>
             </td>
             <td className='table-comparison-icon feature-present'>
-            <i class='fa-solid fa-xmark'></i>
+              <i class='fa-solid fa-xmark'></i>
             </td>
           </tr>
           <tr>
@@ -123,7 +123,7 @@ export const ComparativeTable = ({ item, itemDescription }) => {
               <i className='fa-solid fa-check'></i>
             </td>
             <td className='table-comparison-icon feature-present-not'>
-              <i class='fa-solid fa-xmark'></i>
+              <i className='fa-solid fa-check'></i>
             </td>
           </tr>
         </tbody>

@@ -71,7 +71,7 @@ export const Growth = () => {
               {/* Engagement */}
               Discovering new opportunities can be done in many ways. But in our business the way you do things matter. All our campaigns are built onto our 3 core values:
             </p>
-            <Col>
+            <Col className='slogan'>
               <span className="bold l">
                 It has to be <span className="gradient-color4">authentic.</span>
                 <br />
@@ -85,7 +85,7 @@ export const Growth = () => {
           </Col>
         </Section>
 
-        <Section height='50vh' className='authenticity' ref={box}>
+        <Section height='40vh' className='authenticity' ref={box}>
           <Col marginBottom='3rem'>
             <h2>Authenticity at the forefront</h2>
             <p>
@@ -121,14 +121,14 @@ export const Growth = () => {
             {/* <Link to='/resources' className='main-btn'>
                 <i class='fa-thin fa-arrow-up-left'></i> &nbsp; Resources
               </Link> */}
-            <MainButton text="resources" to='/resources' />
+            <MainButton text="resources" to='/resources' margin='auto' />
           </Col>
         </Section>
 
         <ComparativeTable item={'item1'} itemDescription={'itemDesc 1'} />
 
         <Section height="60vh" className='cta bg-gradient'>
-          <Col width="80%">
+          <Col width="50%" margin='0 auto'>
             <h2>Get started with <span className="gradient-color4 lineBreakMobile">SOR SEO</span></h2>
             <Row>
               <MainButton text="resources" to="/resources" type='gradient' />

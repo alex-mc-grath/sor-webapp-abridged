@@ -43,6 +43,7 @@ export const StyledHowItWorks = styled.article`
         border-radius: 0 0 25px 25px;
         -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
         filter: blur(5px);
+        margin-bottom:5rem;
 
         /* padding: 2rem; */
         -webkit-transform: scaleX(-1);
@@ -59,6 +60,10 @@ export const StyledHowItWorks = styled.article`
         background-origin: content-box;
         padding: 2rem;
       } */
+      }
+
+      .slogan{
+        font-size: 3.15rem;
       }
     }
 

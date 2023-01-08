@@ -8,6 +8,7 @@ export const StyledComparativeTable = styled.div`
 
   .logo-header {
     background: linear-gradient(145deg, #78dde2, #a3eabe);
+    background: linear-gradient(145deg, ${props => props.theme.colors.secondary}, #a3eabe);
     color: white;
     padding: 1rem;
     font-size: 1.5rem;
@@ -41,7 +42,7 @@ export const StyledComparativeTable = styled.div`
 
       td {
         font-family: 'Interstate', sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 22px;
         font-weight: 400;
         padding-left: 2px;
@@ -184,6 +185,12 @@ export const StyledComparativeTable = styled.div`
     tbody tr:hover{
 background: white;
     }
+
+    tr{
+    td{
+      font-size:1.5rem;
+    }
+  }
 
   }
   }

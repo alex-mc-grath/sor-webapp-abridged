@@ -5,8 +5,13 @@ import { Logo } from "../../../_boilerplate/elements/Logo"
 
 import { Badge, Container, Label, List, Section, TextContainer } from "../Style"
 import { WhistLawLongLogo } from "../../../app/assets/icons/whistlawLongLogo"
+import { useState } from "react"
+import { MainButton } from "../../../_boilerplate/inputs/MainButton"
 
 export const PortfolioItem = ({ name, overview, highlights, description, logo, imgs, financials, timeline, color }) => {
+    const [shortList, setShortList] = useState(true)
+    const [renderedButton, setRenderedButton] = useState(<MainButton margin='1.2rem 0' onClick={() => setShortList(!shortList)}>view more</MainButton>)
+
     return (
         <Section>
             <Container>
@@ -44,9 +49,12 @@ export const PortfolioItem = ({ name, overview, highlights, description, logo, i
                             <GridRow col='2' gridGap='0rem 2rem' width='100%' padding='0 2rem' margin='0' justify='space-between'>
                                 {highlights.map((highlight) =>
                                     <List>
-                                        {highlight.map((i) => <li>{i}</li>).slice(0, 3)}
+                                        {shortList && highlight.map((i) => <li>{i}</li>).slice(0, 3)}
+                                        {!shortList && highlight.map((i) => <li>{i}</li>)}
+                                        {/* {highlights.length > 3 && renderedButton} */}
                                     </List>
                                 )}
+                                {/* {highlights.length > 1 && renderButton()} */}
                             </GridRow>
                         </Col>
 

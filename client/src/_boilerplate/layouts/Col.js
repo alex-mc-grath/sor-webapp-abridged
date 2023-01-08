@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Col = styled.div`
   display: flex;
@@ -12,7 +12,9 @@ export const Col = styled.div`
   margin-top: ${(props) => props.marginTop || ''};
   transform: ${props => props.transform};
 
-  @media (max-width : 600px){
-    width:100%;
+  @media (min-width:600px){
+    ${props => props.mobile && css`}
+      width:100%;
+    `
   }
 `;

@@ -17,7 +17,7 @@ export const GetStarted = () => {
       <h2>Welcome to {lightEffect ? <span className="gradient-color4">SOR SEO.</span> : <span className="gradient-color">SOR SEO.</span>} </h2>
       <p>Build to weather the storm,<br />and win the long game.</p>
 
-      <Row margin='2rem 0' justify='space-between'>
+      <Row margin='2rem 0' justify='space-between' mobile>
         {/* <MainButton text="resources" to='organic-growth-marketing/resources' /> */}
         <MainButton text="organic growth solutions" to='/organic-growth-marketing' />
         <MainButton text="software development" to="/dev" />

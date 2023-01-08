@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Row = styled.div`
   display: flex;
@@ -11,6 +11,13 @@ export const Row = styled.div`
   margin-right: ${(props) => props.marginRight || ''};
   margin-left: ${(props) => props.marginLeft || ''};
   margin-top: ${(props) => props.marginTop || ''};
-  gap: ${({gap}) => gap || "1rem"};
+  gap: ${({ gap }) => gap || "1rem"};
   flex-wrap: wrap;
+
+  @media (min-width:400px){
+    ${props => props.mobile && css`
+        flex-direction:column;
+        align-items:center;
+    `}
+  }
 `;
