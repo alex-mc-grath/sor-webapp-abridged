@@ -1,8 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const Layout = styled.div`
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Caslon+Text:wght@100;200;300;400;500;600;700;800;900:ital@1&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Caslon+Text:wght@100;200;300;400;500;600;700;800;900:ital@1&display=swap');
+    
+    font-family:'Source Sans Pro';
 
     p{
         font-family:'Libre Caslon Text';
@@ -106,17 +108,24 @@ export const Container = styled.div`
     /* position:relative; */
     width:100%;
     max-width:1600px;
-    margin: auto;
+    margin: 10rem auto;
     width: 92%;
     height:94%;
 
     @media (max-width:50rem){
     ${props => props.mobile && css`
-        >*:not(:first-child){
+        >*:not(:first-child,:nth-child(2)){
             display:none;
             
         }
         >*:first-child{
+            transform: rotate3d(-.0, .0, .0, -0deg) !important;
+            width:100%;
+            position:relative;
+            right:0;
+            top:0;
+        }
+        >*:nth-child(2){
             transform: rotate3d(-.0, .0, .0, -0deg) !important;
             width:100%;
             position:relative;
@@ -158,7 +167,8 @@ export const Badge = styled.span`
         width: 35%;
     }
     &:nth-of-type(2){
-        width: 35%;
+        /* width: 35%; */
+        width:50%;
     }
 `;
 
@@ -167,7 +177,6 @@ export const StyledNameSignature = styled.div`
     display:flex;
     flex-direction:column;
     bottom:0;
-    width: 40vw;
     height: 30vh;
     padding: 0rem 5rem;  
 
