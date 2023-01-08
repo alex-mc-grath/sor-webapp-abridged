@@ -3,11 +3,10 @@ import styled, { css } from "styled-components";
 export const Layout = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Caslon+Text:wght@100;200;300;400;500;600;700;800;900:ital@1&display=swap');
 
-    
-    font-family:'Source Sans Pro';
 
     p{
         font-family:'Libre Caslon Text';
+        font-family:'Source Sans Pro';
         font-size: 2rem;
         font-weight: 400;
         letter-spacing: -0px;
@@ -19,6 +18,10 @@ export const Layout = styled.div`
             font-family: 'Source Sans Pro'
         }
         
+    }
+
+    li{
+        font-family:'Source Sans Pro';
     }
 
 
@@ -108,7 +111,7 @@ export const Container = styled.div`
     /* position:relative; */
     width:100%;
     max-width:1600px;
-    margin: 10rem auto;
+    margin: 5rem auto;
     width: 92%;
     height:94%;
 
