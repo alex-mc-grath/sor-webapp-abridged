@@ -12,9 +12,13 @@ export const Col = styled.div`
   margin-top: ${(props) => props.marginTop || ''};
   transform: ${props => props.transform};
 
+ 
+  ${props => props.mobile && css`
+        width: 100%;
+        align-items:center;
+    `}
+
   @media (min-width:600px){
-    ${props => props.mobile && css`}
-      width:100%;
-    `
+       
   }
 `;

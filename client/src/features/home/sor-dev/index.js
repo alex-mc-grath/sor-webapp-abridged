@@ -15,7 +15,7 @@ export const Home = () => {
   return (
     <Layout>
       <Container>
-        <Col width='70%'>
+        <Col width='70%' mobile>
           <div>
             {/* <h1>aesthetic sensitivity<br />working for you</h1> */}
             <h1>aesthetic sensitivity<br />meets emotion</h1>

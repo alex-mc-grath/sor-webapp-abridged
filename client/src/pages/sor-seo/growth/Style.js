@@ -63,7 +63,7 @@ export const StyledHowItWorks = styled.article`
       }
 
       .slogan{
-        font-size: 3.15rem;
+        font-size: 2.75rem;
       }
     }
 
@@ -90,6 +90,7 @@ export const StyledHowItWorks = styled.article`
 
   img{
     max-width: 50rem;
+    margin: 3rem 0;
     
   }
   li{

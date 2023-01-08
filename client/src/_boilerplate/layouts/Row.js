@@ -14,10 +14,19 @@ export const Row = styled.div`
   gap: ${({ gap }) => gap || "1rem"};
   flex-wrap: wrap;
 
-  @media (min-width:400px){
+  ${props => props.mobile && css`
+        flex-direction:column;
+        align-items:center;
+    `}
+
+  @media (min-width:600px){
+        flex-direction:row;
+  }
+
+  /* @media (min-width:400px){
     ${props => props.mobile && css`
         flex-direction:column;
         align-items:center;
     `}
-  }
+  } */
 `;

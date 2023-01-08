@@ -128,12 +128,15 @@ export const Growth = () => {
         <ComparativeTable item={'item1'} itemDescription={'itemDesc 1'} />
 
         <Section height="60vh" className='cta bg-gradient'>
-          <Col width="50%" margin='0 auto'>
+          {/* <Col width="50%" margin='0 auto'> */}
+          <Col align='center'>
+
             <h2>Get started with <span className="gradient-color4 lineBreakMobile">SOR SEO</span></h2>
-            <Row>
+            <Row mobile>
               <MainButton text="resources" to="/resources" type='gradient' />
               <MainButton text="meet sor dev" to="/dev" type='gradient' />
             </Row>
+
           </Col>
         </Section>
       </Animation>
