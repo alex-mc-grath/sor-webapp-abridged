@@ -18,6 +18,12 @@ export const Col = styled.div`
         align-items:center;
     `}
 
+
+/* this, underneath, is the proper way =>always mobile first, with exceptions for desktop
+what are theses exceptions? So far I got:
+- Col: need to be column for both page layout and component layout, and  */
+
+
   @media (min-width:600px){
        
   }
