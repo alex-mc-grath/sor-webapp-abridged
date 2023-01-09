@@ -1,24 +1,17 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-// import LogoAnimation from '../../sor-dev/LogoAnimation';
 import { StyledLogin, StyledFormError, StyledFieldError } from './Style';
 
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 
 import { motion } from 'framer-motion';
-// import { variants1 } from '../../../utils/animationVariants';
 
 import { signIn } from './action';
 import { Navigate } from 'react-router-dom';
 import { MainButton } from '../../../_boilerplate/inputs/MainButton';
 import { Animation } from '../../../_boilerplate/layouts/Animation';
 // import { LoginAnimation } from './LoginAnimation';
-
-// import { BubbleMenu } from '../../../layout/BubbleMenu';
-
-// import LoadingIndicator from '../../../layout/bp-components/LoadingIndicator'
-// import { Col } from '../../../layout/Col';
 
 // const CutomizedLogoAnimation = styled(LogoAnimation)`
 //   min-height: 20vh;
@@ -81,13 +74,9 @@ export const Login = () => {
   return (
     <Animation>
       <StyledLogin>
-        {/* <BubbleMenu onceToggled={() => setShowNav(!showNav)} showNav={showNav} linkOptions={['/', '/app/login', '/growth']} textOptions={['Dev', 'Growth']} /> */}
+
         <form onSubmit={formik.handleSubmit}>
           <h2>Sign in</h2>
-
-          {/* {view === '' ? <CutomizedLogoAnimation branchName='APP' /> : <LoginAnimation />} */}
-
-          {/* <Col width='100%'> */}
 
           <div style={{ position: 'relative' }}>
             <input type='email' name='email' onChange={formik.handleChange} placeholder='Email' value={formik.values.email} onBlur={formik.handleBlur} />
